@@ -1,0 +1,7 @@
+# CSVs Directory
+
+Contains **synthetic csvs** tied to each customer and CFR change.  
+These simulate the real customer data and compliance changes used by AccureIQ.
+
+### Note
+Files should be small, non-sensitive, and clearly labeled for demonstration only.
