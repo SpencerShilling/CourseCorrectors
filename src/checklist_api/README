@@ -1,0 +1,12 @@
+# Checklist API Module
+
+This module retrieves **compliance control checklists** from the ComplianceAI API.
+
+### Responsibilities
+- Query the API using CFR citations.
+- Cache API responses locally to avoid redundant calls.
+- Handle rate limits, authentication, and timeouts.
+- Parse and format checklist data for AccureIQ.
+
+### Output
+Structured checklist csvs stored for downstream use.
