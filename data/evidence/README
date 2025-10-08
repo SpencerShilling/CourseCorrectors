@@ -1,0 +1,12 @@
+# Evidence Directory
+
+Contains **synthetic evidence documents** tied to each customer.  
+These simulate the real compliance evidence used by AccureIQ.
+
+### Examples
+- Audit reports
+- Quality control logs
+- Safety certifications
+
+### Note
+Files should be small, non-sensitive, and clearly labeled for demonstration only.
