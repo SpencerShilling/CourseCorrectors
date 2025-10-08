@@ -1,0 +1,12 @@
+# Data Directory
+
+Contains **synthetic input datasets** used by the system.
+
+### Contents
+- `cfr_changes.csv` – Daily CFR substantive changes.
+- `customers.csv` – Customers, their CFRs, and POC info.
+- `/evidence/` – Example Word or PDF documents representing compliance proof.
+
+### Notes
+Only include **non-sensitive, synthetic data**.  
+Actual customer data must never be stored in this repository.
