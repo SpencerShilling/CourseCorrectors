@@ -1,0 +1,12 @@
+# Orchestration Module
+
+This is the **control center** of the pipeline.
+
+### Responsibilities
+- Coordinate data flow between all modules.
+- Manage errors, retries, and logging.
+- Support both scheduled (daily) and manual runs.
+- Produce summary reports for each pipeline execution.
+
+### Output
+Run summaries, error logs, and success metrics.
