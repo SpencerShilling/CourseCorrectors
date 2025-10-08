@@ -1,0 +1,178 @@
+# Course Correctors – Automated CFR Compliance Evaluation System
+
+This repository contains the source code and documentation for the **Course Correctors’ AccureIQ Compliance System**.  
+The goal of this project is to **automate regulatory compliance evaluation** by ingesting daily CFR substantive changes, matching them against customer regulations, retrieving relevant control checklists, analyzing customer evidence, and notifying company points of contact (POCs) with compliance results.
+
+---
+
+## Project Overview
+
+The system is designed to simulate a real-world automation pipeline for regulatory compliance management.  
+It uses **synthetic datasets** representing daily CFR updates, customer compliance data, and evidence documentation.  
+AccureIQ serves as the **language model engine and orchestration task manager**, performing all logic and decision-making automatically.
+
+### Key Objectives
+1. **Automate ingestion** of daily datasets (CFR changes, customer info, evidence files) from GitHub.  
+2. **Query regulatory checklists** through the ComplianceAI API for each relevant CFR citation.  
+3. **Evaluate compliance** using AccureIQ by comparing controls and evidence.  
+4. **Store results** with full lineage and confidence scores.  
+5. **Notify POCs** with compliance summaries and next steps.
+
+---
+
+## System Architecture
+
+The system architecture consists of five logical layers:
+
+1. **Data Sources** – Synthetic CSVs and evidence documents stored in GitHub:
+   - `cfr_changes.csv` → daily list of substantive regulation changes  
+   - `customers.csv` → customer IDs, applicable CFRs, and POC info  
+   - `evidence_index.csv` → maps each customer to its evidence documents  
+   - `checklist_api` → external API providing compliance control text per CFR regulation  
+
+2. **Data Integration Layer** – Merges CFR updates with customer data and checklist responses.
+
+3. **Processing & Logic Layer (AccureIQ)** –  
+   AccureIQ evaluates whether each customer remains compliant, not compliant but with existing evidence, or not compliant with missing evidence.
+
+4. **Storage Layer** –  
+   Stores compliance decisions, rationale, confidence scores, and full traceability for auditing.
+
+5. **Notification Layer** –  
+   Generates and sends messages to customer POCs with the latest compliance results.
+
+A detailed diagram of this architecture is available under  
+`{ADD LINK ONCE WE MAKE DIAGRAM`
+
+---
+
+## Workflow Summary
+
+| **Stage** | **Description** |
+|------------|----------------|
+| **1. Data Pull** | AccureIQ pulls the latest CSVs and evidence from the GitHub repository (or designated storage). |
+| **2. Validation** | The system validates file formats, schema structure, and data completeness. |
+| **3. Matching** | CFR changes are matched to customers based on shared `cfr_citation`. |
+| **4. Checklist Retrieval** | The system calls the ComplianceAI API to retrieve updated control requirements. |
+| **5. Compliance Evaluation** | AccureIQ evaluates each customer’s evidence against the new checklist controls. |
+| **6. Result Storage** | Compliance results, rationale, and confidence scores are stored with lineage logs. |
+| **7. Notification** | The system drafts and sends compliance status notifications to each POC. |
+
+---
+
+## Tools and Technologies
+
+| **Tool / Software** | **Purpose** |
+|----------------------|-------------|
+| **AccureIQ** | Language model engine & orchestration logic for evaluation |
+| **ChatGPT** | Synthetic dataset generation & initial architecture documentation |
+| **ComplianceAI API** | Source for CFR compliance control checklists |
+| **GitHub** | Source repository for all input data and version control |
+| **Python (recommended runtime)** | Data ingestion, API handling, and pipeline orchestration |
+| **SQLite or Postgres** | Result storage and traceability |
+
+---
+
+## Repository Structure
+
+compliance-pipeline/
+├─ data/ # Input CSVs and synthetic evidence
+│ ├─ cfr_changes.csv
+│ ├─ customers.csv
+│ ├─ evidence_index.csv
+│ └─ evidence/
+│ └─ *.docx
+├─ src/
+│ ├─ ingestion/ # Data loading and validation scripts
+│ ├─ matching/ # CFR ↔ Customer matching logic
+│ ├─ checklist_api/ # API integration
+│ ├─ accureiq/ # Evaluation and decisioning layer
+│ ├─ storage/ # Results persistence
+│ ├─ notify/ # Notification module
+│ └─ orchestration/ # End-to-end pipeline controller
+├─ docs/
+│ ├─ system_architecture.html
+│ ├─ risk_register.md
+│ └─ error_analysis.md
+├─ schemas/ # Data contracts & API response schemas
+├─ .env.example
+├─ README.md
+└─ requirements.txt
+
+---
+
+## Running the System (Conceptual Overview)
+
+1. **Prepare Input Data**
+   - Upload daily synthetic CSVs and evidence files to GitHub under `/data/YYYY-MM-DD/`.
+   - Ensure file naming and schema match the expected contract.
+
+2. **Trigger the Run**
+   - AccureIQ automatically detects new data in the repo and starts processing.
+   - Alternatively, trigger a manual run from the AccureIQ console.
+
+3. **Observe Pipeline Execution**
+   - Each stage (ingestion, matching, checklist retrieval, evaluation, notification) is logged.
+   - Run artifacts are saved to `/results/<run_id>/`.
+
+4. **Review Results**
+   - Open the results summary (`results_summary.csv`) and notification previews.
+   - Check `/logs/` for validation reports and any API errors.
+
+---
+
+## Known Limitations
+
+- Synthetic data may not perfectly reflect the complexity of real-world compliance data.
+- Checklist API access may be rate-limited or return incomplete data in high-volume scenarios.
+- AccureIQ results depend on evidence text quality and may require human review for low-confidence outputs.
+- Email/notification functions should remain in **sandbox mode** until final validation.
+
+---
+
+## Future Enhancements
+
+- Integrate direct database ingestion instead of GitHub CSVs.  
+- Add user-facing dashboard summarizing compliance results.  
+- Introduce anomaly detection for sudden compliance drops.  
+- Implement fine-tuned model review for borderline cases.  
+
+---
+
+## Team Roles
+
+| **Team Member** | **Role** | 
+|------------------|-----------|
+| Karyna Todd | Product Owner | 
+| Amy Cruz | Developer | 
+| Andre Jones | Developer | 
+| Spencer Shilling | Developer | 
+| Taylor Payne | Developer | 
+
+---
+
+## Security and Data Handling
+
+- All credentials (API keys, tokens) are stored securely in AccureIQ’s environment or encrypted `.env` variables.
+- Synthetic datasets are used in place of real company data to ensure privacy.
+- No personally identifiable information (PII) is collected, stored, or shared.
+
+---
+
+
+## License
+
+This project is developed for academic and educational purposes as part of the **Course Correctors** capstone project at George Mason University.  
+It is not intended for commercial deployment.
+
+---
+
+## Contact
+
+For questions or collaboration requests, please contact the Course Correctors team lead.  
+> **Project Lead:** [Karyna Todd]  
+> **Email:** [ktodd4@gmu.edu]
+
+---
+
+**© 2025 Course Correctors | AccureIQ Compliance Automation System**
