@@ -1,0 +1,12 @@
+# AccureIQ Processing Module
+
+This module represents the **AI-driven logic layer** of the system.
+
+### Responsibilities
+- Combine checklist requirements and evidence text.
+- Use AccureIQ’s engine to determine compliance status.
+- Return structured results (status, rationale, confidence score).
+- Flag missing evidence or low-confidence cases.
+
+### Output
+Compliance decision records saved to the storage layer.
