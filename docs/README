@@ -1,0 +1,11 @@
+# Documentation Directory
+
+Holds all supporting documentation for the Course Correctors project.
+
+### Suggested Files
+- `system_architecture.html` – System diagram
+- `risk_register.md` – Sprint risk analysis
+- `error_analysis.md` – Test results and failure summary
+- `presentation_slides/` – Optional project presentation materials
+
+Keep this folder updated for sprint deliverables.
