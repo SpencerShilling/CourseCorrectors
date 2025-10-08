@@ -1,0 +1,12 @@
+# Results Directory
+
+Stores the **outputs of completed pipeline runs**.
+
+### Contents
+- Compliance evaluation results
+- Notification logs
+- Run summaries
+- Error reports
+
+### Important
+This folder is usually **gitignored** to prevent large data artifacts from being committed.
