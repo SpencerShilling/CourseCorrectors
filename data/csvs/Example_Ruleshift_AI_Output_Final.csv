@@ -1,0 +1,133 @@
+ChangeID,Timestamp,CFR_Title,CFR_Part,CFR_Subpart,CFR_Subsection,CFR_Citation,CFR_Name,Current_Text,Previous_Text,Change_Link,Diff,Modification_Type,Is_Substantive
+10CFR52.55a_09.25.2025,9/15/2025,10,52,55,a,10 CFR § 52.55(a),Duration of certification,"Except as provided in paragraph (b) of this section, a standard design certification issued under this subpart is valid for 40 years from the date of issuance.","Except as provided in paragraph (b) of this section, a standard design certification issued under this subpart is valid for 15 years from the date of issuance.","eCFR :: 10 CFR 52.55 (Sept. 15, 2025) -- Duration of certification.",15 years to 40 years,Substitution,TRUE
+10CFR1021.103_07.03.2025,7/2/2025,10,1021,103,,11 CFR § 1021.103,Emergency actions,"DOE may take an action without observing all provisions of DOE's NEPA implementing procedures in emergency situations that demand immediate action. DOE shall consult with CEQ as soon as possible regarding alternative arrangements for emergency actions having significant environmental impacts. DOE shall document, including publishing a notice in the Federal Register, emergency actions covered by this paragraph within 30-days after such action occurs; this documentation shall identify any adverse impacts from the actions taken, further mitigation necessary, and any NEPA documents that may be required.",DOE adopts the regulations for implementing NEPA published by CEQ at 40 CFR parts 1500 through 1508.,"eCFR :: 10 CFR 1021.103 (July 3, 2025) -- Emergency actions.",Removed original writing and added new writing,Substitution,TRUE
+10CFR205.321_09.26.2025,9/26/2025 0:00,10,205,321,,10 CFR §205.321,Time of filing,[Reserved],"Pursuant to the DOE's responsibility under the National Environmental Policy Act, the DOE must make an environmental determination of the proposed action. If, as a result of this determination, an environmental impact statement (EIS) must be prepared, the permit processing time normally will be 18-24 months. If no environmental impact statement is required, then a six-month processing time normally would be sufficient.","eCFR :: 10 CFR 205.321 (Sept. 12, 2025) -- § 205.321 [Reserved]",This regulation was removed,Deletion,TRUE
+10CFR13.6_09.20.2025,9/20/2025 9:00,10,13,6,a,10 CFR § 13.6(a),Prerequisites for issuing a complaint,"In the case of allegations of liability under § 13.3(a) with respect to a claim, the reviewing official determines that, with respect to such claim or a group of related claims submitted at the same time such claim is submitted (as defined in paragraph (b) of this section), the amount of money or the value of property or services demanded or requested in violation of § 13.3(a) does not exceed $1,000,000.","In the case of allegations of liability under § 13.3(a) with respect to a claim, the reviewing official determines that, with respect to such claim or a group of related claims submitted at the same time such claim is submitted (as defined in paragraph (b) of this section), the amount of money or the value of property or services demanded or requested in violation of § 13.3(a) does not exceed $150",https://www.ecfr.gov/compare/2025-07-17/to/2025-07-16/title-10/chapter-I/part-13/section-13.6,"$150 changed to $1,00,000",Substitution,TRUE
+10CFR13.46_09.20.2025,9/20/2025 10:00,10,13,46,c,10 CFR §13.46(b) ,Compromise or settlement,"The reviewing official has the exclusive authority to compromise or settle a case under this part at any time after the date on which the reviewing official is permitted to issue a complaint and before the date on which the ALJ issues an initial decision. Before compromising or settling a case under this part, a reviewing official shall notify the Attorney General in writing not later than 30 days before entering into any agreement to compromise or settle allegations of liability under this part and before the date on which the reviewing official is permitted to refer allegations of liability to a presiding officer.",The reviewing official has the exclusive authority to compromise or settle a case under this part at any time after the date on which the reviewing official is permitted to issue a complaint and before the date on which the ALJ issues an initial decision,https://www.ecfr.gov/compare/2025-07-17/to/2025-07-16/title-10/chapter-I/part-13/section-13.46,"Before compromising or settling a case under this part, a reviewing official shall notify the Attorney General in writing not later than 30 days before entering into any agreement to compromise or settle allegations of liability under this part and before the date on which the reviewing official is permitted to refer allegations of liability to a presiding officer.",Addition,TRUE
+21CFR112.40_05.06.2024,5/6/2024 0:00,21,112,40,e,21 CFR §112.40,Produce Safety Rule - Pre-harvest agricultural water,"112.40 What requirements of this subpart apply to my covered farm?
+
+This subpart applies to agricultural water used for, or intended for use in, growing, harvesting, packing, or holding covered produce. If you are using agricultural water for a covered activity listed in the first column, then you must meet the requirements in the second column. You also must meet the requirements in the third column, if applicable.
+
+Table 1 to § 112.40
+
+If you use agricultural water for this covered activity
+
+Then you must meet these requirements
+
+If applicable, you also must meet these requirements
+
+(a) Growing covered produce (other than sprouts)
+
+§ 112.41
+
+(quality standard)
+
+§ 112.45
+
+(measures).
+
+§ 112.42
+
+(inspections and maintenance)
+
+§ 112.46
+
+(treatment).
+
+§ 112.43
+
+(agricultural water assessment)
+
+§ 112.47
+
+(who may test).
+
+§ 112.50
+
+(records)
+
+§ 112.151
+
+(test methods).
+
+(b) Sprout irrigation water
+
+§ 112.41
+
+(quality standard)
+
+§ 112.44(b)
+
+(testing untreated ground water).
+
+§ 112.42
+
+(inspections and maintenance)
+
+§ 112.45
+
+(measures).
+
+§ 112.44(a)
+
+(microbial quality criterion)
+
+§ 112.46
+
+(treatment).
+
+§ 112.50
+
+(records)
+
+§ 112.47
+
+(who may test).
+
+§ 112.151
+
+(test methods).
+
+(c) Harvesting, packing, or holding covered produce
+
+§ 112.41
+
+(quality standard)
+
+§ 112.44(b)
+
+(testing untreated ground water).
+
+§ 112.42
+
+(inspections and maintenance)
+
+§ 112.45
+
+(measures).
+
+§ 112.44(a)
+
+(microbial quality criterion)
+
+§ 112.46
+
+(treatment).
+
+§ 112.44(d)
+
+(additional management and monitoring)
+
+§ 112.47
+
+(who may test).
+
+§ 112.50
+
+(records)
+
+§ 112.151
+
+(test methods)",E. coli in 100 mL … no detectable generic E. coli” (for certain uses); and for growing water a GM of 126 and STV of 410 CFU/100 m,https://www.ecfr.gov/compare/2024-07-05/to/2024-07-04/title-21/chapter-I/subchapter-B/part-112/subpart-E/section-112.40,A written agricultural water assessment is now required,Substitution,TRUE
+21CFR1140.14_08.30.2024,8/30/2024 0:00,21,1140,14,,21 CFR §1140.14,Tobacco,No retailer may sell cigarettes or smokeless tobacco to any person younger than 21 years of age,No retailer may sell cigarettes or smokeless tobacco to any person younger than 18 years of age,https://www.ecfr.gov/compare/2024-09-30/to/2024-09-29/title-21/chapter-I/subchapter-K/part-1140/subpart-B/section-1140.14,Age raised to 21,Substitution,TRUE
+21CFR101.65_09.21.2025,9/21/2025 12:00,21,101,65,d,21 CFR §101.65(d),Food Labeling,"You may use the term “healthy” or derivative terms “health,” “healthful,” “healthfully,” “healthfulness,” “healthier,” “healthiest,” “healthily,” and “healthiness” )  as an implied nutrient content claim on the label or in labeling of a food that is useful in creating a diet that is consistent with dietary recommendations if the food meets the criteria of one or more of the following paragraphs (d)(3)(i) through (vi) of this section as follows:(i)An individual food or mixed product that is comprised of one or more of the following foods that are the foundation of a healthy dietary pattern, with no other added ingredients except for water:(A) Vegetable;(B) Fruit;(C) Whole grains;(D) Fat-free or low-fat dairy;(E) Lean meat, seafood, eggs, beans, peas, lentils, nuts, or seeds.",n/a,https://www.ecfr.gov/compare/2025-04-28/to/2025-04-27/title-21/chapter-I/subchapter-B/part-101/subpart-D/section-101.65,New section added,Addition,TRUE
