@@ -1,0 +1,34 @@
+# --- Secrets & local config ---
+.env
+*.env
+*.secret
+*.pem
+*.key
+
+# --- Data & artifacts you don't want in git ---
+results/
+.artifacts/
+data/evidence/*
+data/cache/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# --- OS / Editor noise ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Logs ---
+*.log
+logs/
