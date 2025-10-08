@@ -1,0 +1,10 @@
+# Storage Module
+
+Handles **data persistence** and traceability for all system outputs.
+
+### Responsibilities
+- Store compliance decisions, rationale, and evidence references.
+- Maintain run metadata (timestamps, checksums, input versions).
+
+### Output
+Persistent result and lineage records under `/results/`.
