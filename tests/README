@@ -1,0 +1,10 @@
+# Tests Directory
+
+Contains test scripts and validation notebooks for system components.
+
+### Purpose
+- Validate data structure and API responses.
+- Unit-test key pipeline modules.
+- Verify that outputs match expected results.
+
+All tests should run offline with synthetic data only.
