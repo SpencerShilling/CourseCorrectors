@@ -1,0 +1,13 @@
+# Ingestion Module
+
+This module handles the **input stage** of the pipeline.  
+It reads, validates, and preprocesses input CSVs and evidence data.
+
+### Responsibilities
+- Load csvs.
+- Verify required columns and formats.
+- Normalize CFR citation formats.
+- Log data validation results.
+
+### Output
+Clean, validated datasets ready for matching.
