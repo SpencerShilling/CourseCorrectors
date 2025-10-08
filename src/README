@@ -1,0 +1,15 @@
+# Source Code Directory
+
+This directory contains all source code modules for the Course Correctors AccureIQ Compliance Automation System.  
+Each subfolder corresponds to a logical stage in the data pipeline — from ingestion to orchestration.
+
+## Subdirectories
+- **ingestion/** – Handles data input and schema validation.  
+- **matching/** – Matches CFR updates to customers and evidence.  
+- **checklist_api/** – Interfaces with the ComplianceAI checklist API.  
+- **accureiq/** – Performs compliance evaluation and decision logic.  
+- **storage/** – Stores results and traceability logs.  
+- **notify/** – Generates and sends POC notifications.  
+- **orchestration/** – Coordinates the full workflow pipeline.
+
+All scripts in these folders should be modular, tested, and documented.
