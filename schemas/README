@@ -1,0 +1,11 @@
+# Schemas Directory
+
+Defines **data contracts** for all CSV and API inputs.
+
+### Contents
+- JSON or YAML schema files describing:
+  - Required columns
+  - Data types
+  - Validation rules
+
+These schemas ensure consistent and reproducible data ingestion.
