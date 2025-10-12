@@ -1,8 +1,12 @@
 # Checklist API Module
 
-This module retrieves **compliance control checklists** from the ComplianceAI API.
+This module contains the API pull required to perform exploratory data analysis (EDA) on the checklist output as well as the API pull used by the API Pull agent in the agentic worklow.
 
-### Responsibilities
+### EDA Pull Responsibilities
+- Query the API using CFR citations.
+- Format the call into table for analysis and exploration
+
+### API Pull Agent Responsibilites
 - Query the API using CFR citations.
 - Cache API responses locally to avoid redundant calls.
 - Handle rate limits, authentication, and timeouts.
