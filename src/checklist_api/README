@@ -12,5 +12,5 @@ This module contains the API pull required to perform exploratory data analysis 
 - Handle rate limits, authentication, and timeouts.
 - Parse and format checklist data for AccureIQ.
 
-### Output
-Structured checklist csvs stored for downstream use.
+### env Variables
+- A local env file is required to pull secret variables.
