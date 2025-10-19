@@ -1,0 +1,37 @@
+from pathlib import Path
+import pandas as pd
+
+def _norm(s: str) -> str:
+    return ''.join(ch for ch in str(s).casefold() if ch.isalnum())
+
+def company_file_map(df: pd.DataFrame, text_dir: str, recursive: bool = True):
+    """
+    Return { IQ_ID : [file_path, ...] } where the FILENAME contains the Company name.
+    """
+    # sanity checks
+    for col in ("Company", "IQ ID"):
+        if col not in df.columns:
+            raise KeyError(f"Expected column '{col}' in dataframe.")
+
+    base = Path(text_dir).expanduser().resolve()
+    if not base.exists():
+        raise FileNotFoundError(f"Directory not found: {base}")
+
+    files = list(base.rglob("*.txt") if recursive else base.glob("*.txt"))
+    files_norm = [(str(p), _norm(p.name)) for p in files]
+
+    out = {}
+    for _, row in df.dropna(subset=["Company", "IQ ID"]).iterrows():
+        company = str(row["Company"]).strip()
+        iqid = str(row["IQ ID"]).strip()
+        cnorm = _norm(company)
+        matches = [path for path, fname_norm in files_norm if cnorm and cnorm in fname_norm]
+        out[iqid] = matches
+    return out
+
+# Example Use
+#evidence_mapping = company_file_map(
+#    result1,
+#    text_dir="~/"
+#)
+#print(mapping)
