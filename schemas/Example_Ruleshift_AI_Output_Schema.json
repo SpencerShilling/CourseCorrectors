@@ -1,0 +1,87 @@
+[
+    {
+        "Column": "CFR_Title",
+        "Description": "Numerical title of CFR",
+        "Data Type": "String"
+    },
+    {
+        "Column": "CFR_Type",
+        "Description": "If the identifier refers to a \u2018section\u2019 or \u2018appendix\u2019",
+        "Data Type": "String"
+    },
+    {
+        "Column": "CFR_Identifier",
+        "Description": "Specific reference identifier",
+        "Data Type": "String"
+    },
+    {
+        "Column": "CFR_Name",
+        "Description": "Plain-language description of CFR Title subject area",
+        "Data Type": "String"
+    },
+    {
+        "Column": "CFR_Part",
+        "Description": "Identifier of what part of the title the change is from",
+        "Data Type": "String"
+    },
+    {
+        "Column": "CFR_Subpart",
+        "Description": "Identifier of what subpart of the part the change is from",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Date",
+        "Description": "The latest date of all dates captured",
+        "Data Type": "Date (YYYY-MM-DD)"
+    },
+    {
+        "Column": "Amendment_Date",
+        "Description": "Date of the most recent substantive change",
+        "Data Type": "Date (YYYY-MM-DD)"
+    },
+    {
+        "Column": "Issue_Date",
+        "Description": "Date of the most recent change of any kind",
+        "Data Type": "Date (YYYY-MM-DD)"
+    },
+    {
+        "Column": "Is_Substantive",
+        "Description": "Indicates whether change was substantive",
+        "Data Type": "Boolean"
+    },
+    {
+        "Column": "Removed",
+        "Description": "Indicates if the regulation was removed",
+        "Data Type": "Boolean"
+    },
+    {
+        "Column": "Change_ID",
+        "Description": "A unique ID number of each change",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Updated_Text",
+        "Description": "Text of eCFR after the change as returned by eCFR API",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Baseline_Text",
+        "Description": "Text of eCFR as returned by Accure",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Diff",
+        "Description": "Text difference of unformatted text (baseline vs. updated)",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Checklist",
+        "Description": "The checklist items associated with the regulation",
+        "Data Type": "List"
+    },
+    {
+        "Column": "Annotations",
+        "Description": "Notes if \u2018add\u2019 or \u2018delete\u2019 checklist items",
+        "Data Type": "List"
+    }
+]
