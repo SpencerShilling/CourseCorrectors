@@ -1,0 +1,10 @@
+Customer_ID,Company Name,Point of Contact (POC) Name,POC Email,City,State,Zip Code,Country,IQ ID
+CUST_001,Terrys Agriculture,Terry Doe,tpayne24@gmu.edu,Backroadston,OH,84502,USA,68f24dd8d22a2e94f0ff9ba8
+CUST_002,New York Medical,Jane Smith,tpayne24@gmu.edu,Othertown,NY,67890,USA,68f24e0dd22a2e94f0ff9bb0
+CUST_003,Safety First Medical,Bob Johnson,tpayne24@gmu.edu,Smalltown,TX,34567,USA,68f24e32d22a2e94f0ff9bbc
+CUST_004,Big City Pharmaceuticals,Maria Rodriguez,tpayne24@gmu.edu,Bigcity,IL,90123,USA,68f24e56d22a2e94f0ff9bc4
+CUST_005,Teds Tobacco Company,"Teddy ""Ted"" Carpenter",tpayne24@gmu.edu,Midsburg,MO,12394,USA,68f24e74d22a2e94f0ff9bcc
+CUST_006,Jamies Consulting,Jamie Keras,tpayne24@gmu.edu,Midsburg,MO,12394,USA,68f24e8bd22a2e94f0ff9bd4
+CUST_007,Landbaron Farms,John Smith,tpayne24@gmu.edu,Smalltown,TX,34567,USA,68f24ea3d22a2e94f0ff9bdc
+CUST_008,Zuul Tobacco Products,Jerry Kiegan,tpayne24@gmu.edu,Bigcity,IL,90123,USA,68f24ec8d22a2e94f0ff9be5
+CUST_009,Low Price Legal,Paul Woodsman,tpayne24@gmu.edu,Othertown,NY,67890,USA,68f24eded22a2e94f0ff9bed
