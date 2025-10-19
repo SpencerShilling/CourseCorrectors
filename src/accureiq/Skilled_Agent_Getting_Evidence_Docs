@@ -1,0 +1,39 @@
+import pandas as pd
+from pathlib import Path
+
+def _norm(s: str) -> str:
+    return ''.join(ch for ch in str(s).casefold() if ch.isalnum())
+
+def company_file_map(df: pd.DataFrame, text_dir: str, recursive: bool = True, debug: bool = True):
+    if 'Company' not in df.columns:
+        raise KeyError("DataFrame must contain a 'Company' column.")
+
+    base = Path(text_dir).expanduser()
+    if debug:
+        print("Searching in:", base.resolve())
+
+    if not base.exists():
+        raise FileNotFoundError(f"Directory not found: {base.resolve()}")
+
+    files = list(base.rglob("*.txt") if recursive else base.glob("*.txt"))
+    if debug:
+        print("Found .txt files:", len(files))
+
+    files_norm = [(str(p), _norm(p.name)) for p in files]
+
+    out = {}
+    for company in (
+        df['Company'].dropna().astype(str).map(str.strip).unique()
+    ):
+        cnorm = _norm(company)
+        matches = [path for path, fname_norm in files_norm if cnorm and cnorm in fname_norm]
+        out[company] = matches
+
+    return out
+
+# Example Usage
+# mapping = company_file_map(
+#    df,
+#    text_dir=""  #debugging tip: use ~/
+#)
+#print(mapping)
