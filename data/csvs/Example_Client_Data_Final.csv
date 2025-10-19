@@ -1,6 +1,0 @@
-Customer_ID,Company Name,Point of Contact (POC) Name,POC Email,Date of Birth,Phone Number,Address,City,State,Zip Code,Country,Industry,Primary NAICS Code,CFR Regulations,Customer Since
-CUST_001,Green Energy Company,John Doe,john.doe@example.com,1/1/1990,123-456-7890,123 Main St,Anytown,CA,12345,USA,Nuclear Energy,221110,"10 CFR §205.321, 10 CFR § 13.6(a), 10 CFR §13.46(b), 10 CFR § 52.55(a), 11 CFR § 1021.103",1/1/2020
-CUST_002,New York Medical,Jane Smith,jane.smith@example.com,6/1/1995,987-654-3210,456 Elm St,Othertown,NY,67890,USA,Food Safety Inc,621310,"21 CFR §112.40, 21 CFR §101.65(d), 10 CFR § 52.55(a), 11 CFR § 1021.103",6/1/2019
-CUST_003,Safety First Medical,Bob Johnson,bob.johnson@example.com,3/1/1980,555-123-4567,789 Oak St,Smalltown,TX,34567,USA,Cigarette City,541612,"21 CFR §1140.14, 10 CFR § 52.55(a), 11 CFR § 1021.103",3/1/2018
-CUST_004,Big City Pharmaceuticals,Maria Rodriguez,maria.rodriguez@example.com,9/1/1992,901-234-5678,321 Pine St,Bigcity,IL,90123,USA,Healthy Food Co,325412,"21 CFR §112.40, 21 CFR §101.65(d)",9/1/2020
-CUST_005,Everglades ER,David Lee,david.lee@example.com,2/1/1985,111-222-3333,456 Maple St,Suburbiatown,FL,45678,USA,Environmental Remediation,541620,"10 CFR §205.321, 10 CFR § 13.6(a), 10 CFR §13.46(b) ",2/1/2017
