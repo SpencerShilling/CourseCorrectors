@@ -1,0 +1,47 @@
+[
+    {
+        "Column": "Customer_ID",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Company Name",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Point of Contact (POC) Name",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "POC Email",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "City",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "State",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Zip Code",
+        "Description": "",
+        "Data Type": "Integer"
+    },
+    {
+        "Column": "Country",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "IQ ID",
+        "Description": "",
+        "Data Type": "String"
+    }
+]

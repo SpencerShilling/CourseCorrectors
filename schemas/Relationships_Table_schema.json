@@ -1,0 +1,27 @@
+[
+    {
+        "Column": "CFR_Title",
+        "Description": "",
+        "Data Type": "Integer"
+    },
+    {
+        "Column": "CFR_Part",
+        "Description": "",
+        "Data Type": "Integer"
+    },
+    {
+        "Column": "CFR_Subpart",
+        "Description": "",
+        "Data Type": "Integer"
+    },
+    {
+        "Column": "Company",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "ID",
+        "Description": "",
+        "Data Type": "String"
+    }
+]

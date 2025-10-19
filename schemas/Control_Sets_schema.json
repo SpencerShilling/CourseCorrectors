@@ -1,0 +1,22 @@
+[
+    {
+        "Column": "Control_Set_ID",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Control_Set_Name",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "Control_Set_Description",
+        "Description": "",
+        "Data Type": "String"
+    },
+    {
+        "Column": "CFR_Regulation",
+        "Description": "",
+        "Data Type": "Integer"
+    }
+]
