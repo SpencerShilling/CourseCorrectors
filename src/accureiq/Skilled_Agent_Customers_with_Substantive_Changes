@@ -1,0 +1,116 @@
+from pathlib import Path
+import pandas as pd
+
+def build_id_dict_from_dir(
+    base_dir: str,
+    *,
+    # filename patterns (tweak if yours differ)
+    ruleshift_globs = ("*ruleshift*output*.csv", "*ruleshift*.csv"),
+    many_to_many_globs = ("*many*to*many*.csv", "*many_to_many*.csv"),
+    customer_data_globs = ("*client*data*.csv", "*client*.csv"),
+    # column names (tweak if yours differ)
+    cfr_title_col: str = "CFR_Title",
+    cfr_part_col: str = "CFR_Part",
+    cfr_subpart_col: str = "CFR_Subpart",
+    left_id_col: str = "ID",
+    right_customer_id_col: str = "Customer_ID",
+    # optional merge validations (e.g., "many_to_one")
+    validate_first_merge: str | None = None,
+    validate_second_merge: str | None = None,
+):
+    """
+    Discover CSVs in `base_dir`, reproduce the notebook merges, drop specified
+    columns, and return a dict keyed by ID with the remaining columns.
+    Value is always a LIST (handles multiple rows per ID).
+    """
+    DROP_COLS = [
+        "CFR_Title_y","CFR_Part_y","CFR_Subpart_y","ChangeID","Timestamp",
+        "CFR_Citation","Current_Text","Previous_Text","Change_Link","Diff",
+        "Modification_Type","Is_Substantive","Company Name","City","State",
+        "Zip Code","Country"
+    ]
+
+    def _find_one(dirpath: Path, patterns: tuple[str, ...], label: str) -> Path:
+        candidates = []
+        for pat in patterns:
+            candidates.extend(dirpath.rglob(pat))
+        uniq = sorted({p.resolve() for p in candidates})
+        if not uniq:
+            raise FileNotFoundError(
+                f"Could not find {label} CSV in '{dirpath}'. Tried patterns: {patterns}"
+            )
+        # pick a stable, specific match (shortest filename first)
+        uniq.sort(key=lambda p: (len(p.name), len(str(p))))
+        return uniq[0]
+
+    base = Path(base_dir).expanduser().resolve()
+    if not base.exists():
+        raise FileNotFoundError(f"Base directory not found: {base}")
+
+    # --- locate CSVs ---
+    ruleshift_csv     = _find_one(base, ruleshift_globs, "RuleShift output")
+    many_to_many_csv  = _find_one(base, many_to_many_globs, "Many-to-Many")
+    customer_data_csv = _find_one(base, customer_data_globs, "Customer data")
+
+    # --- load ---
+    rule_shift_output = pd.read_csv(ruleshift_csv, encoding="unicode_escape")
+    many_to_many      = pd.read_csv(many_to_many_csv)
+    customer_data     = pd.read_csv(customer_data_csv)
+
+    # --- standardize CFR cols & build key ---
+    for df_name, df in (("rule_shift_output", rule_shift_output), ("many_to_many", many_to_many)):
+        for col in (cfr_title_col, cfr_part_col, cfr_subpart_col):
+            if col not in df.columns:
+                raise KeyError(f"Expected column '{col}' in {df_name}.")
+            df[col] = df[col].astype(str).str.strip()
+        df["CFR_Regulation"] = df[cfr_title_col] + df[cfr_part_col] + df[cfr_subpart_col]
+
+    # --- merge on CFR_Regulation ---
+    result = pd.merge(
+        many_to_many,
+        rule_shift_output,
+        on="CFR_Regulation",
+        how="inner",
+        validate=validate_first_merge
+    )
+
+    # --- merge on ID == Customer_ID (align dtypes) ---
+    if left_id_col not in result.columns:
+        raise KeyError(f"Expected '{left_id_col}' column in first merged result.")
+    if right_customer_id_col not in customer_data.columns:
+        raise KeyError(f"Expected '{right_customer_id_col}' column in customer_data.")
+
+    result[left_id_col] = result[left_id_col].astype(str).str.strip()
+    customer_data[right_customer_id_col] = customer_data[right_customer_id_col].astype(str).str.strip()
+
+    result1 = pd.merge(
+        result,
+        customer_data,
+        left_on=left_id_col,
+        right_on=right_customer_id_col,
+        how="inner",
+        validate=validate_second_merge,
+        suffixes=("", "_cust"),
+    ).drop(columns=[right_customer_id_col], errors="ignore")
+
+    # --- drop requested columns ---
+    cleaned = result1.drop(columns=DROP_COLS, errors="ignore").copy()
+
+    if left_id_col not in cleaned.columns:
+        raise KeyError(f"ID column '{left_id_col}' not present after drops.")
+
+    # --- build dict: ID -> [row dicts] ---
+    id_dict: dict[str, list[dict]] = {}
+    for _, row in cleaned.iterrows():
+        id_key = row[left_id_col]
+        payload = row.drop(labels=[left_id_col]).to_dict()
+        id_dict.setdefault(id_key, []).append(payload)
+
+    return id_dict
+
+# Example Usage
+#id_map = build_id_dict_from_dir(
+#    base_dir="", # Debugging tip, use ~/
+#)
+
+#print(id_map)
