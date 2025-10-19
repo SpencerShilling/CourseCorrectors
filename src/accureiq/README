@@ -1,6 +1,6 @@
 # AccureIQ Processing Module
 
-This module represents the **AI-driven logic layer** of the system.
+This module represents the code used for the skilled agents in Accure IQ. 
 
 ### Responsibilities
 - Combine checklist requirements and evidence text.
