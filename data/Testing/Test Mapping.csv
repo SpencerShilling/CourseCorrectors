@@ -1,0 +1,10 @@
+﻿Company ,Category,Regulation,Compliance,Document Name
+Terrys Agriculture,Agriculture,21 CFR §112.40,Yes,Agriculture_Standards_Document_BCP-AG-WTR-STD-EVD_10.22.2025
+Landbaron Farms,Agriculture,21 CFR §112.40,No,Water_Agriculture_Test_LBF-AG-WTR-STD-PLM_10.22.2025
+Rolling Meadow Orchard,Agriculture,21 CFR §112.40,Missing,Rolling_Meadow_Orchard_Audit_RMO-FIN-AUD-EVD_10.22.2025
+New York Law,Law,10 CFR §13.46,Yes,Authority_to_Compromise_or_Settle_Cases_NYL-LGL-AUTH-EVD_10.22.2025
+Carsons Consulting,Law,10 CFR §13.46,No,Authority_to_Compromise_or_Settle_Cases_CSC-LGL-AUTH-EVD_10.22.2025
+Settlement Smashers,Law,10 CFR §13.46,Missing,Authority_to_Provide_Consulting_Services_SSM-CON-SVC-EVD_10.22.2025
+Teds Tobacco Company,Tobacco,21 1140.14,Yes,Age_Verification_and_Sales_Audit_TTB-AGE-AUD-TBD_10.22.2025
+Tobacco Hut Junior,Tobacco,21 1140.14,No,Age_Verification_and_Sales_Audit_THJ-AGE-AUD-EVD_10.22.2025
+Zuul Tobacco Products,Tobacco,21 1140.14,Missing,Product_Composition_Audit_ZTP-PRD-AUD-EVD_10.22.2025
