@@ -1,0 +1,164 @@
+#AgentCodeStarted
+import os
+import logging
+from flask import request
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+from typing import List, Optional, Dict, Union  # <-- add Dict, Union
+
+LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_12"
+LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_12.log")
+os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+email_body_map = {
+    "Terrys Agriculture": "Our audit confirms Terry’s Agriculture is fully compliant with 21 CFR 112.40. Inspections and maintenance are current, water quality testing meets microbial/chemical thresholds, and recordkeeping is complete.\n\nNext steps: continue the established inspection cadence, maintain quarterly test scheduling and documentation, and keep digital logs up to date for traceability.",
+    "Landbaron Farms": "The audit identified non-compliance with 21 CFR 112.40: missed inspection intervals, incomplete maintenance documentation, and water test results exceeding microbial/nitrate limits. Recordkeeping gaps also reduce traceability.\n\nNext steps (priority 14 days): (1) implement a corrective action plan and complete overdue inspections; (2) conduct immediate water testing and remediation; (3) standardize and backfill recordkeeping in the water management system.",
+    "New York Law": "Our review confirms full compliance with 10 CFR 13.46. Settlement offers and agreements were handled within permitted windows, written agreements are on file, and 30-day notifications to the Attorney General were documented.\n\nNext steps: maintain current notification templates and logs, continue authority-head sign-off, and preserve records in the legal repository.",
+    "Carsons Consulting": "The audit found non-compliance with 10 CFR 13.46: missing or late notifications to the Attorney General and incomplete written approvals/signatures for certain settlements.\n\nNext steps (priority): (1) institute a mandatory pre-settlement AG-notification checkpoint (≥30 days); (2) require authority-head written sign-off before execution; (3) reconcile and archive all settlement documents and correspondence.",
+    "Teds Tobacco Company": "Your audit indicates full compliance with 21 CFR 1140.14. ID verification occurred for all sampled sales, annual training records are current, and sales/verification logs are complete.\n\nNext steps: continue automated ID prompts at POS, maintain annual refresher training, and retain digital logs for audit readiness.",
+    "Tobacco Hut Junior": "The audit identified violations of 21 CFR 1140.14, including sales to individuals under 21, expired/insufficient employee training, and incomplete sales/ID verification logs.\n\nNext steps (urgent, 14 days): (1) enforce mandatory ID-scanner locks at POS; (2) retrain all staff with documented completion; (3) implement centralized daily log reconciliation and retain records for 3 years.",
+    "Settlement Smashers": "We do not yet have sufficient evidence to complete your audit. Key documents (procedures, logs, and applicable regulatory mappings) are missing.\n\nNext steps: please provide the relevant evidence pack (policies, logs, and recent test/approval records). Once received, we will finalize the compliance determination and recommendations.",
+    "Zuul Tobacco Products": "We are awaiting documentation to complete your audit (e.g., recent laboratory analyses of product contents, QA procedures, and recordkeeping artifacts).\n\nNext steps: submit the lab reports, SOPs, and retention logs so we can conclude the audit and provide determinations/next steps.",
+    "Rolling Meadow Orchard": "We need additional evidence to complete your audit (e.g., water quality tests, inspection/maintenance logs, and recordkeeping extracts for agricultural practices).\n\nNext steps: share recent lab results, inspection schedules/completions, and system logs so we can finalize the assessment and recommendations."
+}
+
+gmail_username = "course.correctors.gmu@gmail.com"
+gmail_password = "fycn nutk qwpn mihy"
+
+def _norm(s: str) -> str:
+    return s.strip().casefold()
+
+
+def send_compliance_email(
+    sender_email: str,
+    sender_password: str,
+    recipient_email: List[str],
+    report: str,
+    subject: str = "Compliance Status Report",     # <-- add subject
+    smtp_server: str = "smtp.gmail.com",
+    smtp_port: int = 587,
+    use_html: bool = False,
+    attachments: Optional[List[str]] = None,
+) -> bool:
+    try:
+        msg = MIMEMultipart()
+        msg["From"] = sender_email
+        msg["To"] = ", ".join(recipient_email)
+        msg["Subject"] = subject
+
+        if use_html:
+            body = f"""
+            <html>
+            <body>
+                <h2>Compliance Status</h2>
+                <p><strong>Report:</strong></p>
+                <pre>{report}</pre>
+                <pre>sent from AccureIQ</pre>
+            </body>
+            </html>
+            """
+            msg.attach(MIMEText(body, "html"))
+        else:
+            body = f"Compliance Status Enclosed\n\nReport:\n{report}\n\nsent using AccureIQ"
+            msg.attach(MIMEText(body, "plain"))
+
+        if attachments:
+            for filepath in attachments:
+                if os.path.isfile(filepath):
+                    with open(filepath, "rb") as file:
+                        part = MIMEApplication(file.read(), Name=os.path.basename(filepath))
+                        part["Content-Disposition"] = (
+                            f'attachment; filename="{os.path.basename(filepath)}"'
+                        )
+                        msg.attach(part)
+                else:
+                    logging.warning(f"Attachment not found: {filepath}")
+
+        with smtplib.SMTP(smtp_server, smtp_port, timeout=10) as server:
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.sendmail(sender_email, recipient_email, msg.as_string())
+
+        logging.info("Email sent to %s", recipient_email)
+        return True
+
+    except smtplib.SMTPException as e:
+        logging.error("SMTP error occurred: %s", e)
+        return False
+    except Exception as ex:
+        logging.exception("Unexpected error sending email")
+        return False
+    
+def send_all_emails(
+    email_body_map: Dict[str, str],
+    email_address_map: Dict[str, Union[str, List[str]]],
+    subject_template: str = "Compliance Audit Result – {company}",
+    use_html: bool = False,
+) -> dict:
+    bodies_norm = {_norm(k): k for k in email_body_map.keys()}
+    addrs_norm  = {_norm(k): k for k in email_address_map.keys()}
+
+    common = sorted(bodies_norm.keys() & addrs_norm.keys())
+    results = {}
+
+    for nk in common:
+        company_name = bodies_norm[nk]
+        address_key  = addrs_norm[nk]
+        body_text    = email_body_map[company_name]
+        recipients   = email_address_map[address_key]
+        if isinstance(recipients, str):
+            recipients = [recipients]
+        subject      = subject_template.format(company=company_name)
+
+        ok = send_compliance_email(
+            sender_email=gmail_username,
+            sender_password=gmail_password,
+            recipient_email=recipients,
+            report=body_text,
+            subject=subject,
+            use_html=use_html,
+        )
+        results[company_name] = "sent" if ok else "failed"
+
+    unmatched_body_only    = sorted(set(bodies_norm.keys()) - set(addrs_norm.keys()))
+    unmatched_address_only = sorted(set(addrs_norm.keys())  - set(bodies_norm.keys()))
+
+    return {
+        "status": "success" if all(v == "sent" for v in results.values()) else "partial",
+        "results": results,
+        "unmatched_body_only": [bodies_norm[n] for n in unmatched_body_only],
+        "unmatched_address_only": [addrs_norm[n] for n in unmatched_address_only],
+    }
+
+def main():
+    try:
+        logging.info("***************Email Sender Agent triggered***************")
+        data = request.get_json(force=True)
+        logging.info("request data: %s", data)
+        email_address_map = data.get("companies_and_poc") 
+
+        result = send_all_emails(
+            email_body_map=email_body_map,
+            email_address_map=email_address_map,
+            subject_template=data.get("subject_template", "Compliance Status – {company}"),
+            use_html=bool(data.get("use_html", False)),
+        )
+        return result
+    except Exception as e:
+        logging.error("Exception: %s", str(e))
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+
+#AgentCodeEnded
