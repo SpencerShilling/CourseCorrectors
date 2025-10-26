@@ -1,0 +1,56 @@
+#AgentCodeStarted
+import os
+import logging
+from flask import request
+import pandas as pd
+import json
+
+
+LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_6"
+LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_6.log")
+os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+def main():
+    try:
+        logging.info("***************Format Data triggered***************")
+        data = request.get_json(force=True)
+        checklist = data.get("checklist")
+        companies_and_requirements = data.get("companies_and_requirements")
+
+        # Format data
+        rows = []
+        for company, codes in companies_and_requirements.items():
+            # de-dup while preserving order (remove if you want duplicates kept)
+            for code in dict.fromkeys(codes):
+                rows.append({
+                    "Company": company,
+                    "Requirement Code": code,
+                    "Requirement": checklist.get(code, "<missing requirement text>")
+                })
+
+        companies_regulations_and_requirements = pd.DataFrame(rows, columns=["Company", "Requirement Code", "Requirement"])
+
+        # optional: sort, then save
+        companies_regulations_and_requirements = companies_regulations_and_requirements.sort_values(["Company", "Requirement Code"], kind="stable")
+        
+        logging.info("Agent finished merging dictionaries")
+        output = {
+            "status": "success",
+            "companies_regulations_and_requirements": companies_regulations_and_requirements.to_dict(orient = "records")
+        }
+        return output
+    except Exception as e:
+        logging.error("Exception: %s", str(e))
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+#AgentCodeEnded
