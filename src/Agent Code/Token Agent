@@ -1,0 +1,62 @@
+#AgentCodeStarted
+import os
+import logging
+import requests
+from flask import request
+import time
+import json
+
+LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_4"
+LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_4.log")
+os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+# Token URL (for authentication only)
+BASE_URL_AUTH = "https://complianceai-be.accure.ai:9091/v1/auth/login"
+
+def get_token():
+    token_api_response = requests.post(
+        BASE_URL_AUTH,
+        json={"username": "mygmuecfr", "password": "MyGMUecfrPassword.123"},
+        verify = False
+    )
+
+    # NEW: try JSON; if not JSON, use raw text as the bearer token
+    try:
+        token_api_response_json = token_api_response.json()
+        token = token_api_response_json.get("bearer_token") or token_api_response_json["access_token"]
+    except ValueError:
+        # Not JSON — treat entire body as the token
+        token = token_api_response.text.strip()
+
+
+    logging.info("Succesfully obtained token")
+    return token
+
+def main():
+    try:
+        logging.info("***************Token Puller Agent triggered***************")
+
+        # Pull token logic
+        token = get_token()
+
+        logging.info("Agent finished pulling token")
+        output = {
+            "status": "success",
+            "token": token
+        }
+        return output
+    except Exception as e:
+        logging.error("Exception: %s", str(e))
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+#AgentCodeEnded
