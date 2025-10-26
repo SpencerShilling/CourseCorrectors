@@ -1,0 +1,105 @@
+#AgentCodeStarted
+import os
+import logging
+from flask import request
+import requests
+import pandas as pd
+import json, os, re
+from datetime import datetime
+from typing import Tuple, List, Dict, Any
+
+LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_5"
+LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_5.log")
+os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+BASE_URL_BE = "https://complianceai-be.accure.ai:9091/"
+
+def auth_hdr(token: str) -> dict:
+    return {"Authorization": f"Bearer {token}"}
+    
+def get_checklist(token: str, title_number: int, section_identifier: str) -> dict:
+    url = f"{BASE_URL_BE}/v1/ecfr/titles/{title_number}/sections/{section_identifier}/checklist"
+    headers = {**auth_hdr(token), "Accept": "application/json"}
+    r = requests.get(url, headers=headers, timeout=60, verify = False)
+
+    if r.status_code == 404:
+        return {"_error": "not_found", "status": 404, "url": url, "body": r.text}
+
+    r.raise_for_status()
+
+    try:
+        return r.json()
+    except ValueError:
+        return {"_error": "non_json_response", "status": r.status_code, "url": url, "body": r.text}
+
+def vr_list_from_checklist_blocks(blocks):
+    out = []
+    for block in blocks or []:
+        for ln in block.splitlines():
+            s = ln.strip()
+            if s.startswith("|") and "---" not in s and "Number" not in s:
+                cells = [c.strip() for c in s.strip("|").split("|")]
+                if len(cells) >= 4:
+                    out.append(cells[3])  # 4th col = Verifiable Requirement
+                break
+    return out    
+
+
+def get_checklists_payload_by_code(token: str, codes: list[str]) -> dict[str, dict]:
+    """
+    Returns {'101346': <payload>, '2111240': <payload>, ...}
+    """
+    out: dict[str, dict] = {}
+    seen = set()
+    for code in codes:
+        code = str(code)
+        if code in seen:
+            continue
+        seen.add(code)
+
+        title = int(code[:2])
+        rest = code[2:]
+        section = f"{rest[:-2]}.{rest[-2:]}" if len(rest) >= 3 else rest
+
+        out[code] = get_checklist(token, title, section)  # payload only
+    return out
+
+    
+def main():
+    try:
+        logging.info("***************API Puller Agent triggered***************")
+        data = request.get_json(force=True)
+
+        token = data.get("token")
+        companies_and_requirements = data.get("companies_and_requirements")
+        
+        unique_values = list({val for values in companies_and_requirements.values() for val in values})
+        result = get_checklists_payload_by_code(token, unique_values)
+        logging.info("Agent finished pulling API response for all regulations")
+
+        checklist = {
+            code: vr_list_from_checklist_blocks(payload.get("checklist", []))
+            for code, payload in (result or {}).items()
+        }     
+        
+        logging.info("Agent finished pulling verifiable requirment")
+        output = {
+            "status": "success",
+            "checklist" : checklist
+        }
+        return output
+    except Exception as e:
+        logging.error("Exception: %s", str(e))
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+#AgentCodeEnded
