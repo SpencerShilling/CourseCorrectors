@@ -1,0 +1,96 @@
+#AgentCodeStarted
+import os
+import logging
+from flask import request
+import pandas as pd
+
+LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_1"
+LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_1.log")
+os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
+
+logging.basicConfig(
+    filename=LOG_FILE,
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+def main():
+    try:
+        logging.info("***************Read CSV Files triggered***************")
+        data = request.get_json(force=True)
+        logging.info("Request Data %s", data)
+        input_path = data.get("input_path")
+        
+        # Getting data
+        relationships = pd.read_csv(os.path.join(input_path, "Relationships_Table.csv"))
+        client_data = pd.read_csv(os.path.join(input_path, "Client_Data.csv"))
+        ruleshift_ai_output = pd.read_csv(os.path.join(input_path, "Ruleshift_AI_Example_Output.csv"))
+        control_sets = pd.read_csv(os.path.join(input_path, "Control_Sets.csv"))
+        
+        # Creating and formatting keys
+        relationships['CFR_Title'] = relationships['CFR_Title'].astype(str)
+        relationships['CFR_Part'] = relationships['CFR_Part'].astype(str)
+        relationships['CFR_Subpart'] = relationships['CFR_Subpart'].astype(str)
+        relationships["CFR_Regulation"] = (relationships['CFR_Title'] + relationships['CFR_Part'] + relationships['CFR_Subpart']).astype(str).str.strip()
+        control_sets["CFR_Regulation"] = control_sets["CFR_Regulation"].astype(str).str.strip()
+
+        ruleshift_ai_output['CFR_Title'] = ruleshift_ai_output['CFR_Title'].astype(str)
+        ruleshift_ai_output['CFR_Part'] = ruleshift_ai_output['CFR_Part'].astype(str)
+        ruleshift_ai_output['CFR_Subpart'] = ruleshift_ai_output['CFR_Subpart'].astype(str)
+        ruleshift_ai_output["CFR_Regulation"] = (ruleshift_ai_output['CFR_Title'] + ruleshift_ai_output['CFR_Part'] + ruleshift_ai_output['CFR_Subpart']).astype(str).str.strip()
+        
+        # Identifying columns to drop
+        DROP_COLS = [
+            "CFR_Title_y","CFR_Part_y","CFR_Subpart_y","ChangeID","Timestamp",
+            "CFR_Citation","Current_Text","Previous_Text","Change_Link","Diff",
+            "Modification_Type","Is_Substantive","Company Name","City","State",
+            "Zip Code","Country", "Control_Set_Name", "Control_Set_Description",
+            "CFR_Subsection", "Company Name_y"
+        ]
+            
+        # Joining Tables
+        result = pd.merge(ruleshift_ai_output,relationships, on="CFR_Regulation", how="inner")
+        result1 = pd.merge(result, client_data, on="IQ ID", how="inner")
+        result2 = pd.merge(result1, control_sets, on="CFR_Regulation", how="inner")
+        
+        companies_requiring_audit = result2.drop(columns=DROP_COLS, errors="ignore").copy()
+        companies_requiring_audit_dictionary = companies_requiring_audit.to_dict(orient="records")
+        
+        # Returning dictionary of just company name and requirement
+        companies_and_requirements = (
+            companies_requiring_audit.groupby("Company Name_x", sort=False)["CFR_Regulation"]
+            .apply(lambda s: list(dict.fromkeys(s))) 
+            .to_dict()
+        )
+        
+        companies_and_poc = (
+            companies_requiring_audit.groupby("Company Name_x", sort=False)["POC Email"]
+            .apply(lambda s: list(dict.fromkeys(s))) 
+            .to_dict()
+        )    
+        
+        companies_iq_control = (
+            companies_requiring_audit
+              .groupby("Company Name_x", sort=False)
+              .agg(IQ_ID=("IQ ID", "first"),
+                   Control_Set_ID=("Control_Set_ID", "first"))
+              .to_dict(orient="index")
+        )
+        
+        logging.info("Agent finished reading CSV files")
+        output = {
+            "status": "success",
+            "companies_and_requirements" : companies_and_requirements,
+            "companies_and_poc" : companies_and_poc,
+            "companies_iq_control" : companies_iq_control
+        }
+        return output
+    except Exception as e:
+        logging.error("Exception: %s", str(e))
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+#AgentCodeEnded
