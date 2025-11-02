@@ -1,0 +1,17 @@
+# Simulate success/failure data for 100 workflow runs
+np.random.seed(42)
+workflow_runs["Success"] = np.random.choice(["Success", "Failure"], size=100, p=[0.92, 0.08])
+
+# Calculate success rate
+success_rate = workflow_runs["Success"].value_counts(normalize=True) * 100
+
+# Bar chart visualization of workflow success vs failure
+plt.figure(figsize=(6, 5))
+sns.barplot(x=success_rate.index, y=success_rate.values, palette=["green", "red"])
+plt.ylim(0, 100)
+plt.ylabel("Percentage of Runs (%)")
+plt.title("Workflow Success Rate Across 100 Runs")
+plt.xlabel("Workflow Outcome")
+plt.bar_label(plt.gca().containers[0], fmt="%.1f%%")
+plt.tight_layout()
+plt.show()
