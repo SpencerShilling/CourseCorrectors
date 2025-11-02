@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix
+
+# Example data
+y_true = ['Compliant', 'Compliant', 'Non-Compliant', 'Needs Evidence', 'Compliant',
+          'Non-Compliant', 'Needs Evidence', 'Compliant', 'Non-Compliant', 'Needs Evidence']
+y_pred = ['Compliant', 'Non-Compliant', 'Non-Compliant', 'Needs Evidence', 'Compliant',
+          'Compliant', 'Needs Evidence', 'Compliant', 'Non-Compliant', 'Needs Evidence']
+
+# Create confusion matrix
+labels = ['Compliant', 'Non-Compliant', 'Needs Evidence']
+cm = confusion_matrix(y_true, y_pred, labels=labels)
+
+plt.figure(figsize=(6, 5))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Greens', xticklabels=labels, yticklabels=labels)
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.title('Confusion Matrix Example (Green Color Scheme)')
+plt.tight_layout()
+plt.show()
