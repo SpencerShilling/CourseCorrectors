@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+
+# Simulate 100 workflow run times (in seconds) (CHANGE THIS ONCE WE HAVE ACTUAL DATA)
+np.random.seed(42)
+workflow_runs = pd.DataFrame({
+    "Run": range(1, 101),
+    "Execution_Time": np.random.normal(loc=6.5, scale=1.2, size=100).clip(min=3.5, max=10.5)
+})
+
+# Histogram of workflow execution times
+plt.figure(figsize=(8, 5))
+sns.histplot(workflow_runs["Execution_Time"], bins=10, color="green", kde=True)
+plt.xlabel("Execution Time (seconds)")
+plt.ylabel("Number of Workflow Runs")
+plt.title("Distribution of Workflow Execution Times Across 100 Runs")
+plt.tight_layout()
+plt.show()
