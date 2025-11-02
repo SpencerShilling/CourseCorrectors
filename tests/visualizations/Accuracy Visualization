@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# Example data: % of audit summaries that accurately match source data per company
+data = {
+    "Company": [
+        "Terrys Agriculture",
+        "Carson's Consulting",
+        "Tobacco Hut Junior",
+        "Settlement Smashers",
+        "Zuul Tobacco Products"
+    ],
+    "% Match to Source Data": [95, 82, 76, 88, 91]
+}
+
+df = pd.DataFrame(data)
+
+# Create bar chart visualization
+plt.figure(figsize=(8, 5))
+sns.barplot(x="% Match to Source Data", y="Company", data=df, palette="Greens", orient="h")
+plt.xlim(0, 100)
+plt.xlabel("% of Audit Summary Content Matching Source Data")
+plt.ylabel("Company")
+plt.title("Accuracy of Audit Summaries Compared to Source Data")
+plt.tight_layout()
+plt.show()
