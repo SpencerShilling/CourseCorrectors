@@ -11,7 +11,7 @@ df_failures = pd.DataFrame({
 
 # Create bar chart visualization
 plt.figure(figsize=(7, 5))
-sns.barplot(x="Agent", y="Failure Rate (%)", data=df_failures, palette="Reds")
+sns.barplot(x="Agent", y="Failure Rate (%)", data=df_failures, palette="Greens")
 plt.ylim(0, 15)
 plt.ylabel("Failure Rate (% per 100 runs)")
 plt.title("Agent Failure Rate Across 100 Workflow Runs")
