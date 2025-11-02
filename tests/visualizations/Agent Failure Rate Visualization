@@ -1,0 +1,20 @@
+# Simulate failure counts per agent over 100 runs
+agents = ["Evidence Agent", "Audit Agent", "Email Agent"]
+failure_counts = [5, 9, 3]  # Example: number of failed runs per 100
+
+# Create dataframe
+df_failures = pd.DataFrame({
+    "Agent": agents,
+    "Failures": failure_counts,
+    "Failure Rate (%)": [f / 100 * 100 for f in failure_counts]
+})
+
+# Create bar chart visualization
+plt.figure(figsize=(7, 5))
+sns.barplot(x="Agent", y="Failure Rate (%)", data=df_failures, palette="Reds")
+plt.ylim(0, 15)
+plt.ylabel("Failure Rate (% per 100 runs)")
+plt.title("Agent Failure Rate Across 100 Workflow Runs")
+plt.bar_label(plt.gca().containers[0], fmt="%.1f%%")
+plt.tight_layout()
+plt.show()
