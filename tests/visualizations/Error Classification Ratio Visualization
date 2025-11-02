@@ -1,0 +1,25 @@
+plt.figure(figsize=(10, 6))
+bars = plt.bar(
+    error_df_sorted["Error Type"],
+    error_df_sorted["Count"],
+    color=colors
+)
+
+# Add vertical separator between External and Internal errors
+external_count = len(errors["External Errors"])
+plt.axvline(x=external_count - 0.5, color="gray", linestyle="--", linewidth=1.5)
+
+# Category labels
+plt.text(external_count / 2 - 1, max(error_df_sorted["Count"]) + 1, "External Errors",
+         ha="center", fontsize=12, fontweight="bold", color="gray")
+plt.text(external_count + (len(errors["Internal Errors"]) / 2), max(error_df_sorted["Count"]) + 1,
+         "Internal Errors", ha="center", fontsize=12, fontweight="bold", color="gray")
+
+# Adjusted title position
+plt.title("Error Classification Ratio: External vs. Internal Errors", pad=40)
+plt.ylabel("Number of Errors")
+plt.xlabel("Error Type")
+plt.xticks(rotation=45, ha="right")
+
+plt.tight_layout()
+plt.show()
