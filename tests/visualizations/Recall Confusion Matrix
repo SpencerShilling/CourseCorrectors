@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import pandas as pd
+
+# Example categories of evidence documents
+labels = ["Water Quality", "Sanitation", "Labeling", "Recordkeeping"]
+
+# Example confusion matrix values representing counts
+# Rows = actual relevance (true labels), Columns = predicted relevance
+cm_counts = np.array([[45, 3, 2, 0],
+                      [5, 40, 3, 2],
+                      [2, 4, 42, 2],
+                      [1, 2, 3, 44]])
+
+# Convert to percentages of each row (recall-oriented)
+cm_percent = cm_counts / cm_counts.sum(axis=1, keepdims=True) * 100
+cm_df = pd.DataFrame(cm_percent, index=labels, columns=labels)
+
+# Plot confusion matrix as a heatmap in green color scale
+plt.figure(figsize=(7,6))
+sns.heatmap(cm_df, annot=True, fmt=".1f", cmap="Greens", xticklabels=labels, yticklabels=labels, cbar_kws={'label': '% of True Relevant Docs'})
+plt.xlabel("Predicted Relevance Category")
+plt.ylabel("Actual Relevance Category")
+plt.title("Confusion Matrix: % of Relevant Evidence Documents Identified as Relevant")
+plt.tight_layout()
+plt.show()
