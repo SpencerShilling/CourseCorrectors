@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix
+
+# Example data
+#y_true = ['Compliant', 'Compliant', 'Non-Compliant', 'Compliant',
+#          'Non-Compliant', 'Compliant', 'Non-Compliant']
+#y_pred = ['Compliant', 'Non-Compliant', 'Non-Compliant', 'Compliant',
+#          'Compliant','Compliant', 'Non-Compliant']
+
+
+import pandas as pd
+
+    # Replace 'your_file.xlsx' with the actual path to your Excel file
+    # Replace 'Sheet1' with the name of the sheet containing your table
+df = pd.read_excel('OneDrive - George Mason University - O365 Production\Confusion Matrix.xlsx', sheet_name='Sheet2')
+    
+y_true = df['Actual'].tolist()
+y_pred = df['Predicted'].tolist()
+
+
+# Create confusion matrix
+labels = ['Relevant', 'Missing', 'Not Relevant']
+cm = confusion_matrix(y_true, y_pred, labels=labels)
+
+plt.figure(figsize=(6, 5))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Greens', xticklabels=labels, yticklabels=labels)
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.title('Evidence Presence Determinaton (n=450)')
+plt.tight_layout()
+plt.show()
