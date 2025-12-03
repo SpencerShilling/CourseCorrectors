@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# Actual Data for Identification of Evidence Presence
+data = {
+    "Type of Evidence": [
+        "All Provided/All Relevant",
+        "All Missing",
+        "All Provided/Not Relevant",
+        "5 Provided/Relevant, 4 Missing",
+        "5 Provided/Relevant, 2 Missing, 2 Provided/Not Relevant"
+    ],
+    "% Accuracy for Filename Identification": [100, 0, 100, 100,100]
+}
+
+df = pd.DataFrame(data)
+
+# Create bar chart visualization
+plt.figure(figsize=(8, 5))
+sns.barplot(x="% Accuracy for Filename Identification", y="Type of Evidence", data=df, palette="Greens", orient="h")
+plt.xlim(0, 100)
+plt.xlabel("% Accuracy for Filename Identification")
+plt.ylabel("Type of Evidence")
+plt.title("Accuracy for Identification of Filenames (n=10 for each evidence type)")
+plt.tight_layout()
+plt.show()
