@@ -1,0 +1,17 @@
+Zuul Tobacco Products Product Quality Control SOP Review Date: October 2, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of outdated Standard Operating Procedures (SOPs) governing product quality control and testing processes, in reference to 21 CFR §1140.32(a)(2). The audit revealed that the active SOP version no longer aligns with current laboratory protocols and FDA guidance.
+Evidence Summary Procedure Version — The Quality Control SOP (Version 2.0, dated 2020) remains in use despite major process changes introduced in 2023.
+Test Method Alignment — The existing SOP references outdated moisture and nicotine testing methods no longer utilized by the Product Quality Laboratory.
+Training Impact — Employee training records indicate continued use of legacy test procedures.
+Regulatory Updates — FDA guidance revisions from 2023 require enhanced sample traceability not addressed in the current SOP.
+Corrective Measures — Revision 3.0 of the SOP is under review by the Quality Assurance department, with implementation targeted for November 2025.
+Supporting Documentation
+	1	SOP Version History — Copies of outdated and pending revisions.
+	2	QA Department Memo — Draft approval record for Version 3.0.
+	3	Training Records — Documentation showing outdated procedural instruction.
+	4	Regulatory Guidance Summary — FDA update reference used for SOP revision.
+Observations
+	•	Current SOP is outdated and inconsistent with laboratory practices.
+	•	Legacy testing procedures may not meet current traceability standards.
+	•	Recommend expedited release of Version 3.0 and retraining of QA personnel.
+Document Control Document ID — ZTP-QCSOP-EVD Version — 1.0 Effective Date — October 2, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Thomas R. Delaney, Director of Regulatory Compliance

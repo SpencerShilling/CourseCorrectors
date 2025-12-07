@@ -1,0 +1,17 @@
+Settlement Smashers Client Audit Record Review Date: September 3, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of missing client audit records required under Settlement Smashers’ quality assurance policy. The absence of completed audit reports limits the ability to confirm post-engagement review compliance.
+Evidence Summary Audit Scope — Review of 20 client engagements found that five lacked completed post-project audit forms.
+Recordkeeping — The Consulting Engagement Management System (CEMS) contained placeholders without attachments for completed audit summaries.
+Policy Reference — Quality Assurance Policy §4.2 requires audit reports for all projects exceeding $100,000 in contract value.
+Root Cause — Audit completion reminders were not triggered in CEMS due to inactive scheduling workflows.
+Corrective Measures — System automation re-enabled in August 2025 with manual uploads required for missing audit files.
+Supporting Documentation
+	1	Audit Tracker Export — Missing record index.
+	2	QA Policy Manual — Excerpt defining audit requirement.
+	3	Supervisor Follow-Up Emails — Requests for audit file submission.
+	4	Corrective Plan — QA directive reinstating post-project audit verification.
+Observations
+	•	Missing audit files reduce verifiable oversight of client projects.
+	•	CEMS automation was inactive for several months.
+	•	Recommend monthly review of audit completion metrics.
+Document Control Document ID — SSM-CLIAUD-EVD Version — 1.0 Effective Date — September 3, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Charles D. Lennox, Director of Professional Services

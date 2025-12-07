@@ -1,0 +1,16 @@
+Terry’s Agriculture Agricultural Water Quality Compliance Audit Date: March 5, 2025 Prepared by: Agricultural Quality and Compliance Team
+Purpose This document provides evidence supporting Terry’s Agriculture’s compliance with agricultural water quality standards under 21 CFR Part 112. The audit reviewed laboratory test data, maintenance records, and inspection schedules to verify adherence to microbial and chemical safety thresholds.
+Evidence Summary Water Sampling and Analysis — Quarterly test results confirmed all irrigation water met microbial quality standards with E. coli levels below 126 CFU per 100 mL and no detectable pathogens.
+Chemical Standards — Nitrate and total coliform levels remained within internal limits (below 10 mg/L nitrate-N).
+Inspection Records — All irrigation sources underwent monthly inspection for contamination risks, equipment condition, and water storage integrity.
+Documentation — Records are maintained in the Agricultural Water Management System (AWMS) with complete traceability for all water applications.
+Supporting Documentation
+	1	Water Quality Test Reports — Certified lab results Q1–Q4 2025.
+	2	Inspection Logs — Monthly entries verifying compliance.
+	3	Maintenance Reports — Preventive maintenance checklists.
+	4	AWMS Record Export — Timestamped verification of data entries.
+Observations
+	•	All irrigation water meets microbial and chemical standards.
+	•	No deviations found during the audit period.
+	•	Inspection and documentation procedures remain consistent with CFR requirements.
+Document Control Document ID — TA-AG-WTRQUAL-EVD Version — 1.0 Effective Date — March 5, 2025 Prepared By — Terry Brown, Compliance Analyst Reviewed By — Billy Bob, QA Director

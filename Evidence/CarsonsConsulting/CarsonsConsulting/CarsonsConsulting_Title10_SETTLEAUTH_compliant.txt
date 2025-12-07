@@ -1,0 +1,50 @@
+Carson’s Consulting
+Authority to Compromise or Settle Cases – Compliance Review
+Date: March 12, 2025
+Prepared by: Legal Compliance and Administrative Oversight Team
+
+Purpose
+This document provides evidence confirming Carson’s Consulting’s compliance with 10 CFR Part 13 regarding authority to compromise or settle cases. The audit verified that settlements were conducted only by authorized officials within the regulatory time window and in accordance with Attorney General notification requirements.
+
+Evidence Summary
+Authorization Verification —
+All reviewing officials held valid authorization to issue complaints prior to settlement execution. Delegation memos were current and properly signed.
+
+Timing of Settlements —
+All reviewed settlements occurred after the complaint was issued and before the Administrative Law Judge (ALJ) issued an initial decision.
+
+Attorney General Notification —
+Notifications were sent at least 30 days prior to settlement agreements. Receipt confirmations were located for each communication.
+
+Recordkeeping —
+All settlement correspondence and approvals were retained in the Legal Document Management System (LDMS) with validated timestamps and access logs.
+
+Oversight Review —
+Quarterly compliance review reports demonstrated continued monitoring of settlement authorization and timing practices.
+
+Supporting Documentation
+
+Delegation of Authority Memos — Signed and dated authorization files.
+
+Case Logs — Timestamped entries confirming settlement chronology.
+
+Attorney General Notification Letters — Records with confirmation receipts.
+
+LDMS Record Reports — Audit trail exports verifying retention and integrity.
+
+Oversight Review Reports — Documentation of compliance verification.
+
+Observations
+
+All settlements executed by authorized officials.
+
+Notification and timing requirements fully met.
+
+No deviations from federal procedural requirements identified.
+
+Document Control
+Document ID — CSC-LGL-AUTH-COMP-EVD
+Version — 1.0
+Effective Date — March 12, 2025
+Prepared By — Rachel D. Whitmore, Compliance Analyst
+Reviewed By — Marcus J. Barrington, Legal Director

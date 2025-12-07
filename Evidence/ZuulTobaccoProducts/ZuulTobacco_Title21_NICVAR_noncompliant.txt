@@ -1,0 +1,17 @@
+Zuul Tobacco Products Nicotine Concentration Variance Audit Date: March 7, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of noncompliance with product composition control requirements under 21 CFR §1140.10(b). The audit identified excessive nicotine-level variation in multiple production lots beyond approved formulation tolerances.
+Evidence Summary Sampling Method — Laboratory testing was performed on 40 batches from three manufacturing facilities. Eight batches showed nicotine concentration variance exceeding ±5 percent from declared formulations.
+Root Cause Review — Process control records indicated inconsistent leaf blend ratios and variable drying temperatures in two plants during March 2025 runs.
+Specification Deviation — Internal process limit is ±2 percent for nicotine yield; audit data showed up to 6.4 percent variance in certain batches.
+Quality Assurance Follow-Up — QA sampling frequency was insufficient to detect variances prior to release. Testing interval has since been revised to each shift.
+Corrective Action Plan — Batch holds initiated for out-of-tolerance lots; process recalibration and retesting scheduled for April 2025.
+Supporting Documentation
+	1	Laboratory Test Reports — Nicotine analysis results for 40 batches.
+	2	Process Deviation Forms — Records of temperature and blend variances.
+	3	QA Review Memos — Internal communications regarding batch holds.
+	4	Corrective Action Plan — Recalibration and re-sampling instructions.
+Observations
+	•	Eight batches exceeded allowable variance limits.
+	•	Quality control frequency below required standard.
+	•	Immediate retesting and revalidation required for regulatory compliance.
+Document Control Document ID — ZTP-NICVAR-EVD Version — 1.0 Effective Date — March 7, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Rebecca S. Holbrook, Quality Systems Manager

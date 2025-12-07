@@ -1,0 +1,17 @@
+New York Law Settlement Correspondence Log Review Date: March 18, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing settlement correspondence logs for certain case files under 10 CFR Part 13. The absence of these logs limits the ability to verify case settlement timing and procedural compliance.
+Evidence Summary Audit Scope — A review of 40 settlement case records identified 10 missing correspondence logs documenting settlement initiation and approval discussions.
+System Verification — The Legal Document Management System (LDMS) contained settlement agreements but no attached or linked correspondence records for several case IDs.
+Notification Impact — Without the logs, confirmation of Attorney General notification timelines cannot be verified for affected cases.
+Process Weakness — Manual logging procedures contributed to record omissions during high-volume case closures in late 2024.
+Remediation Plan — Automated correspondence logging functionality is being implemented to ensure automatic entry creation when settlement communications occur.
+Supporting Documentation
+	1	Settlement Case Index — Listing files missing correspondence records.
+	2	LDMS Extract — Metadata showing incomplete communication chains.
+	3	Internal Audit Memos — Documentation of manual log procedures.
+	4	Corrective Action Plan — Implementation timeline for automation feature.
+Observations
+	•	Ten settlement cases missing correspondence logs.
+	•	Incomplete communication records prevent full procedural validation.
+	•	Automation of correspondence tracking recommended for sustainability.
+Document Control Document ID — NYL-SETTLELOG-EVD Version — 1.0 Effective Date — March 18, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Richard T. Paxton, Deputy Director of Compliance

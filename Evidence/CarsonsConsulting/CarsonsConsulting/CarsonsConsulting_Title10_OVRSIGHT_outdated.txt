@@ -1,0 +1,16 @@
+Carson’s Consulting Legal Oversight Procedure Review Date: October 7, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence that Carson’s Consulting’s Legal Oversight Procedures (Version 1.3, issued 2021) are outdated and no longer align with current LDMS verification and audit requirements under 10 CFR Part 13.
+Evidence Summary Procedure Version Review — The active oversight document omits new audit requirements introduced by the 2024 Compliance Review Framework.
+System Integration — Procedures still reference manual oversight logs instead of automated LDMS validation workflows.
+Compliance Impact — Failure to update the oversight framework delays detection of incomplete settlement authorization records.
+Revision Effort — A new procedure (Version 2.0) incorporating digital tracking requirements is scheduled for release in November 2025.
+Supporting Documentation
+	1	Oversight Procedure v1.3 — Active outdated version.
+	2	Draft v2.0 — Updated procedure incorporating LDMS verification.
+	3	Policy Update Memo — Compliance Review Framework (2024).
+	4	Implementation Plan — Revision release schedule.
+Observations
+	•	Oversight document outdated and incomplete.
+	•	Update pending to reflect automated verification system.
+	•	Recommend expedited release of Version 2.0.
+Document Control Document ID — CSC-OVRSIGHT-EVD Version — 1.0 Effective Date — October 7, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Stephen J. Coleridge, General Counsel

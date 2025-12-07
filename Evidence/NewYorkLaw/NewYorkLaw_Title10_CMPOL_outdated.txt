@@ -1,0 +1,17 @@
+New York Law Case Management Policy Review Date: January 29, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of outdated internal policies governing case management and procedural tracking under 10 CFR Part 13. The audit found that the active Case Management Policy (Version 2.1, issued 2020) no longer reflects current electronic tracking, notification, or delegation procedures.
+Evidence Summary Policy Review — The 2020 Case Management Policy references manual tracking processes and legacy systems that have since been replaced by the Legal Document Management System (LDMS).
+Process Misalignment — Existing policy does not include automated validation checks or escalation workflows now required by the 2023 internal compliance framework.
+Impact Assessment — The outdated policy creates ambiguity in procedural timelines and notification accountability, increasing audit remediation workload.
+Revision Progress — Draft Version 3.0 of the Case Management Policy has been completed and is under legal review for approval and publication by February 2025.
+Training Implications — Staff training materials continue to cite outdated policy procedures pending formal adoption of the revised version.
+Supporting Documentation
+	1	Case Management Policy v2.1 — Copy of outdated policy issued 2020.
+	2	Draft Policy v3.0 — Working copy under internal review.
+	3	Policy Gap Analysis — Report identifying obsolete procedures.
+	4	Training Reference Packet — Documents referencing legacy process steps.
+Observations
+	•	Policy outdated by three operational revisions.
+	•	Legacy tracking methods no longer align with current systems.
+	•	Recommend immediate approval and rollout of Version 3.0.
+Document Control Document ID — NYL-CMPOL-EVD Version — 1.0 Effective Date — January 29, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Dana K. Winslow, Senior Legal Counsel

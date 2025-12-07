@@ -1,0 +1,40 @@
+RMO_FixedAssetsMaintenance_OUTDATED
+
+Rolling Meadow Orchard (RMO)
+Fixed Asset Maintenance Records Outdated Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document identifies outdated evidence within RMO’s fixed asset maintenance files, specifically missing updates to maintenance logs and outdated service histories.
+
+Evidence Summary
+Maintenance Log Review —
+Quarterly maintenance checks for tractors, pallet loaders, and orchard vehicles were not updated past Q2 FY2024.
+
+Service Record Evaluation —
+Vendor service documentation for refrigeration and bottling equipment was last uploaded in 2022.
+
+Asset Lifecycle Review —
+Depreciation recalculations tied to maintenance schedules were not updated in accordance with the 2024 policy.
+
+Accuracy Assessment —
+Outdated maintenance logs and service histories reduce reliability of asset valuation and lifecycle planning.
+
+Supporting Documentation
+    1   Maintenance Log Archive — Entries last updated June 2024.
+    2   Vendor Service Folder — Missing FY2023–2024 uploads.
+    3   Depreciation Policy Addendum — 2024 requirements.
+    4   Equipment Service Matrix — Incomplete updates.
+
+Observations
+    •   Missing updates for multiple service cycles.
+    •   Outdated logs affect depreciation accuracy.
+    •   Maintenance documentation requires immediate update.
+
+Document Control
+Document ID — RMO-FIXMAINT-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

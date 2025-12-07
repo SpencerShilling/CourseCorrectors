@@ -1,0 +1,17 @@
+Zuul Tobacco Products Ingredient Traceability Audit Date: May 11, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of noncompliance with 21 CFR §1140.14(a) due to incomplete ingredient traceability and missing supplier documentation. Several production lots lacked verifiable source records for key tobacco inputs.
+Evidence Summary Supplier Documentation — Certificates of analysis were missing for five raw tobacco lots received in April 2025.
+Material Tracking — Lot tracking numbers were not properly linked between intake logs and batch formulation records.
+System Integration — The Procurement and Quality Management Systems are not synchronized, causing data gaps in traceability reports.
+Audit Verification — Manual cross-checks confirmed unverified supplier origins for two additive components used in manufacturing.
+Regulatory Impact — Failure to maintain complete traceability records violates recordkeeping provisions under §1140.14(a)(2).
+Supporting Documentation
+	1	Material Receiving Logs — Partial records missing supplier certifications.
+	2	Batch Formulation Sheets — Lots without linked COA numbers.
+	3	System Error Reports — Traceability system integration issues.
+	4	Audit Correspondence — Requests for supplier documents.
+Observations
+	•	Traceability records incomplete for multiple raw material lots.
+	•	Supplier certifications not properly maintained or verified.
+	•	Immediate data reconciliation and system integration update required.
+Document Control Document ID — ZTP-TRACE-EVD Version — 1.0 Effective Date — May 11, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Jason W. Patel, Procurement Compliance Manager

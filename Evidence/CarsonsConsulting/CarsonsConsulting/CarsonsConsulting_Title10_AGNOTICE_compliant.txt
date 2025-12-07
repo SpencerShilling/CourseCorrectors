@@ -1,0 +1,17 @@
+Carson’s Consulting Attorney General Notification and Record Retention Compliance Date: July 21, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence demonstrating Carson’s Consulting’s compliance with Attorney General notification and legal record retention standards under 10 CFR Part 13. All relevant notifications were delivered within the required timeframe and archived appropriately.
+Evidence Summary Notification Review — All settlements completed between January and June 2025 included timely notification to the Attorney General at least 30 days prior to agreement execution.
+Acknowledgment Verification — Each notification letter was confirmed received and acknowledged by the Attorney General’s office within 72 hours of transmission.
+Retention Review — Records were retained in LDMS with secure metadata and access tracking for a minimum of seven years per company policy.
+System Audit — Cross-check between case tracking logs and LDMS metadata confirmed alignment between settlement dates and notification submission.
+Oversight Confirmation — Internal audit certification dated July 2025 verified 100% compliance with federal and company notification procedures.
+Supporting Documentation
+	1	Attorney General Correspondence — Letters and acknowledgment receipts.
+	2	LDMS Records — Archived metadata confirming storage integrity.
+	3	Case Tracking Logs — Cross-verification entries matching notification timelines.
+	4	Audit Certification Report — Confirmation of procedural adherence.
+Observations
+	•	Attorney General notifications issued timely and acknowledged.
+	•	Record retention meets statutory and internal policy standards.
+	•	No findings of delay or documentation loss detected.
+Document Control Document ID — CSC-AGNOTICE-EVD Version — 1.0 Effective Date — July 21, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Olivia M. Trent, Senior Counsel

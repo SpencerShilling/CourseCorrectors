@@ -1,0 +1,43 @@
+Settlement Smashers
+Ethics and Compliance Training Program Audit
+Date: July 11, 2025
+Prepared by: Professional Services Compliance and Operations Team
+
+Purpose
+This document provides evidence confirming Settlement Smashers’ compliance with its ethics, integrity, and client confidentiality training requirements for all consulting personnel. The audit verified that annual compliance modules and attestations were completed and archived properly.
+
+Evidence Summary
+Training Scope —
+All consulting employees and contractors are required to complete annual ethics, integrity, and client data protection training as part of their professional certification renewal.
+
+Verification Process —
+The compliance team reviewed 2025 completion logs, employee attestations, and departmental summaries stored within the HR Learning Portal.
+
+Completion Rate —
+Audit sampling confirmed a 100% completion rate across all active employees. Temporary consultants were included in the 2025 compliance cycle.
+
+Documentation Integrity —
+Completion timestamps and digital signatures were verified to confirm authenticity and tamper-proof record storage.
+
+Retention and Review —
+All training documentation is archived for a minimum of five years, and compliance reports are submitted quarterly to executive management.
+
+Supporting Documentation
+1. Ethics Training Completion Logs — Exported from HR Learning Portal.
+2. Attestation Records — Digitally signed confirmations from employees.
+3. Course Materials — Training outlines and policy updates.
+4. Compliance Summary Report — Q2 2025 submission confirming completion.
+5. System Access Logs — Metadata confirming record authenticity.
+
+Observations
+* Ethics and confidentiality training completed by 100% of active personnel.
+* Digital verification confirmed authenticity of completion records.
+* Retention and reporting requirements fully met.
+* No corrective actions required.
+
+Document Control
+Document ID — SSM-ETHCOMP-EVD
+Version — 1.0
+Effective Date — July 11, 2025
+Prepared By — Professional Services Compliance and Operations Team
+Reviewed By — Jennifer R. Vale, Chief Compliance Officer

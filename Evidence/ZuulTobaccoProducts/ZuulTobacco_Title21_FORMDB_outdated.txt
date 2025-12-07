@@ -1,0 +1,17 @@
+Zuul Tobacco Products Master Formulation Database Review Date: January 22, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of outdated master formulation data and missing version controls for tobacco product recipes as required under 21 CFR §1140.10(a). The audit identified obsolete formulation records still in use for production referencing pre-2023 ingredient specifications.
+Evidence Summary Database Review — The Master Formulation Database contained multiple legacy records last updated in 2022, including discontinued additive profiles.
+Version Control — Revision tracking features were not consistently applied; several formula updates lacked author or approval identifiers.
+Production Alignment — Two manufacturing sites continued referencing older formula sheets for current production batches.
+Regulatory Consistency — Ingredient specifications from older records no longer align with updated FDA-submitted documentation.
+Remediation Plan — A database update initiative was launched in February 2025 to archive obsolete formulas and implement revision control automation.
+Supporting Documentation
+	1	Formulation Index — List of outdated records identified.
+	2	System Access Logs — Audit trail showing last modification dates.
+	3	Manufacturing Records — Batches referencing obsolete formulas.
+	4	Corrective Action Plan — Memo outlining database cleanup procedures.
+Observations
+	•	Outdated formulation data poses compliance and consistency risks.
+	•	Lack of revision control creates traceability gaps in product documentation.
+	•	Recommend immediate system update and full version audit.
+Document Control Document ID — ZTP-FORMDB-EVD Version — 1.0 Effective Date — January 22, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Rebecca S. Holbrook, Quality Systems Manager

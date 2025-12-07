@@ -1,0 +1,17 @@
+New York Law Case Authorization Memo Review Date: June 20, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing delegation and authorization memos for case settlements conducted under 10 CFR Part 13. These documents verify that reviewing officials were granted settlement authority before execution of agreements.
+Evidence Summary Authorization Verification — Audit identified seven settlement cases missing signed authorization memos confirming delegation of authority.
+Record System Findings — The LDMS audit trail indicates placeholder entries for delegation documentation without corresponding attachments.
+Compliance Context — Per internal legal procedures, reviewing officials must receive written delegation authorization prior to settlement negotiation or agreement finalization.
+Risk Implication — Absence of authorization records raises compliance concerns regarding approval chain integrity.
+Corrective Action — Retroactive authorization memos are being requested from the Office of Legal Affairs with submission deadlines set for July 2025.
+Supporting Documentation
+	1	Missing Authorization List — Index of affected case IDs.
+	2	LDMS Metadata — Records showing missing attachments.
+	3	Delegation Policy — Excerpt detailing authorization requirements.
+	4	Corrective Directive — Request for retroactive documentation submission.
+Observations
+	•	Seven settlement cases lack supporting authorization memos.
+	•	Gaps result from incomplete upload process during document transfer.
+	•	Retroactive validation in progress to restore complete audit trail.
+Document Control Document ID — NYL-AUTHMEMO-EVD Version — 1.0 Effective Date — June 20, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Dana K. Winslow, Senior Legal Counsel

@@ -1,0 +1,17 @@
+Tobacco Hut Junior Employee Training Log Audit Date: March 29, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of missing employee training documentation as required under 21 CFR §1140.14(c). The audit identified incomplete or unavailable training records for retail employees responsible for age-verification and restricted product sales.
+Evidence Summary Training Documentation — Three regional stores did not produce training logs for their 2025 compliance sessions.
+Attendance Verification — Exports from the Learning Management System (LMS) showed partial employee participation with missing timestamps and unverified completion records.
+Follow-Up Requests — Multiple requests were sent to district managers for confirmation of training completion; only partial responses were received.
+Training Records — No physical or digital certificates were available for new hires onboarded between January and March 2025.
+Corrective Measures — Corporate compliance has initiated mandatory re-training and documentation uploads for all affected personnel.
+Supporting Documentation
+	1	LMS Export Files — Incomplete participation reports from Q1 2025.
+	2	Email Requests — Audit correspondence with regional managers.
+	3	Employee Roster — Store-level lists identifying unverified staff.
+	4	Corporate Memo — Directive requiring updated documentation submission.
+Observations
+	•	Missing training evidence limits proof of compliance with §1140.14(c).
+	•	Documentation inconsistencies indicate a lack of centralized record management.
+	•	Recommend implementing automated completion tracking and centralized archival.
+Document Control Document ID — THJ-TRAINLOG-EVD Version — 1.0 Effective Date — March 29, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Benjamin T. Rourke, Retail Compliance Manager

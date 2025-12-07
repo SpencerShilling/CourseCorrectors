@@ -1,0 +1,17 @@
+Settlement Smashers Unverified Training Records Audit Date: May 3, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of noncompliance with internal ethics and professional conduct training requirements. The audit found that documentation for several consulting employees’ 2025 training completions was missing or unverifiable.
+Evidence Summary Training Record Review — Training completion logs were unavailable for 14 consulting employees onboarded in Q1 2025.
+Verification Issues — Digital signature verification failed for six records due to corrupted metadata files in the HR Learning Portal.
+Policy Reference — Internal policy requires all consultants to complete annual ethics training before client assignment.
+Compliance Gap — Failure to validate completion violates Settlement Smashers’ internal compliance policy and HR training procedures.
+Corrective Action Plan — Affected employees were re-enrolled in the compliance course with completion tracking re-enabled as of May 5, 2025.
+Supporting Documentation
+	1	Employee Roster — List of consultants missing verification.
+	2	HR Portal Logs — Corrupted digital signature entries.
+	3	Compliance Policy — Annual training requirements excerpt.
+	4	Corrective Plan — HR directive for retraining and verification.
+Observations
+	•	Missing or invalid records for multiple employees.
+	•	Noncompliance with annual ethics training requirement.
+	•	HR systems must strengthen verification and record storage.
+Document Control Document ID — SSM-TRAINREC-EVD Version — 1.0 Effective Date — May 3, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Jennifer R. Vale, Chief Compliance Officer

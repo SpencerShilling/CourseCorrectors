@@ -1,0 +1,33 @@
+Landbaron Farms
+Wildlife Monitoring (§112.83) - Compliance Evidence Document
+Date: October 22, 2025
+Prepared by: Agricultural Quality and Compliance Team
+
+Purpose
+This document provides evidence that wildlife monitoring procedures are outdated and insufficiently enforced under 21 CFR §112.83.
+
+Evidence Summary
+Requirement
+SOP Version
+Wildlife monitoring SOP last updated in 2019; does not include current buffer guidance or criteria for evaluating intrusions at harvest.
+
+Requirement
+Training Currency
+No refresher training in 2025; last training in 2021. Patrol coverage decreased in 2025 season due to staff turnover.
+
+Requirement
+Patrol Documentation
+Patrol logs missing for multiple weeks during harvest; no GPS-tagged routes or photographic evidence retained.
+
+Supporting Documentation
+1. Wildlife Monitoring SOP – Rev 1.2 (2019).
+2. Training Records – last completion 2021.
+3. Patrol Logs – incomplete 2025 entries.
+
+Observations
+* Procedures and training are outdated; documentation insufficient to ensure risk-based decisions.
+* Recommend updating SOP to include explicit buffer, flagging, and disposition criteria; resume routine training with documented patrols.
+
+Document Control
+Document ID | Version | Effective Date | Prepared By | Reviewed By
+LBF-WILDLIFE-EVD | 1.0 | October 22, 2025 | Agricultural Quality and Compliance Team | Dr. Felix R. Navarro, Chief Food Safety Officer

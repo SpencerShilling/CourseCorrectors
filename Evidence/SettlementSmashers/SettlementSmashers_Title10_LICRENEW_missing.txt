@@ -1,0 +1,17 @@
+Settlement Smashers Licensing Renewal Certificate Audit Date: June 18, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of missing renewal certificates for professional business licenses maintained by Settlement Smashers. These missing records impact verification of current authorization to provide consulting services across key jurisdictions.
+Evidence Summary Licensing Review — Two regional offices were unable to produce copies of 2025 renewal certificates for state consulting registrations.
+Renewal Verification — Email correspondence confirmed that renewal applications were submitted but final approval documents were not uploaded to compliance systems.
+System Audit — The Regulatory Licensing Tracker did not contain updated record IDs for three active licenses.
+Risk Exposure — Failure to maintain evidence of active licensure may delay contract approvals and state filings.
+Corrective Measures — Licensing coordinator instructed to retrieve and upload all renewal confirmations to the Regulatory Licensing Tracker by June 30, 2025.
+Supporting Documentation
+	1	License Tracker Report — Record of missing certificate uploads.
+	2	Renewal Submission Emails — Confirmation of filings.
+	3	State Licensing Requirements — Applicable jurisdiction references.
+	4	Corrective Action Memo — Instructions for record update.
+Observations
+	•	Missing license renewal certificates affect compliance verification.
+	•	Immediate documentation retrieval required for affected offices.
+	•	Recommend monthly automated licensing audit report generation.
+Document Control Document ID — SSM-LICRENEW-EVD Version — 1.0 Effective Date — June 18, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Owen P. Garrity, Compliance Operations Manager

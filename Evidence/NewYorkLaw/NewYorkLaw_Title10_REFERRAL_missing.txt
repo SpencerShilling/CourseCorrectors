@@ -1,0 +1,17 @@
+New York Law Referral Documentation Audit Date: September 2, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing referral documentation confirming whether case files were transferred to a presiding officer under 10 CFR §13.27. Missing referral records prevent verification that settlements were executed within the authorized procedural stage.
+Evidence Summary Referral File Review — Nine cases lacked referral forms or correspondence confirming submission to or receipt by the presiding officer.
+Procedural Reference — Per regulation, no settlements may occur after referral; therefore, missing referral confirmation limits the ability to validate compliance boundaries.
+System Records — LDMS entries contained settlement documents but no referral correspondence files.
+Root Cause — Administrative backlog during mid-year reorganization resulted in incomplete file transfers and index gaps.
+Remediation Actions — Legal administrative staff are reconstructing referral documentation using archived email correspondence and scheduling a secondary compliance review.
+Supporting Documentation
+	1	Case Review List — Files missing referral confirmation.
+	2	LDMS Extract — Record gaps in referral documentation.
+	3	Regulatory Guidance — Section §13.27 defining referral requirements.
+	4	Corrective Action Plan — Process improvement and re-audit plan.
+Observations
+	•	Nine cases missing referral confirmation documentation.
+	•	Lack of referral evidence limits compliance verification.
+	•	Reconstruction effort initiated with re-audit scheduled for Q4 2025.
+Document Control Document ID — NYL-REFERRAL-EVD Version — 1.0 Effective Date — September 2, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Jonathan P. Ellsworth, Director of Legal Affairs

@@ -1,0 +1,40 @@
+RollingMeadowOrchard_InventoryValuation_MISSING
+
+Rolling Meadow Orchard (RMO)
+Inventory Valuation Missing Evidence Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document provides evidence of missing inventory valuation records required for FY2024 financial audit validation. Missing documents relate to physical counts, variance explanations, and supervisory approval.
+
+Evidence Summary
+Physical Count Worksheets —
+Year-end count sheets for packaged apple products, cider production stock, and retail inventory were not found in OMSS or physical archives.
+
+Variance Analysis Review —
+Required shrinkage and spoilage variance reports were not present in audit files.
+
+Approval Record Check —
+Supervisor and Operations Manager sign-off sheets for inventory verification were missing.
+
+Risk Assessment —
+Missing records limit assurance of valuation accuracy and increase potential misstatement of COGS.
+
+Supporting Documentation
+    1   Missing Inventory Report — Items with no FY2024 records.
+    2   OMSS Extract — Year-end inventory data gaps.
+    3   Inventory Policy — Required count and variance procedures.
+    4   Email Request Log — Attempts to retrieve missing documents.
+
+Observations
+    •   Physical count sheets and variance reports not located.
+    •   Approval documentation incomplete.
+    •   Verification process cannot be fully validated.
+
+Document Control
+Document ID — RMO-INVVAL-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

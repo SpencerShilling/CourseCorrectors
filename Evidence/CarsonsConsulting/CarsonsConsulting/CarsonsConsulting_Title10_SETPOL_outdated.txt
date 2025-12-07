@@ -1,0 +1,16 @@
+Carson’s Consulting Settlement Policy Manual Review Date: February 2, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of outdated policy content in Carson’s Consulting’s Settlement Policy Manual. The manual references legacy processes and lacks integration with current LDMS controls and notification procedures.
+Evidence Summary Policy Audit — The Settlement Policy Manual (Version 1.5, issued 2020) references paper-based notification workflows and outdated authority validation methods.
+Procedural Gaps — Manual does not reflect changes introduced by the 2023 compliance automation initiative.
+Regulatory Misalignment — Recent 10 CFR Part 13 revisions require digital confirmation logs, which are not addressed in the current manual.
+Update Status — Revision 2.0 is under review by Legal Affairs with publication expected in Q2 2025.
+Supporting Documentation
+	1	Settlement Policy Manual v1.5 — Outdated policy file.
+	2	Draft Policy v2.0 — Updated document pending approval.
+	3	Policy Gap Analysis — Findings summary from Compliance Audit Team.
+	4	Revision Tracker — Schedule for policy update.
+Observations
+	•	Current policy outdated by five years.
+	•	Lacks digital workflow integration and audit validation.
+	•	Revision pending final legal approval.
+Document Control Document ID — CSC-SETPOL-EVD Version — 1.0 Effective Date — February 2, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Marcus J. Barrington, Legal Director

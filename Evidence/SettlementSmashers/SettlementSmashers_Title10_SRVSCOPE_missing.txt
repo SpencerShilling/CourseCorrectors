@@ -1,0 +1,17 @@
+Settlement Smashers Service Scope Log Review Date: March 24, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of missing documentation within the service scope tracking process. The audit identified incomplete or missing logs detailing project deliverables and client service classifications in violation of internal consulting policy.
+Evidence Summary Audit Scope — The audit reviewed 40 active consulting engagements and confirmed that 12 lacked properly completed Service Scope Logs.
+Policy Requirement — Internal procedures require each engagement to include a scope definition within the Statement of Work (SOW) and be logged in the Consulting Engagement Management System (CEMS).
+Record Gap — Seven SOWs were uploaded without scope descriptions or engagement type codes.
+Compliance Risk — Missing scope entries limit visibility into approved project categories and may cause service misclassification.
+Remedial Plan — Project management has mandated retroactive updates for all missing scope logs by March 31, 2025.
+Supporting Documentation
+	1	SOW Log Index — List of missing service scope entries.
+	2	Engagement Policy — Excerpt outlining required scope documentation.
+	3	CEMS Data Export — Evidence of incomplete scope fields.
+	4	Corrective Action Notice — Directive issued to project leads.
+Observations
+	•	Missing service scope logs create documentation and compliance gaps.
+	•	Scope classification must be completed for all engagements.
+	•	Recommend implementing automated validation before project activation.
+Document Control Document ID — SSM-SRVSCOPE-EVD Version — 1.0 Effective Date — March 24, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Jennifer R. Vale, Chief Compliance Officer

@@ -1,0 +1,18 @@
+Ted’s Tobacco Distributor Certification Record Review Date: July 21, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of missing distributor certification files required under 21 CFR §1140.14(a). The regulation mandates that manufacturers and distributors maintain proof of compliance acknowledgment for all vendors involved in tobacco product sales.
+Evidence Summary Vendor Documentation — Certification forms were not located for six active distributors supplying tobacco inventory to Ted’s Tobacco retail outlets.
+Contract Review — Existing agreements reference pre-2022 compliance standards and lack certification clauses acknowledging FDA enforcement provisions.
+Record Retention — The vendor compliance folder in the corporate network shows gaps for 2023–2024 entries.
+Audit Requests — Follow-up inquiries to procurement and vendor management divisions have not yet produced the missing records.
+Internal Oversight — Procurement staff confirmed awareness of requirement but cited turnover and inconsistent documentation practices as the cause of missing files.
+Supporting Documentation
+	1	Distributor List — Current active vendors as of July 2025.
+	2	Procurement Email Requests — Pending responses for missing certifications.
+	3	Archived Contracts — Pre-2022 copies without compliance acknowledgment.
+	4	Vendor Management Policy — Revision 2.1 (2020) pending update.
+Observations
+	•	Missing distributor certifications impede verification of third-party compliance.
+	•	Absence of certification clauses risks noncompliance under §1140.14(a).
+	•	Recommend immediate retrieval of records and amendment of all active vendor agreements.
+Document Control Document ID — TTB-DISTCERT-EVD Version — 1.0 Effective Date — July 21, 2025 Prepared By — Retail Compliance and Audit Team
+Reviewed By — Laura K. Benton, Senior Compliance Officer

@@ -1,0 +1,16 @@
+Terry’s Agriculture Microbial Quality Criterion Compliance Audit Date: June 18, 2025 Prepared by: Agricultural Quality and Compliance Team
+Purpose This document provides evidence that Terry’s Agriculture’s irrigation and post-harvest water meets microbial quality criteria established under 21 CFR Part 112. The audit confirms ongoing testing and verification protocols ensure safety for produce consumption.
+Evidence Summary Testing Frequency — Bi-weekly microbial tests conducted on all active irrigation systems and post-harvest wash stations.
+Results — All test samples reported less than 126 CFU/100 mL geometric mean for E. coli, and no single sample exceeded 410 CFU/100 mL.
+Compliance Monitoring — Microbial testing procedures aligned with FSMA standards and verified by third-party accredited laboratories.
+System Logging — Results uploaded automatically to the AWMS, ensuring traceability and secure recordkeeping.
+Supporting Documentation
+	1	Microbial Analysis Reports — Certified lab data, April–June 2025.
+	2	AWMS System Export — Verified results and timestamps.
+	3	QA Review Logs — Quality assurance sign-offs for all samples.
+	4	FSMA Compliance Certificate — Annual microbial compliance verification.
+Observations
+	•	All microbial results within compliant thresholds.
+	•	Verification logs confirm complete traceability and oversight.
+	•	No corrective actions required.
+Document Control Document ID — TA-AG-MICROBIAL-EVD Version — 1.0 Effective Date — June 18, 2025 Prepared By — Lydia M. Hatcher, Compliance Analyst Reviewed By — Carla F. Jensen, QA Director

@@ -1,0 +1,25 @@
+Ted’s Tobacco Age Verification System Failure Date: June 9, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of noncompliance with the federal minimum age requirement for tobacco sales as defined in 21 CFR §1140.14(b). The audit revealed failures in the ID verification system that allowed sales to occur without proper age validation.
+Evidence Summary
+Audit Area
+Evidence Description
+System Configuration
+POS terminals in Stores #15 and #22 had manual override functions enabled, allowing transactions to proceed without ID verification.
+Transaction Review
+Eight sales transactions were identified without ID-scan confirmation; two involved purchasers aged 19 and 20.
+Employee Practices
+Interviews with store managers indicated inconsistent understanding of the lockout protocol.
+Control Deficiency
+The override option violates §1140.14(b)(2), which requires active age-verification for every sale.
+Corrective Action Status
+A software patch was initiated to disable manual overrides, with completion pending corporate IT validation.
+Supporting Documentation
+	1	POS Exception Logs — Records of transactions without ID-scan confirmation.
+	2	Employee Incident Reports — Staff statements and follow-up notes regarding system bypass.
+	3	Compliance Notification — Corporate memo issued to regional managers on June 11, 2025.
+	4	Corrective Action Plan — IT directive for system update and employee retraining.
+Observations
+	•	Eight instances of system override were detected.
+	•	Sales to underage individuals constitute regulatory violations under §1140.14(b).
+	•	Immediate system remediation and staff retraining required.
+Document Control Document ID Version Effective Date Prepared By Reviewed By TTB-IDFAIL-EVD 1.0 June 9, 2025 Retail Compliance and Audit Team Dr. Neal J. Sorrento, Tobacco Regulatory Analyst

@@ -1,0 +1,40 @@
+RollingMeadowOrchard_RevenueRecognition_COMPLIANT
+
+Rolling Meadow Orchard (RMO)
+Revenue Recognition Compliance Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document provides compliant evidence supporting RMO’s revenue recognition procedures for FY2024. Evidence includes validated sales data, invoice records, and reconciliation results demonstrating adherence to internal accounting policy and GAAP standards.
+
+Evidence Summary
+Sales Records Review —
+Daily transaction summaries, POS logs, and wholesale invoices were complete and properly recorded for the audit period.
+
+Deposit Reconciliation —
+Bank deposits matched recorded revenue with only minor, explainable timing differences identified.
+
+Invoice Verification —
+Invoice logs contained no gaps in numbering, and all customer payments were properly matched to recorded transactions.
+
+Compliance Evaluation —
+Revenue recognition practices fully aligned with ASC 606 requirements and RMO’s financial policy.
+
+Supporting Documentation
+    1   Daily Sales Transaction Log — POS and wholesale data.
+    2   Invoice Register — Complete invoice sequence and payment matching.
+    3   Deposit Reconciliation Worksheets — Sales-to-bank matching.
+    4   RMO Financial Policy — Revenue recognition section.
+
+Observations
+    •   All revenue records complete and validated.
+    •   Deposit matching confirmed accuracy and completeness.
+    •   No exceptions or compliance issues identified.
+
+Document Control
+Document ID — RMO-REVREC-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

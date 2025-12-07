@@ -1,0 +1,16 @@
+Carson’s Consulting Presiding Officer Referral Documentation Audit Date: September 5, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing referral documentation verifying case transmission to presiding officers under 10 CFR §13.27. Missing referral evidence prevents validation that settlements occurred prior to case referral.
+Evidence Summary Referral Record Audit — Five settlement cases lacked referral confirmation forms or email correspondence verifying transfer to a presiding officer.
+Regulatory Reference — No settlements may occur post-referral; missing documentation prevents confirmation of compliance with that restriction.
+System Findings — LDMS contains settlement files but lacks referral documentation attachments.
+Remediation — Administrative staff assigned to retrieve referral confirmations from archived email backups.
+Supporting Documentation
+	1	Case List — IDs missing referral confirmation.
+	2	LDMS Report — Referral folder metadata without attachments.
+	3	Policy Reference — §13.27 referral procedures excerpt.
+	4	Remediation Plan — Email archive retrieval directive.
+Observations
+	•	Five settlement files missing referral documentation.
+	•	Missing records reduce procedural verification accuracy.
+	•	Retrieval and re-audit in progress for compliance validation.
+Document Control Document ID — CSC-REFERRAL-EVD Version — 1.0 Effective Date — September 5, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Olivia M. Trent, Senior Counsel

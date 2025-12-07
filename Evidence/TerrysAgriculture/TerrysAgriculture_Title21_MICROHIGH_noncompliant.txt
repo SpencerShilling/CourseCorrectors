@@ -1,0 +1,16 @@
+Terry’s Agriculture Elevated Microbial Levels Audit Date: February 14, 2025 Prepared by: Agricultural Quality and Compliance Team
+Purpose This document provides evidence of noncompliance with microbial water quality criteria under 21 CFR Part 112. Laboratory tests identified microbial contamination exceeding acceptable thresholds for irrigation water.
+Evidence Summary Sampling Data — Test results from January 2025 revealed E. coli levels averaging 185 CFU per 100 mL across two irrigation sites, exceeding the regulatory geometric mean limit of 126 CFU.
+Root Cause — Sediment buildup and poor filter maintenance were identified as contributing factors to contamination.
+Impact — Affected crops were temporarily excluded from harvest until follow-up tests confirmed acceptable microbial levels.
+Corrective Measures — Filtration systems flushed and chlorinated; new microbial sampling protocol introduced for weekly testing.
+Supporting Documentation
+	1	Laboratory Reports — January 2025 microbial data.
+	2	Maintenance Logs — Records confirming filter cleaning.
+	3	Corrective Action Plan — Emergency sanitation directive.
+	4	Follow-Up Test Results — Verification of corrective success.
+Observations
+	•	Two irrigation sources exceeded microbial thresholds.
+	•	Root cause linked to maintenance delays.
+	•	Post-correction results confirmed restored compliance.
+Document Control Document ID — TA-AG-MICROHIGH-EVD Version — 1.0 Effective Date — February 14, 2025 Prepared By — Terry Brown, Compliance Analyst Reviewed By — Billy Bob, QA Director

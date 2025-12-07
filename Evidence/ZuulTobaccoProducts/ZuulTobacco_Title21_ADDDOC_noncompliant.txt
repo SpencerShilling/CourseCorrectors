@@ -1,0 +1,17 @@
+Zuul Tobacco Products Additive Documentation Verification Audit Date: February 18, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of noncompliance with 21 CFR §1140.32(a) for inadequate documentation of flavoring and chemical additives. The audit identified unverified additive files and missing laboratory certifications for multiple formulations.
+Evidence Summary Record Availability — Additive data sheets were absent for seven formulations manufactured between December 2024 and February 2025.
+Supplier Verification — No third-party certifications were on file for two chemical suppliers providing flavoring additives.
+Batch Review — QA records did not contain cross-references to laboratory validation reports for ingredient purity.
+System Gap — The Product Composition and Quality Management System (PCQMS) showed missing upload entries for additive certifications.
+Follow-Up Actions — Requests have been issued to suppliers to submit updated safety data and purity certificates for all flavor components.
+Supporting Documentation
+	1	Additive Data Sheets — Partial records for seven formulations.
+	2	Supplier Communication Logs — Requests for updated certifications.
+	3	Laboratory Validation Reports — Pending verification of purity tests.
+	4	PCQMS Upload Logs — System entries showing missing documents.
+Observations
+	•	Additive records incomplete for multiple product lines.
+	•	Lack of supplier verification violates §1140.32(a).
+	•	Recommend immediate submission of certifications and system audit.
+Document Control Document ID — ZTP-ADDDOC-EVD Version — 1.0 Effective Date — February 18, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Thomas R. Delaney, Director of Regulatory Compliance

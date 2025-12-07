@@ -1,0 +1,17 @@
+Tobacco Hut Junior Point-of-Sale System Audit Records Date: September 4, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of missing POS system audit records as required by 21 CFR §1140.32(a). Audit reports for the current system version were not located, preventing verification of data security, transaction integrity, and log retention compliance.
+Evidence Summary Audit Record Availability — No audit trail reports were produced for the POS software version implemented in March 2024.
+System Validation — Change-control and revalidation documentation were not completed following the upgrade, as required under §1140.32(a).
+Backup Logs — Records of POS data backups for 2023–2024 were incomplete, with gaps in transaction coverage for Q3 2024.
+Evidence Requests — Requests for audit reports and change records were submitted to IT and vendor support teams with no response as of August 2025.
+Follow-Up Actions — Corporate compliance has required immediate completion of the missing system validation and data retention audit.
+Supporting Documentation
+	1	System Upgrade Log — Record of March 2024 software deployment.
+	2	Audit Request Emails — Correspondence with IT support and compliance vendor.
+	3	Backup Summary Reports — Showing incomplete archival coverage.
+	4	Compliance Action Notice — Directive for immediate validation audit.
+Observations
+	•	Missing system validation evidence constitutes a compliance gap under §1140.32(a).
+	•	Documentation lapses risk noncompliance during regulatory inspection.
+	•	Recommend immediate validation audit and quarterly log verification moving forward.
+Document Control Document ID — THJ-POS-AUD-EVD Version — 1.0 Effective Date — September 4, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Victor L. Carr, Regional Compliance Officer

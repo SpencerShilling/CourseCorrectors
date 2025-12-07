@@ -1,0 +1,40 @@
+RMO_OMSSLogs_MISSING
+
+Rolling Meadow Orchard (RMO)
+OMSS Sales & Adjustments Log Missing Evidence Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document identifies missing logs and adjustment records within the Orchard Management and Sales System (OMSS) needed for FY2024 reconciliation.
+
+Evidence Summary
+Adjustment Log Review —
+Price overrides, spoilage entries, and bulk order adjustments for Q3 and Q4 FY2024 were not present.
+
+Sales Exception Records —
+Exception logs documenting corrected transactions were missing for multiple high-volume weekends.
+
+Audit Trail Review —
+Audit trails for user edits in the retail store module had no recorded entries for July–September.
+
+Risk Assessment —
+Missing logs hinder validation of sales integrity and transaction-level accuracy.
+
+Supporting Documentation
+    1   OMSS Audit Extract — Missing adjustment entries.
+    2   Exception Log Index — Gaps in record sequence.
+    3   Retail Module Procedures — Documentation for overrides.
+    4   IT Ticket Log — Requests to regenerate missing audit records.
+
+Observations
+    •   Missing adjustment logs for second half of FY2024.
+    •   Exception logs incomplete.
+    •   Audit trail activity absent for key months.
+
+Document Control
+Document ID — RMO-OMSSLOGS-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

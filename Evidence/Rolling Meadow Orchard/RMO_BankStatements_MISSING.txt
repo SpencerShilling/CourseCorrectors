@@ -1,0 +1,40 @@
+RMO_BankStatements_MISSING
+
+Rolling Meadow Orchard (RMO)
+Bank Statement Archive Missing Evidence Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document details missing monthly bank statements needed to complete FY2024 account reconciliation.
+
+Evidence Summary
+Statement Archive Review —
+Bank statements for April and November 2024 were not located in digital or physical archives.
+
+Reconciliation Check —
+Associated reconciliation worksheets referenced these statements but contained placeholder entries.
+
+Compliance Requirement —
+Monthly statements are required under RMO’s reconciliation policy and external audit requirements.
+
+Risk Assessment —
+Missing statements impede verification of deposits, withdrawals, and month-end account positions.
+
+Supporting Documentation
+    1   Missing Statement Index — Lists absent statement months.
+    2   Reconciliation Worksheets — Placeholder entries.
+    3   Bank Correspondence Log — Requests for duplicates.
+    4   Reconciliation Policy — Monthly documentation requirement.
+
+Observations
+    •   Two months’ statements missing.
+    •   Reconciliations incomplete without statements.
+    •   Duplicate statements requested from bank.
+
+Document Control
+Document ID — RMO-BNKSTMTS-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

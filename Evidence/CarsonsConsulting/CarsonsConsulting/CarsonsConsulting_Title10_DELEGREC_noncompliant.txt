@@ -1,0 +1,17 @@
+Carson’s Consulting Incomplete Delegation Record Audit Date: April 28, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of noncompliance due to incomplete delegation records for certain reviewing officials under 10 CFR §13.25. The audit revealed missing or unsigned authority memos for several settlements finalized in Q1 2025.
+Evidence Summary Audit Findings — Three settlement cases lacked signed delegation memos authorizing officials to issue complaints before agreement execution.
+Recordkeeping Gap — LDMS entries contained draft delegation forms without signatures or approval stamps.
+Impact — The absence of executed delegation documentation calls into question the procedural authority for settlements completed during this period.
+Root Cause — Administrative transition between departments caused delays in final approval routing.
+Corrective Action — Retroactive authorization forms were executed and uploaded by May 2025. Workflow validation steps added to prevent unsigned delegation uploads.
+Supporting Documentation
+	1	Draft Delegation Memos — Unsigned versions recovered from LDMS.
+	2	Case Summary Sheets — Records of affected settlements.
+	3	Corrective Action Memo — Directive enforcing workflow validation.
+	4	Updated Delegation Register — Revised list with complete signatures.
+Observations
+	•	Missing delegation records for three cases.
+	•	Cause identified as administrative oversight.
+	•	Preventive system controls established for validation.
+Document Control Document ID — CSC-DELEGREC-EVD Version — 1.0 Effective Date — April 28, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Stephen J. Coleridge, General Counsel

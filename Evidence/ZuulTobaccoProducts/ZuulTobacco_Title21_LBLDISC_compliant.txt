@@ -1,0 +1,17 @@
+Zuul Tobacco Products Labeling and Ingredient Disclosure Audit Date: July 22, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence confirming Zuul Tobacco Products’ compliance with 21 CFR §1140.32(b) and related FDA requirements for accurate labeling and ingredient disclosure. The audit ensured that product packaging, advertising, and submission documentation accurately represented verified composition and health disclosures.
+Evidence Summary Audit Scope — A review was conducted of packaging, labeling, and ingredient disclosure files for 18 unique tobacco product lines produced in 2025.
+Verification Process — Ingredient lists were compared to FDA-submitted disclosures and confirmed against laboratory analysis data from the Product Quality Laboratory.
+Design Compliance — All reviewed product labels included mandated Surgeon General warnings displayed in high contrast, occupying at least 20% of the display area.
+Cross-Referencing — Regulatory filings submitted through the electronic registration system were matched to batch-specific documentation for consistency.
+Results — No labeling or ingredient mismatches were detected. All warnings and ingredient disclosures were fully compliant with §1140.32(b).
+Supporting Documentation
+	1	FDA Submission Records — Ingredient disclosure and labeling confirmation files.
+	2	Product Label Samples — Physical and digital samples reviewed during audit.
+	3	Quality Control Logs — Internal checks verifying label-print accuracy.
+	4	Laboratory Verification Reports — Test data confirming declared nicotine and additive levels.
+Observations
+	•	All product labels and disclosures were consistent with regulatory submissions.
+	•	FDA-mandated warnings were displayed correctly on all packaging.
+	•	No corrective or preventive actions required.
+Document Control Document ID — ZTP-LBLDISC-EVD Version — 1.0 Effective Date — July 22, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Thomas R. Delaney, Director of Regulatory Compliance

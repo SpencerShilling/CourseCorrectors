@@ -1,0 +1,40 @@
+RollingMeadowOrchard_FixedAssets_OUTDATED
+
+Rolling Meadow Orchard (RMO)
+Fixed Asset Register Outdated Evidence Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document provides evidence showing that RMO’s Fixed Asset Register used during initial FY2024 review was outdated and did not reflect recent changes in equipment additions and disposals.
+
+Evidence Summary
+Asset Additions Review —
+A refrigeration unit (March 2024) and two pallet loaders (July 2024) were added during the fiscal year but not recorded in the register.
+
+Asset Disposal Records —
+Two tractors removed from service in January 2024 were not logged as disposals or adjusted for remaining depreciation.
+
+Depreciation Schedule Review —
+Depreciation calculations were based on pre-2023 schedules, despite updated policy changes effective January 2024.
+
+Accuracy Assessment —
+Outdated records result in misstated asset values and depreciation expense for FY2024.
+
+Supporting Documentation
+    1   Purchase Receipts — Newly acquired equipment.
+    2   Disposal Notice Log — Unrecorded tractor removals.
+    3   Depreciation Policy Update — 2024 change notice.
+    4   Fixed Asset Register (Prior Version) — Outdated entries.
+
+Observations
+    •   New assets missing from Register.
+    •   Disposals not reflected.
+    •   Depreciation schedules require updating.
+
+Document Control
+Document ID — RMO-FIXAST-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

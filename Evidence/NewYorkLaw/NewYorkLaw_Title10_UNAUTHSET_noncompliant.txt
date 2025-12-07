@@ -1,0 +1,17 @@
+New York Law Unauthorized Settlement Activity Audit Date: May 19, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of noncompliance related to unauthorized settlement activity conducted before proper delegation of authority under 10 CFR §13.25. The audit discovered settlements executed without final approval from designated reviewing officials.
+Evidence Summary Case File Review — Two settlements were executed prior to formal delegation authorization being issued to reviewing officials.
+Authorization Verification — Delegation memos for both cases were signed post-settlement, indicating premature execution of settlement terms.
+System Oversight — The Legal Document Management System (LDMS) did not flag missing delegation documentation prior to record finalization.
+Compliance Impact — Failure to obtain prior authorization undermines procedural control and violates agency settlement regulations.
+Corrective Actions — A mandatory pre-settlement approval checklist has been added to LDMS workflows requiring uploaded authorization prior to closure.
+Supporting Documentation
+	1	Case Files — Records showing settlement execution before delegation approval.
+	2	Delegation Memos — Signatures dated after settlement completion.
+	3	LDMS Workflow Records — Evidence of missing pre-authorization validation.
+	4	Corrective Directive — Memo implementing mandatory pre-authorization checklist.
+Observations
+	•	Two cases executed before official authorization.
+	•	Documentation oversight caused procedural noncompliance.
+	•	New control measures introduced to enforce verification.
+Document Control Document ID — NYL-UNAUTHSET-EVD Version — 1.0 Effective Date — May 19, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Dana K. Winslow, Senior Legal Counsel

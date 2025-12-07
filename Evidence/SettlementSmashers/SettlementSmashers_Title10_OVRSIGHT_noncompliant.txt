@@ -1,0 +1,17 @@
+SettlementSmashers_Title10_OVRSIGHT_noncompliant.txt Settlement Smashers Incomplete Oversight Documentation Audit Date: August 9, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of incomplete oversight documentation for consulting engagements. The audit revealed that supervisory review notes and compliance monitoring reports were missing for several projects completed in mid-2025.
+Evidence Summary Audit Scope — A total of 25 consulting projects completed between April and July 2025 were reviewed for oversight documentation.
+Findings — Nine projects lacked supervisory sign-off and quarterly compliance oversight reports.
+Recordkeeping Review — The CEMS repository contained placeholder entries for reviews but no attached documents.
+Root Cause — Delays in supervisor upload and lack of automated report prompts caused oversight gaps.
+Remedial Measures — Supervisory report uploads have been mandated for all engagement completions moving forward, with CEMS alerts reactivated August 2025.
+Supporting Documentation
+	1	Project Audit List — Identified missing oversight reports.
+	2	Supervisor Communication Logs — Requests for documentation.
+	3	Compliance Oversight Policy — Section on supervisory review.
+	4	Corrective Action Notice — Memo reinstating oversight uploads.
+Observations
+	•	Nine projects lacked documented supervisory oversight.
+	•	Audit control processes failed to capture post-engagement reviews.
+	•	CEMS system automation to be monitored monthly.
+Document Control Document ID — SSM-OVRSIGHT-EVD Version — 1.0 Effective Date — August 9, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Charles D. Lennox, Director of Professional Services

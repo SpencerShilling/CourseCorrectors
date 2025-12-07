@@ -1,0 +1,16 @@
+Settlement Smashers Master Service Agreement Template Review Date: January 27, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of outdated Master Service Agreement (MSA) templates currently in circulation. The audit determined that certain contractual clauses and signature authorization references no longer align with Settlement Smashers’ current compliance framework and policy revisions.
+Evidence Summary Template Review — Two versions of the MSA template were found in use, one dated 2020 and another modified in 2022, both lacking updated language on data privacy and electronic signature protocols.
+Policy Alignment — The outdated templates omit references to the 2023 Privacy and Data Protection Policy and revised contract approval thresholds.
+Risk Assessment — Using legacy templates exposes the firm to potential noncompliance with client data management standards and state contract laws.
+Corrective Action — Legal and compliance teams are finalizing MSA Template Version 3.0 with revised clauses and new approval workflows, scheduled for implementation by February 2025.
+Supporting Documentation
+	1	Archived MSA Templates — Copies of 2020 and 2022 versions.
+	2	Legal Department Memos — Notes identifying outdated clauses.
+	3	Privacy Policy Reference — 2023 update requiring revised terms.
+	4	Draft Template 3.0 — Preliminary copy under final review.
+Observations
+	•	Outdated contractual templates still in limited use.
+	•	Updated privacy and authorization requirements not incorporated.
+	•	Recommend immediate deprecation of all pre-2023 templates.
+Document Control Document ID — SSM-MSAV2-EVD Version — 1.0 Effective Date — January 27, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Owen P. Garrity, Compliance Operations Manager

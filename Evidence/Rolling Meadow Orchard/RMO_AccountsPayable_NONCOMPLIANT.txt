@@ -1,0 +1,40 @@
+RMO_AccountsPayable_NONCOMPLIANT
+
+Rolling Meadow Orchard (RMO)
+Accounts Payable Non-Compliance Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document highlights non-compliant findings related to FY2024 accounts payable procedures, including late payments, missing signatures, and incorrect vendor coding.
+
+Evidence Summary
+Late Payment Review —
+Seven invoices exceeded the 30-day payment window required under vendor contracts.
+
+Signature Verification —
+Three payment authorization forms lacked required dual signatures.
+
+Vendor Coding Analysis —
+Two major vendors were mapped to outdated ledger codes, impacting AP aging reports.
+
+Compliance Impact —
+Late payments and incomplete approvals pose financial and vendor relationship risks.
+
+Supporting Documentation
+    1   AP Aging Report — Overdue items.
+    2   Vendor Contract Extract — Payment terms.
+    3   Signature Audit Log — Missing authorization.
+    4   GL Code Map — Incorrect vendor mapping.
+
+Observations
+    •   Multiple late payments.
+    •   Missing signature approvals.
+    •   Coding errors affecting AP accuracy.
+
+Document Control
+Document ID — RMO-ACCPAY-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

@@ -1,0 +1,19 @@
+NewYorkLaw_Title10_AGNOTICE_compliant.txt New York Law Attorney General Notification and Record Retention Compliance Date: August 3, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of compliance with federal and state procedural requirements for Attorney General notification and legal record retention under 10 CFR Part 13. The audit verified that notifications, correspondence, and settlement records were transmitted and archived in accordance with regulatory mandates.
+Evidence Summary Notification Process — All settlement actions reviewed included written notifications transmitted to the Attorney General at least 30 days before final agreement execution.
+Record Verification — Copies of notification letters and email confirmations were located in the LDMS repository with complete metadata and acknowledgment from the Attorney General’s office.
+Retention Controls — Records were stored in accordance with the corporate retention schedule, maintaining accessibility for a minimum of seven years after settlement closure.
+Audit Oversight — The compliance team cross-verified LDMS entries and timestamped logs against case tracking data to ensure procedural accuracy.
+Compliance Confirmation — No exceptions or missing records were identified during the review period. The notification and retention process meets all federal procedural requirements.
+Supporting Documentation
+	1	Attorney General Notification Letters — Verified communications with timestamps.
+	2	LDMS Record Exports — System entries confirming data storage and retrieval.
+	3	Case Tracking System Logs — Cross-referenced with settlement notifications.
+	4	Compliance Audit Report — Internal verification of notification timelines.
+	5	Retention Policy Document — Corporate standard outlining seven-year retention.
+Observations
+	•	Notifications issued within regulatory timelines.
+	•	LDMS audit confirms completeness and record traceability.
+	•	Oversight controls maintain alignment with state and federal standards.
+	•	No corrective actions required.
+Document Control Document ID — NYL-AGNOTICE-EVD Version — 1.0 Effective Date — August 3, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Dana K. Winslow, Senior Legal Counsel

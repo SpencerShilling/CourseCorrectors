@@ -1,0 +1,17 @@
+Ted’s Tobacco Point-of-Sale Audit Trail Records Date: September 10, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of missing POS system audit trail reports as required under 21 CFR §1140.32(a). The absence of these reports limits the ability to confirm data security and transaction integrity for age-restricted sales.
+Evidence Summary Audit Record Availability — No audit reports were provided for POS system version 5.4, deployed in May 2024.
+System Validation — IT compliance department failed to submit post-upgrade verification documentation confirming encryption and data logging continuity.
+Data Retention — Backup files older than 2023 were archived but not restored for audit inspection.
+Configuration Logs — No change-control or approval records were provided to verify compliance with system modification procedures.
+Follow-Up Attempts — Multiple requests for records were made to IT and compliance departments without response as of September 5, 2025.
+Supporting Documentation
+	1	Audit Record Requests — Submitted July–August 2025.
+	2	System Configuration History — Upgrade logs showing version change to 5.4.
+	3	Backup Log Reports — Missing entries between March and August 2024.
+	4	IT Department Correspondence — Pending response to audit inquiry.
+Observations
+	•	Missing POS audit records create compliance verification gaps under §1140.32(a).
+	•	System changes were implemented without documented validation.
+	•	Immediate audit and documentation update required for regulatory alignment.
+Document Control Document ID — TTB-POS-AUD-EVD Version — 1.0 Effective Date — September 10, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Thomas L. Nguyen, Compliance and Ethics Director

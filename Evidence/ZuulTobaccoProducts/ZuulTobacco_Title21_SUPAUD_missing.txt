@@ -1,0 +1,17 @@
+Zuul Tobacco Products Supplier Audit Record Review Date: August 28, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of missing supplier audit reports as required under 21 CFR §1140.32(b). Periodic supplier audits ensure that contracted manufacturers and raw material vendors maintain appropriate quality and compliance standards.
+Evidence Summary Audit Program Review — Annual supplier audit schedule was not executed for three key raw material providers.
+Record Verification — No audit summaries or follow-up reports were available for 2024–2025 cycles.
+Risk Evaluation — Vendors without current audit certification continue to supply regulated tobacco materials.
+Corrective Oversight — Quality Assurance confirmed resource limitations and delayed audit scheduling.
+Planned Remediation — A revised supplier audit calendar and third-party audit contracts were issued in August 2025 to restore compliance.
+Supporting Documentation
+	1	Supplier Audit Tracker — Missing entries for three major vendors.
+	2	Correspondence Records — Emails discussing postponed audits.
+	3	Audit Schedule (2025) — Revised plan for vendor evaluations.
+	4	Quality Management Memo — Action plan for compliance restoration.
+Observations
+	•	Missing supplier audit records violate §1140.32(b) vendor oversight standards.
+	•	Risk of supplier nonconformance remains unmitigated without documentation.
+	•	Recommend immediate audit execution and improved scheduling control.
+Document Control Document ID — ZTP-SUPAUD-EVD Version — 1.0 Effective Date — August 28, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Thomas R. Delaney, Director of Regulatory Compliance

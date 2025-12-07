@@ -1,0 +1,17 @@
+Tobacco Hut Junior Distributor Certification Records Audit Date: July 17, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of missing distributor certification records required under 21 CFR §1140.14(a). The audit determined that several vendor agreements lacked documented acknowledgment of federal tobacco compliance obligations.
+Evidence Summary Vendor Documentation — Certification files for four active distributors were not available in the corporate vendor management system.
+Contract Review — Two existing agreements reference outdated compliance standards and omit clauses acknowledging FDA enforcement requirements.
+Record Retention — Vendor documentation from 2023 and 2024 was not archived in accordance with internal recordkeeping policy.
+Follow-Up Actions — Requests for updated certifications were sent to all active vendors; responses pending from two distributors.
+Compliance Risk — Failure to maintain complete vendor certification files increases exposure to third-party compliance violations.
+Supporting Documentation
+	1	Vendor List — Active distributors as of July 2025.
+	2	Procurement Requests — Pending certification documentation emails.
+	3	Archived Contracts — Pre-2022 agreements lacking compliance references.
+	4	Vendor Management Policy — Internal policy requiring biannual recertification.
+Observations
+	•	Missing distributor certifications violate vendor oversight provisions of §1140.14(a).
+	•	Incomplete records prevent verification of supplier compliance.
+	•	Recommend immediate follow-up with nonresponsive vendors and policy enforcement.
+Document Control Document ID — THJ-DISTCERT-EVD Version — 1.0 Effective Date — July 17, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Rachel E. Stansfield, Senior Marketing Compliance Officer

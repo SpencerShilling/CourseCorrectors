@@ -1,0 +1,40 @@
+RollingMeadowOrchard_ExpenseVerification_NONCOMPLIANT
+
+Rolling Meadow Orchard (RMO)
+Expense Verification Non-Compliance Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document identifies evidence of non-compliance in RMO’s FY2024 expense verification process. Findings relate to missing documentation, incomplete approval workflows, and coding inaccuracies.
+
+Evidence Summary
+Expense Documentation Review —
+Multiple expense entries lacked supporting receipts, including payments to Greenline Equipment Rentals and Harvest Supplies Co.
+
+Authorization Workflow Check —
+Two high-value expenses (>$10,000) failed to include required Finance Director approval.
+
+Ledger Coding Validation —
+Several travel expenses were misclassified under Orchard Equipment Maintenance, distorting account category totals.
+
+Compliance Impact —
+Documentation gaps and approval failures reduce reliability of expense reporting and violate internal control policy.
+
+Supporting Documentation
+    1   Expense Ledger Extract — Flagged entries.
+    2   Missing Receipt Log — Items lacking documentation.
+    3   Policy Reference — Authorization thresholds and documentation requirements.
+    4   Approval Audit Report — Unapproved high-value transactions.
+
+Observations
+    •   Receipt and approval documentation incomplete.
+    •   Misclassified expenses affect category accuracy.
+    •   Corrections required prior to audit completion.
+
+Document Control
+Document ID — RMO-EXPVER-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

@@ -1,0 +1,17 @@
+Tobacco Hut Junior Age Verification and Sales Audit Date: April 8, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of compliance with the federal minimum-age sales requirement for tobacco products under 21 CFR §1140.14(b). The audit reviewed the effectiveness of Tobacco Hut Junior’s ID verification system and employee adherence to age-restricted sales protocols across all retail locations.
+Evidence Summary Audit Scope — The audit covered all Tobacco Hut Junior retail locations between January 1 and September 30, 2025. POS data, ID-verification logs, and employee records were reviewed.
+Methodology — A random sample of 2,500 transactions was selected for verification. Each transaction was checked against ID-scan logs and receipt timestamps to confirm purchaser age at the time of sale.
+Verification Process — The company’s digital ID-scanning system automatically verifies age and blocks transactions for underage customers. Review confirmed that all tested transactions were processed within system parameters and showed no bypass attempts.
+Employee Compliance — Training records and performance logs demonstrated that all employees completed annual age-verification compliance training.
+Audit Findings — All reviewed transactions complied with §1140.14(b). The ID verification system functioned properly, and no instances of underage sales were detected.
+Supporting Documentation
+	1	POS Transaction Reports — Data confirming successful age verification for all audited sales.
+	2	ID Verification Logs — Records of electronic age validation without overrides.
+	3	Employee Training Certificates — Proof of completion for 2025 compliance training cycle.
+	4	Audit Sampling Plan — Documentation outlining sampling methodology and verification criteria.
+Observations
+	•	The ID-verification system functioned consistently across all stores.
+	•	No sales to underage customers occurred during the review period.
+	•	Training and recordkeeping controls meet all regulatory requirements.
+Document Control Document ID — THJ-AGE-AUD-EVD Version — 1.0 Effective Date — April 8, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Benjamin T. Rourke, Retail Compliance Manager

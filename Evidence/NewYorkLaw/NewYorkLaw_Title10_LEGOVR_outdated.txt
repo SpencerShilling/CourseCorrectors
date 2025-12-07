@@ -1,0 +1,17 @@
+New York Law Legal Oversight Procedure Review Date: October 4, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of outdated Legal Oversight Procedures under 10 CFR Part 13, which define the supervisory and verification framework for settlement reviews and notifications. The current procedure document has not been updated to reflect recent regulatory or internal workflow changes.
+Evidence Summary Procedure Version — The active oversight document (Version 1.3, issued 2021) omits references to the new LDMS workflow enhancements implemented in 2024.
+Operational Gap — The oversight process still requires manual email verification for Attorney General notifications rather than relying on the LDMS automated transmission log.
+Regulatory Alignment — Recent regulatory guidance requires expanded metadata verification and two-step authorization prior to settlement approval, neither of which are referenced in the current oversight procedure.
+Revision Timeline — Updated Legal Oversight Procedure (Version 2.0) has been drafted and is awaiting approval by the Director of Legal Affairs.
+Implementation Status — Training and compliance reporting functions will transition to the new oversight version once formally adopted in Q4 2025.
+Supporting Documentation
+	1	Oversight Procedure v1.3 — Current version (issued 2021).
+	2	Draft Procedure v2.0 — Revision incorporating LDMS workflows.
+	3	Regulatory Guidance Memo — Updates to verification standards.
+	4	Approval Tracker — Timeline for procedure revision adoption.
+Observations
+	•	Legal Oversight Procedures outdated by four years.
+	•	Current document fails to incorporate automation and verification updates.
+	•	Recommend expedited approval of Version 2.0 to maintain compliance alignment.
+Document Control Document ID — NYL-LEGOVR-EVD Version — 1.0 Effective Date — October 4, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Jonathan P. Ellsworth, Director of Legal Affairs

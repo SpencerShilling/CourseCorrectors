@@ -1,0 +1,17 @@
+Ted’s Tobacco Employee Training Record Audit Date: March 18, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of missing employee training documentation required under 21 CFR §1140.14(c). The absence of complete training logs prevents verification that all retail staff have completed mandatory compliance training on age-restricted sales.
+Evidence Summary Training Documentation — Five store locations failed to produce records of cashier training on age verification and refusal protocols.
+Attendance Logs — Corporate Learning Management System (LMS) exports revealed incomplete attendance entries and several missing employee certifications.
+Compliance Verification — Follow-up emails to district managers requesting training confirmations remained unanswered as of the audit date.
+Record Retention — No physical or electronic copies of 2025 training materials were located at regional offices.
+Internal Controls — Lack of centralized documentation storage prevents routine training validation and audit readiness.
+Supporting Documentation
+	1	Training Log Requests — Audit requests submitted February–March 2025.
+	2	LMS Exports — Partial completion data with missing timestamps.
+	3	District Manager Correspondence — Pending responses from five retail regions.
+	4	Company Policy Memo — Reminder issued April 2025 on training documentation retention.
+Observations
+	•	Missing training records prevent verification of employee compliance awareness.
+	•	Weak documentation controls may result in recurring audit deficiencies.
+	•	Recommend establishing centralized, mandatory training record submission.
+Document Control Document ID — TTB-TRAINLOG-EVD Version — 1.0 Effective Date — March 18, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Angela D. Reid, Retail Audit Coordinator

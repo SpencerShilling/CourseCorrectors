@@ -1,0 +1,16 @@
+Carson’s Consulting Settlement Correspondence Log Review Date: April 4, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing settlement correspondence logs under 10 CFR Part 13. Missing logs prevent full verification of settlement activity, Attorney General notification timing, and procedural compliance.
+Evidence Summary Case Review — Eight settlement case files lacked correspondence logs documenting communications between reviewing officials and the Attorney General.
+System Audit — LDMS entries showed settlement agreements but no attached correspondence confirming notification or receipt.
+Compliance Impact — Absence of these records hinders confirmation of settlement authorization and regulatory notification windows.
+Remediation Plan — A new LDMS automation will generate correspondence log entries when Attorney General notifications are transmitted.
+Supporting Documentation
+	1	Case Index — Settlement IDs missing correspondence records.
+	2	LDMS Extract — Metadata for incomplete correspondence entries.
+	3	Internal Audit Memo — Findings on missing records.
+	4	Corrective Directive — LDMS enhancement work order.
+Observations
+	•	Eight settlement files missing correspondence documentation.
+	•	Lack of communication tracking limits validation.
+	•	Automated correspondence logging implementation underway.
+Document Control Document ID — CSC-SETTLELOG-EVD Version — 1.0 Effective Date — April 4, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Stephen J. Coleridge, General Counsel

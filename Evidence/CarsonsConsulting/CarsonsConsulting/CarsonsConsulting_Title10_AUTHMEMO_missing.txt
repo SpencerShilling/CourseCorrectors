@@ -1,0 +1,16 @@
+Carson’s Consulting Delegation Authorization Memo Review Date: June 19, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing delegation authorization memos required under 10 CFR §13.25. These memos verify that reviewing officials were granted authority to issue complaints before settlement execution.
+Evidence Summary Authorization Audit — Four settlement case files lacked signed delegation memos confirming approval authority.
+Record System Review — LDMS log entries contained placeholders for delegation documentation with no uploaded attachments.
+Risk Evaluation — Missing authorization records reduce assurance of procedural compliance and expose the company to potential review challenges.
+Remedial Measures — Retroactive delegation memos requested from Legal Affairs with submission deadline July 10, 2025.
+Supporting Documentation
+	1	Delegation Memo Index — Missing records list.
+	2	LDMS Extract — Entries with empty file references.
+	3	Compliance Policy — Section detailing delegation authority.
+	4	Action Request Memo — Legal Affairs directive to reissue documents.
+Observations
+	•	Four case files missing delegation authorization memos.
+	•	Incomplete documentation impairs traceability.
+	•	Remediation in progress with Legal Affairs oversight.
+Document Control Document ID — CSC-AUTHMEMO-EVD Version — 1.0 Effective Date — June 19, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Rachel D. Whitmore, Compliance Analyst

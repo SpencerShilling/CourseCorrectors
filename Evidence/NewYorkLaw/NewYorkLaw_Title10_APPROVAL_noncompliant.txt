@@ -1,0 +1,17 @@
+New York Law Missing Approval Documentation Audit Date: July 8, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of missing approval documentation associated with case settlements under 10 CFR Part 13. The absence of signed approval forms limits verification that settlement actions were reviewed by authorized officials.
+Evidence Summary Approval Record Review — Audit sampling identified six case files missing approval forms or email authorization confirming settlement acceptance.
+Policy Requirement — Procedures require that all settlements include written approval by the Director of Legal Affairs or designee before execution.
+System Audit — LDMS entries contained placeholders for approvals but lacked attached documents or e-signature confirmation logs.
+Root Cause — Staff turnover in the administrative support team resulted in incomplete uploads during Q2 2025.
+Remediation Steps — Compliance operations have launched a retroactive documentation retrieval and re-upload campaign with expected completion by August 2025.
+Supporting Documentation
+	1	Case File Index — List of settlements missing approval documentation.
+	2	LDMS Extract — Missing attachment report from Q2 2025.
+	3	Policy Manual — Section on required pre-settlement approvals.
+	4	Administrative Notice — Directive to recover missing approvals.
+Observations
+	•	Six settlements missing documented approval forms.
+	•	Gaps attributed to administrative turnover.
+	•	Ongoing retrieval effort to restore complete documentation.
+Document Control Document ID — NYL-APPROVAL-EVD Version — 1.0 Effective Date — July 8, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Jonathan P. Ellsworth, Director of Legal Affairs

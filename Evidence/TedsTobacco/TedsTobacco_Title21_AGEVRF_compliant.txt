@@ -1,0 +1,26 @@
+Ted’s Tobacco
+Age Verification and Sales Audit Date: April 17, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence from an internal audit conducted by Ted’s Tobacco to verify adherence to the federal minimum age requirement for the sale of tobacco products as defined under 21 CFR §1140.14(b). The audit confirmed that electronic ID verification was consistently used across all retail locations.
+Evidence Summary
+Audit Area
+Evidence Description
+Audit Scope
+The audit included a review of 2,000 POS transactions conducted between January and September 2025. Each sale was cross-referenced with system-generated ID-scan confirmations.
+Verification Method
+Ted’s Tobacco utilizes a secure digital ID verification platform that validates age and authenticity in real time against federal and state databases.
+System Integrity
+Review of POS log exports indicated no manual overrides or skipped scans. System alert functionality was active and functioning properly during all test transactions.
+Employee Compliance
+Training records show that 100% of cashiers completed the 2025 compliance training, which included age-verification procedures and refusal protocols.
+Results
+All reviewed transactions were compliant. No underage sales or attempted bypasses were detected.
+Supporting Documentation
+	1	POS Transaction Audit Reports — Time-stamped ID verification data from all reviewed transactions.
+	2	System Verification Logs — Confirmation of scan validation and lockout features.
+	3	Employee Training Certificates — Documentation of cashier completion of ID verification training.
+	4	Audit Sampling Plan — Outline of reviewed transactions and sampling methodology.
+Observations
+	•	All retail transactions reviewed met the requirements of §1140.14(b).
+	•	The ID verification system was effective, consistent, and fully operational.
+	•	No corrective actions are required at this time.
+Document Control Document ID Version Effective Date Prepared By Reviewed By TTB-AGE-AUD-EVD 1.0 April 17, 2025 Retail Compliance and Audit Team Marcus E. Dunham, Director of Retail Compliance

@@ -1,0 +1,17 @@
+Zuul Tobacco Products Raw Material Certificate of Analysis Review Date: March 20, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of missing Certificates of Analysis (COAs) for raw tobacco materials, as required under 21 CFR §1140.10(c). The absence of supplier-issued COAs prevents verification of ingredient purity, leaf grade, and moisture content for multiple production batches.
+Evidence Summary Documentation Gaps — Five incoming raw tobacco shipments from February 2025 lacked corresponding Certificates of Analysis.
+Supplier Response — Follow-up requests to two primary suppliers remain unanswered as of the audit date.
+Batch Impact — Three production lots used uncertified raw material inputs, creating traceability and quality compliance risks.
+Process Oversight — Procurement staff failed to document exceptions or initiate hold procedures for incomplete COA deliveries.
+Corrective Actions — Procurement and Quality teams have been directed to suspend purchasing from nonresponsive suppliers pending documentation receipt.
+Supporting Documentation
+	1	Receiving Logs — Records of raw material intake without attached COAs.
+	2	Supplier Correspondence — Email requests for missing certificates.
+	3	Batch Production Logs — References to uncertified raw material usage.
+	4	Corrective Action Plan — Memo directing supplier requalification.
+Observations
+	•	Missing supplier COAs impede material traceability and compliance verification.
+	•	Procurement controls must enforce receipt verification before material release.
+	•	Recommend periodic supplier audits to ensure certification integrity.
+Document Control Document ID — ZTP-RAWCOA-EVD Version — 1.0 Effective Date — March 20, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Erin L. Vaughn, Senior Quality Analyst

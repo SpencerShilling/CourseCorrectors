@@ -1,0 +1,17 @@
+New York Law Late Attorney General Notification Audit Date: February 12, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of noncompliance with the regulatory requirement for timely notification to the Attorney General prior to settlement execution under 10 CFR Part 13. The audit identified several settlement cases where the required 30-day notification window was not met.
+Evidence Summary Case Review — Audit of 15 settlement cases completed in Q4 2024 revealed four cases with notifications issued less than 30 days prior to settlement.
+Notification Logs — Timestamp metadata confirmed delayed delivery of Attorney General notifications ranging from 7–15 days before settlement execution.
+Root Cause — Delays were attributed to administrative backlog in the Legal Notification Queue following a system migration in November 2024.
+Compliance Impact — Late notifications violate procedural timing requirements and compromise transparency obligations under the regulation.
+Corrective Measures — Legal operations implemented a scheduling automation to ensure automatic notice generation 35 days before anticipated settlement closure.
+Supporting Documentation
+	1	Notification Log Extract — Timestamp data showing late transmissions.
+	2	Settlement Calendar Records — Dates of complaint issuance and settlement approval.
+	3	Email Correspondence — Internal notes referencing notification delays.
+	4	Corrective Action Plan — Workflow automation directive issued February 2025.
+Observations
+	•	Four late notifications identified during review period.
+	•	Root cause traced to system migration backlog.
+	•	Compliance automation now implemented to prevent recurrence.
+Document Control Document ID — NYL-LATEAG-EVD Version — 1.0 Effective Date — February 12, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Richard T. Paxton, Deputy Director of Compliance

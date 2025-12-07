@@ -1,0 +1,19 @@
+New York Law Authority to Compromise or Settle Cases Date: April 15, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence supporting New York Law’s adherence to procedural requirements under the regulation governing the authority of reviewing officials to compromise or settle cases. It presents internal documentation verifying compliance with authorization, timing, and notification requirements for settlements.
+Evidence Summary Authority Verification — Documentation confirms that reviewing officials possess exclusive authority to compromise or settle cases only after authorization to issue a complaint and before the Administrative Law Judge (ALJ) issues an initial decision.
+Settlement Timing — Case management logs show that all settlements occurred within the authorized window, after complaint issuance but prior to ALJ decision issuance. Timestamped case entries validate compliance with procedural timelines.
+Attorney General Notification — Written notifications to the Attorney General were transmitted at least 30 days prior to settlement execution, consistent with regulatory standards. Delivery receipts confirm receipt by the Attorney General’s office.
+Record Retention — All correspondence and notification records are maintained in the Legal Document Management System (LDMS) with complete audit trail and metadata verification.
+Supervisory Oversight — Each settlement record includes review notes and legal approval sign-offs confirming adherence to statutory procedures.
+Supporting Documentation
+	1	Delegation of Authority Memos — Confirming authorization of reviewing officials.
+	2	Settlement Correspondence Logs — Dated records validating settlement timing.
+	3	Attorney General Notifications — Copies of letters and delivery confirmations.
+	4	LDMS Audit Reports — Metadata confirming data integrity and transmission.
+	5	Legal Review Notes — Oversight documentation from compliance officers.
+Observations
+	•	Settlements occurred only within authorized timeframes.
+	•	Attorney General was notified timely per procedural standards.
+	•	Complete audit records demonstrate compliance with notification and retention requirements.
+	•	No procedural deviations identified.
+Document Control Document ID — NYL-LGL-AUTH-EVD Version — 1.0 Effective Date — April 15, 2025 Prepared By — Madeline R. Cooper, Senior Legal Analyst Reviewed By — Jonathan P. Ellsworth, Director of Legal Affairs

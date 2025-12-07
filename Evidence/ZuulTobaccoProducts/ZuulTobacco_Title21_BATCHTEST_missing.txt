@@ -1,0 +1,17 @@
+Zuul Tobacco Products Batch Testing Log Verification Date: May 14, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence of missing quality assurance batch testing logs as required under 21 CFR §1140.14(c). Missing entries hinder the ability to confirm that finished products underwent complete laboratory testing prior to market release.
+Evidence Summary Testing Log Review — Audit identified missing or incomplete batch test results for 12 product lots produced in Q1 2025.
+System Records — The Product Composition and Quality Management System (PCQMS) contained placeholders without test result uploads.
+Sample Retention — Retention samples for affected lots were located but lacked matching analytical records.
+Responsibility Assignment — QA supervisors confirmed that some log files were stored locally and not uploaded per policy.
+Follow-Up Actions — A retrieval and data restoration effort is underway to reenter missing test results into the PCQMS.
+Supporting Documentation
+	1	Batch Record Index — List of affected product lots.
+	2	QA Supervisor Statements — Confirming missing test logs.
+	3	PCQMS Extract — Evidence of incomplete result uploads.
+	4	Corrective Action Directive — Order to restore missing data.
+Observations
+	•	Missing batch test logs represent a documentation control weakness.
+	•	Retained samples without verified results compromise audit readiness.
+	•	Recommend establishing automated data upload controls in PCQMS.
+Document Control Document ID — ZTP-BATCHTEST-EVD Version — 1.0 Effective Date — May 14, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Jason W. Patel, Procurement Compliance Manager

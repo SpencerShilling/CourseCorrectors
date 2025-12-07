@@ -1,0 +1,17 @@
+Zuul Tobacco Products Product Composition Audit Date: April 12, 2025 Prepared by: Product Quality and Regulatory Compliance Team
+Purpose This document provides evidence confirming compliance with 21 CFR §1140.10(b) and §1140.14 concerning accurate product composition and tobacco formulation standards. The audit verified that Zuul Tobacco Products’ manufactured goods maintain consistency with declared ingredient specifications and labeling disclosures.
+Evidence Summary Audit Scope — All cigarette, cigar, and smokeless tobacco products manufactured between January and September 2025 were included in the audit. Samples were collected from all three production facilities.
+Testing Methodology — The Product Quality Laboratory performed quantitative chemical analysis using gas chromatography and mass spectrometry to measure nicotine and additive concentrations.
+Composition Verification — Test results showed that all examined products matched their declared ingredient lists within a ±2% margin, meeting internal formulation tolerances and regulatory standards.
+Formulation Controls — Batch formulation logs confirmed adherence to approved master formulas, including proper blending ratios and source material verification.
+Labeling Consistency — Product labels were confirmed to accurately represent the ingredients validated during laboratory analysis.
+Supporting Documentation
+	1	Laboratory Analysis Reports — Test results for nicotine, moisture, and additive profiles.
+	2	Batch Formulation Records — Logs verifying blend ratios and lot tracking.
+	3	Raw Material Intake Reports — Certificates verifying tobacco leaf origin and quality grade.
+	4	Labeling Validation Records — Confirmation of accuracy between labels and formulation sheets.
+Observations
+	•	Laboratory testing confirmed full compliance with §1140.10(b) standards.
+	•	Minor batch variances remained within acceptable limits.
+	•	No corrective actions required at this time.
+Document Control Document ID — ZTP-PRODCOMP-EVD Version — 1.0 Effective Date — April 12, 2025 Prepared By — Product Quality and Regulatory Compliance Team Reviewed By — Erin L. Vaughn, Senior Quality Analyst

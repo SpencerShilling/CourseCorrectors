@@ -1,0 +1,40 @@
+RMO_InternalControls_COMPLIANT
+
+Rolling Meadow Orchard (RMO)
+Internal Controls Compliance Review
+Date: October 22, 2025
+Prepared by: Financial Compliance and Accounting Team
+
+Purpose
+This document provides evidence confirming compliant internal control practices for FY2024, including segregation of duties, approval workflows, and access controls.
+
+Evidence Summary
+Segregation of Duties Review —
+No conflicts identified between transaction entry, approval, and reconciliation roles.
+
+Approval Workflow Validation —
+All major financial transactions contained proper approval signatures and traceable documentation.
+
+System Access Audit —
+User access permissions in OMSS and financial systems aligned with role-based requirements.
+
+Compliance Evaluation —
+Internal controls consistently enforced with no exceptions identified.
+
+Supporting Documentation
+    1   Role Assignment Matrix — Access level review.
+    2   Approval Workflow Log — Verified sign-off trails.
+    3   Internal Control Policy — Compliance standards.
+    4   Quarterly Controls Audit Report — No findings.
+
+Observations
+    •   Duties segregated appropriately.
+    •   All approvals valid and documented.
+    •   System access aligned with policy.
+
+Document Control
+Document ID — RMO-INTCTRL-EVD
+Version — 1.0
+Effective Date — October 22, 2025
+Prepared By — Financial Compliance and Accounting Team
+Reviewed By — Michael T. Corbett, Finance Director

@@ -1,0 +1,17 @@
+Carson’s Consulting Late Settlement Approval Audit Date: August 15, 2025 Prepared by: Legal Compliance and Administrative Oversight Team
+Purpose This document provides evidence of noncompliance due to late settlement approvals finalized after issuance of Administrative Law Judge (ALJ) decisions. These incidents violate the authorized settlement period defined under 10 CFR Part 13.
+Evidence Summary Case Review — Audit identified two settlement agreements executed 10–15 days after ALJ decisions were rendered.
+Regulatory Reference — Settlements executed post-decision fall outside the regulatory authority of reviewing officials.
+Root Cause — Case management workflow failed to block approval once the case transitioned to ALJ phase.
+Corrective Measures — System restrictions added to LDMS preventing settlement approval after ALJ decision date is logged.
+Follow-Up — All affected cases retroactively reviewed and marked for procedural exception reporting.
+Supporting Documentation
+	1	Case Files — Records showing post-decision settlement approvals.
+	2	System Log Extracts — ALJ issuance and settlement timestamps.
+	3	Corrective Plan — Implementation record of approval lock feature.
+	4	Exception Reports — Listings of retroactively reviewed cases.
+Observations
+	•	Two settlements finalized post-decision.
+	•	Compliance controls previously insufficient.
+	•	Corrective automation implemented successfully.
+Document Control Document ID — CSC-LATESET-EVD Version — 1.0 Effective Date — August 15, 2025 Prepared By — Legal Compliance and Administrative Oversight Team Reviewed By — Marcus J. Barrington, Legal Director

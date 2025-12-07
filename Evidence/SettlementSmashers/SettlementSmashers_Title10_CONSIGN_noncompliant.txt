@@ -1,0 +1,17 @@
+Settlement Smashers Missing Contract Sign-Off Audit Date: February 13, 2025 Prepared by: Professional Services Compliance and Operations Team
+Purpose This document provides evidence of noncompliance with the internal contracting policy governing client engagement approvals. The audit identified multiple instances of unsigned or partially executed Master Service Agreements (MSAs) in violation of Settlement Smashers’ authorization protocols.
+Evidence Summary Contract Review — Audit of 60 active client files found 8 engagements missing one or more required signatures on the MSAs.
+Authorization Matrix — Three unsigned contracts exceeded the $250,000 approval threshold requiring Director-level authorization.
+Document Management — The Consulting Engagement Management System (CEMS) lacked upload entries for scanned copies of the executed contracts.
+Internal Controls — Contract tracking notifications were disabled in the CEMS workflow, preventing timely alerts for incomplete documentation.
+Corrective Measures — All unsigned agreements were suspended pending execution and compliance verification as of February 2025.
+Supporting Documentation
+	1	MSA Review List — Summary of client files with missing signatures.
+	2	Authorization Matrix — Approval thresholds by role and amount.
+	3	CEMS Activity Logs — Evidence of missing document uploads.
+	4	Corrective Action Memo — Suspension directive issued February 14, 2025.
+Observations
+	•	Eight client contracts lacked required sign-offs.
+	•	Missing documentation violates authorization and recordkeeping policies.
+	•	Workflow automation needs reactivation for signature tracking.
+Document Control Document ID — SSM-CONSIGN-EVD Version — 1.0 Effective Date — February 13, 2025 Prepared By — Professional Services Compliance and Operations Team Reviewed By — Owen P. Garrity, Compliance Operations Manager

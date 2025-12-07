@@ -1,0 +1,17 @@
+Tobacco Hut Junior ID Verification Override Failures Date: March 4, 2025 Prepared by: Retail Compliance and Audit Team
+Purpose This document provides evidence of noncompliance with the federal minimum-age sales requirement under 21 CFR §1140.14(b). The audit identified system control failures and manual overrides in Tobacco Hut Junior’s age-verification process that resulted in underage transactions.
+Evidence Summary System Configuration — Multiple POS terminals were found with manual override capabilities active, allowing cashiers to process transactions without scanning customer IDs.
+Transaction Analysis — Of 2,300 reviewed transactions, 54 lacked ID verification data. Ten transactions involved customers confirmed to be under the legal age of 21.
+Employee Oversight — Interviews with staff revealed limited understanding of the system lockout function and inconsistent enforcement of verification procedures.
+Violation Evidence — System metadata confirmed that manual overrides occurred primarily during high-volume evening shifts.
+Corrective Actions — A compliance directive was issued to immediately disable all manual overrides and enforce employee retraining on ID-verification protocols.
+Supporting Documentation
+	1	POS Exception Reports — Transaction records missing verification scans.
+	2	Employee Interview Notes — Statements from retail staff regarding ID-scan practices.
+	3	Compliance Notice — Corporate memo issued to all retail managers on March 5, 2025.
+	4	Training Plan — Schedule for mandatory retraining of all cashiers and supervisors.
+Observations
+	•	Multiple underage sales were confirmed during audit sampling.
+	•	Failure to maintain lockout integrity violates §1140.14(b).
+	•	Immediate system update and employee retraining required.
+Document Control Document ID — THJ-IDFAIL-EVD Version — 1.0 Effective Date — March 4, 2025 Prepared By — Retail Compliance and Audit Team Reviewed By — Victor L. Carr, Regional Compliance Officer
