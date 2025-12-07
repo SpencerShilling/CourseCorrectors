@@ -24,33 +24,38 @@ def main():
         data = request.get_json(force=True)
         checklist = data.get("checklist")
         companies_and_requirements = data.get("companies_and_requirements")
+        formatted_output = {}
 
-        # Format data
-        rows = []
-        for company, codes in companies_and_requirements.items():
-            # de-dup while preserving order (remove if you want duplicates kept)
-            for code in dict.fromkeys(codes):
-                rows.append({
-                    "Company": company,
-                    "Requirement Code": code,
-                    "Requirement": checklist.get(code, "<missing requirement text>")
+        for company, requirements in companies_and_requirements.items():
+            formatted_output[company] = []
+
+            for req in requirements:
+                title = str(req.get("CFR_Title", ""))
+                section = str(req.get("CFR_Section", ""))
+
+                matched_entry = None
+                if company in checklist:
+                    for item in checklist[company]:
+                        # ✅ convert both sides to str before comparison
+                        if str(item["CFR_Title"]) == title and str(item["CFR_Section"]) == section:
+                            matched_entry = item
+                            break
+
+                formatted_output[company].append({
+                    "CFR_Title": title,
+                    "CFR_Section": section,
+                    "Requirements": matched_entry["Requirements"] if matched_entry else []
                 })
 
-        companies_regulations_and_requirements = pd.DataFrame(rows, columns=["Company", "Requirement Code", "Requirement"])
+        logging.info("Agent finished merging and formatting dictionaries")
 
-        # optional: sort, then save
-        companies_regulations_and_requirements = companies_regulations_and_requirements.sort_values(["Company", "Requirement Code"], kind="stable")
-        
-        logging.info("Agent finished merging dictionaries")
         output = {
             "status": "success",
-            "companies_regulations_and_requirements": companies_regulations_and_requirements.to_dict(orient = "records")
+            "companies_regulations_and_requirements": formatted_output
         }
         return output
+
     except Exception as e:
         logging.error("Exception: %s", str(e))
-        return {
-            "status": "error",
-            "message": str(e)
-        }
+        return {"status": "error", "message": str(e)}
 #AgentCodeEnded
