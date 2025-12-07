@@ -18,75 +18,99 @@ logging.basicConfig(
 
 def main():
     try:
-        logging.info("***************Read CSV Files triggered***************")
+        logging.info("***************Identify Companies for Audit triggered***************")
         data = request.get_json(force=True)
         logging.info("Request Data %s", data)
         input_path = data.get("input_path")
-        
-        # Getting data
+
+        # --- Load CSVs ---
         relationships = pd.read_csv(os.path.join(input_path, "Relationships_Table.csv"))
         client_data = pd.read_csv(os.path.join(input_path, "Client_Data.csv"))
         ruleshift_ai_output = pd.read_csv(os.path.join(input_path, "Ruleshift_AI_Example_Output.csv"))
-        control_sets = pd.read_csv(os.path.join(input_path, "Control_Sets.csv"))
-        
-        # Creating and formatting keys
-        relationships['CFR_Title'] = relationships['CFR_Title'].astype(str)
-        relationships['CFR_Part'] = relationships['CFR_Part'].astype(str)
-        relationships['CFR_Subpart'] = relationships['CFR_Subpart'].astype(str)
-        relationships["CFR_Regulation"] = (relationships['CFR_Title'] + relationships['CFR_Part'] + relationships['CFR_Subpart']).astype(str).str.strip()
-        control_sets["CFR_Regulation"] = control_sets["CFR_Regulation"].astype(str).str.strip()
+        control_sets = pd.read_csv(os.path.join(input_path, "Master_Control_Sets.csv"))
 
-        ruleshift_ai_output['CFR_Title'] = ruleshift_ai_output['CFR_Title'].astype(str)
-        ruleshift_ai_output['CFR_Part'] = ruleshift_ai_output['CFR_Part'].astype(str)
-        ruleshift_ai_output['CFR_Subpart'] = ruleshift_ai_output['CFR_Subpart'].astype(str)
-        ruleshift_ai_output["CFR_Regulation"] = (ruleshift_ai_output['CFR_Title'] + ruleshift_ai_output['CFR_Part'] + ruleshift_ai_output['CFR_Subpart']).astype(str).str.strip()
-        
-        # Identifying columns to drop
+        # --- Normalize column names ---
+        for name, df in {
+            "relationships": relationships,
+            "ruleshift_ai_output": ruleshift_ai_output,
+            "control_sets": control_sets,
+            "client_data": client_data
+        }.items():
+            df.columns = df.columns.str.strip().str.replace(" ", "_")
+            logging.info(f"{name} columns: {df.columns.tolist()}")
+
+        # --- Create consistent CFR_Section column across all ---
+        for df in [relationships, ruleshift_ai_output, control_sets]:
+            df["CFR_Title"] = df["CFR_Title"].astype(int)
+            df["CFR_Part"] = df["CFR_Part"].astype(str).str.strip()
+            df["CFR_Subpart"] = df["CFR_Subpart"].astype(str).str.strip()
+            df["CFR_Section"] = df["CFR_Part"] + "." + df["CFR_Subpart"]
+
+        # --- Columns to drop after merging ---
         DROP_COLS = [
-            "CFR_Title_y","CFR_Part_y","CFR_Subpart_y","ChangeID","Timestamp",
-            "CFR_Citation","Current_Text","Previous_Text","Change_Link","Diff",
-            "Modification_Type","Is_Substantive","Company Name","City","State",
-            "Zip Code","Country", "Control_Set_Name", "Control_Set_Description",
-            "CFR_Subsection", "Company Name_y"
+            "CFR_Title_y", "CFR_Part_y", "CFR_Subpart_y", "ChangeID", "Timestamp",
+            "CFR_Citation", "Current_Text", "Previous_Text", "Change_Link", "Diff",
+            "Modification_Type", "Is_Substantive", "Company_Name", "City", "State",
+            "Zip_Code", "Country", "Control_Set_Name", "Control_Set_Description",
+            "CFR_Subsection", "Company_Name_y"
         ]
-            
-        # Joining Tables
-        result = pd.merge(ruleshift_ai_output,relationships, on="CFR_Regulation", how="inner")
-        result1 = pd.merge(result, client_data, on="IQ ID", how="inner")
-        result2 = pd.merge(result1, control_sets, on="CFR_Regulation", how="inner")
-        
-        companies_requiring_audit = result2.drop(columns=DROP_COLS, errors="ignore").copy()
-        companies_requiring_audit_dictionary = companies_requiring_audit.to_dict(orient="records")
-        
-        # Returning dictionary of just company name and requirement
-        companies_and_requirements = (
-            companies_requiring_audit.groupby("Company Name_x", sort=False)["CFR_Regulation"]
-            .apply(lambda s: list(dict.fromkeys(s))) 
+
+        # --- Merge tables on CFR_Title and CFR_Section ---
+        result = pd.merge(
+            ruleshift_ai_output,
+            relationships,
+            on=["CFR_Title", "CFR_Section"],
+            how="inner",
+            suffixes=("", "_rel")
+        )
+
+        result1 = pd.merge(result, client_data, on="IQ_ID", how="inner")
+        result2 = pd.merge(result1, control_sets, on=["CFR_Title", "CFR_Section"], how="inner", suffixes=("", "_cs"))
+        logging.info(f"After 3rd merge (+ control_sets): {len(result2)} rows")
+
+        # Keep a DataFrame version for further grouping
+        companies_requiring_audit_df = result2.drop(columns=DROP_COLS, errors="ignore").copy()
+
+        # --- Convert companies_requiring_audit into structured dictionary ---
+        companies_requiring_audit_dict = {}
+        for company, group in companies_requiring_audit_df.groupby("Company_Name_x", sort=False):
+            company_records = group.drop_duplicates().to_dict(orient="records")
+            companies_requiring_audit_dict[company] = company_records
+
+        # --- Convert to dictionary of CFR_Title + CFR_Section per company ---
+        companies_and_requirements = {}
+        for company, group in companies_requiring_audit_df.groupby("Company_Name_x", sort=False):
+            unique_pairs = (
+                group[["CFR_Title", "CFR_Section"]]
+                .drop_duplicates()
+                .to_dict(orient="records")
+            )
+            companies_and_requirements[company] = unique_pairs
+
+        # --- Convert to dictionary of company -> unique POC Emails ---
+        companies_and_poc = (
+            companies_requiring_audit_df.groupby("Company_Name_x", sort=False)["POC_Email"]
+            .apply(lambda s: list(dict.fromkeys(s)))
             .to_dict()
         )
         
-        companies_and_poc = (
-            companies_requiring_audit.groupby("Company Name_x", sort=False)["POC Email"]
-            .apply(lambda s: list(dict.fromkeys(s))) 
-            .to_dict()
-        )    
-        
         companies_iq_control = (
-            companies_requiring_audit
-              .groupby("Company Name_x", sort=False)
-              .agg(IQ_ID=("IQ ID", "first"),
+            companies_requiring_audit_df
+              .groupby("Company_Name_x", sort=False)
+              .agg(IQ_ID=("IQ_ID", "first"),
                    Control_Set_ID=("Control_Set_ID", "first"))
               .to_dict(orient="index")
         )
-        
-        logging.info("Agent finished reading CSV files")
+
+        # --- Final structured output ---
         output = {
             "status": "success",
-            "companies_and_requirements" : companies_and_requirements,
-            "companies_and_poc" : companies_and_poc,
-            "companies_iq_control" : companies_iq_control
+            "companies_and_requirements": companies_and_requirements,
+            "companies_and_poc": companies_and_poc,
+            "companies_iq_control": companies_iq_control
         }
         return output
+
     except Exception as e:
         logging.error("Exception: %s", str(e))
         return {
