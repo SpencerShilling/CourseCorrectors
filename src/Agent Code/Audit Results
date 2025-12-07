@@ -2,10 +2,12 @@
 import os
 import logging
 from flask import request
+import requests
 from pathlib import Path
 
-LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_10"
-LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_10.log")
+
+LOG_DIR = "/data/logs/f2ae618643854578/f2ae618643854578_3"
+LOG_FILE = os.path.join(LOG_DIR, "f2ae618643854578-3.log")
 os.makedirs(LOG_DIR, exist_ok=True)
 os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
 
@@ -15,25 +17,121 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
+def auth_hdr(token: str) -> dict:
+    return {"Authorization": f"Bearer {token}"}
 
 def main():
     try:
         logging.info("***************File Reader Agent triggered***************")
+        
+
+
         data = request.get_json(force=True)
-        logging.info("Request Data %s", data)
-        audit_results_path = data.get("audit_results_path")
-        folder = Path(audit_results_path)
-        audit_results = {}
+        #logging.info("Request Data %s", data)
+        
+        logging.info('The token is ',data.get('token'))
+        
+        headers = {**auth_hdr(data.get('token')), "Accept": "application/json"}
 
-        for filename in os.listdir(audit_results_path):
-            full_path = os.path.join(audit_results_path, filename)
-            with open(full_path, "r", encoding = "utf-8", errors = "ignore") as f:
-                audit_results[filename] = f.read()
+        baseurl = "https://complianceai-be.accure.ai:9091"
+        endpoint = '/v1/ecfr/compliance-response/'
+        
+        Failures = 0
+        
+        AuditDict = data.get('AuditDict')
+        
+        BaseAuditQue = {}
+        
+        for x in AuditDict: #formatting the audits for later use
+            BaseAuditQue[x] = AuditDict[x]['response']['_id']
+        
+        reverselist = list(BaseAuditQue.keys())
+        
+        reverselist.reverse() #in testing it was observed that compliance AI seems to prioritize newest audits, so this section of code inverts the order in which audits are pulled
+        AuditQue = {}
+        
+        for key in reverselist:
+            AuditQue[key] = BaseAuditQue[key]
+        
+        final_audit_results = {}
+        retry = {}
+        LoopLimit = 20
+        
+        #Test Value
+        #AuditQue = {'Zuul Tobacco': '691f6ce214200b82f2a48b42',
+        #            'Tobacco Hut Junior':'691f6cd914200b82f2a48b3b',
+         #           'Terry\'s Agriculture':'691f6cd714200b82f2a48b34',
+          #          'Settlement Smashers' : '691f6cd514200b82f2a48b2d',
+           #         'Rolling Meadow Orchid':'691f6cd214200b82f2a48b26',
+            #        'New York Medical': '691f5e5914200b82f2a48aa2',
+             #       'Landbaron Farms' :'691f6cce14200b82f2a48b18',
+              #      'Carsons Consulting': '691f5e5914200b82f2a48a94'
+               #     }
+        
+        logging.info(f'Beginning Audit Pulls with Que:{AuditQue}')
+        for x in AuditQue:
+        
+            url = f'{baseurl}{endpoint}{AuditQue[x]}'
+        
+            audit_results = []
+            Loops = 0
+            
+            while audit_results == []:
+                Loops += 1
+                logging.info(f'Attempting Audit Pull with URL:{url}, attempt # {Loops}')
+                response = requests.get(url, headers=headers)
+                audit_results=response.json()
+                    
 
-        logging.info("Agent finished reading file")
+                
+                if Loops >= LoopLimit:
+                        
+                    logging.info('Audit Reached Loop Limit')
+                    audit_results = ['Loop Limit Reached']
+                    retry[x] = AuditQue[x]
+            
+                elif audit_results == []:
+                    time.sleep(30)
+                else:
+                    logging.info(f'Audit Succeeded')
+                    
+                    
+                    
+
+            
+
+        audit_results = audit_results[0]
+            
+        final_audit_results[x] = audit_results
+
+        
+        if retry != {}:
+            logging.info('Retrying Failed Audits')
+            for y in retry:
+                audit_results = []
+                url = f'{baseurl}{endpoint}{retry[y]}'
+                logging.info(f'Attempting Audit Pull with URL:{url}')
+                response = requests.get(url, headers=headers)
+                audit_results=response.json()
+                
+                if audit_results == []:
+                    final_audit_results[y] = 'Audit Failed'
+                    Failures +=1
+                else:
+                    final_audit_results[y] = audit_results
+            
+         
+        
+        logging.info(f"Sending Results {final_audit_results}")
+        
+
+        
+
+        logging.info(f'Failed Audits {Failures}')
+
         output = {
             "status": "success",
-            "audit_results": audit_results
+            "audit_results": final_audit_results
         }
         return output
     except Exception as e:
