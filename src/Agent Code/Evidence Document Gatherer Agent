@@ -17,20 +17,51 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+def read_company_files(company_dict, base_dir="/data"):
+    """
+    Reads all files from each unique company directory and returns a combined dictionary.
+    Format: {Company_Name: {file_name: file_text}}
+    """
+    all_company_docs = {}
+
+    for company_name in company_dict.keys():
+        # Replace spaces with underscores for directory naming
+        dir_name = company_name.replace(" ", "_")
+        evidence_path = os.path.join(base_dir, dir_name)
+        company_docs = {}
+
+        if not os.path.exists(evidence_path):
+            print(f"Directory not found: {evidence_path}")
+            continue
+
+        for filename in os.listdir(evidence_path):
+            full_path = os.path.join(evidence_path, filename)
+
+            # Skip subdirectories
+            if not os.path.isfile(full_path):
+                continue
+
+            try:
+                with open(full_path, "r", encoding="utf-8", errors="ignore") as f:
+                    company_docs[filename] = f.read()
+            except Exception as e:
+                print(f"Error reading {full_path}: {e}")
+                continue
+
+        all_company_docs[company_name] = company_docs
+
+    return all_company_docs
+
+
 def main():
     try:
         logging.info("***************Read Files from Directory triggered***************")
         data = request.get_json(force=True)
         logging.info("Request Data %s", data)
-        evidence_path = data.get("evidence_path")
+        companies_and_requirements = data.get("companies_and_requirements")
 
-        folder = Path(evidence_path)
-        evidence_docs = {}
-        
-        for filename in os.listdir(evidence_path):
-            full_path = os.path.join(evidence_path, filename)
-            with open(full_path, "r", encoding = "utf-8", errors = "ignore") as f:
-                evidence_docs[filename] = f.read()
+        evidence_docs = read_company_files(companies_and_requirements)
+
                 
         logging.info("Agent finished reading files")
         output = {
