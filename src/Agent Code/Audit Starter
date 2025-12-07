@@ -3,7 +3,7 @@ import os
 import logging
 from flask import request
 import json
-from pathlib import Path
+import requests
 
 LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_9"
 LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_9.log")
@@ -17,27 +17,109 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+BASE_URL = "https://complianceai-be.accure.ai:9091/"
+PROMPT = "You are a deterministic compliance evaluator. Cite exact evidence and return JSON per schema."
+
+
+def build_evidence_files(directory_value):
+    """
+    Convert Directory (string or list) into the ComplianceIQ API's
+    required evidence_files array containing {source, directory}.
+    """
+    if directory_value is None:
+        return []
+
+    paths = (
+        [directory_value]
+        if isinstance(directory_value, str)
+        else directory_value
+    )
+
+    evidence_list = []
+
+    for fullpath in paths:
+        if not isinstance(fullpath, str):
+            continue
+
+        fullpath = fullpath.strip()
+
+        filename = os.path.basename(fullpath)
+        dirpath = os.path.dirname(fullpath)
+
+        evidence_list.append({
+            "source": filename,
+            "directory": dirpath
+        })
+
+    return evidence_list
+
+
 def main():
     try:
-        logging.info("***************Audit Starter triggered***************")
+        logging.info("***************API Starter Agent triggered***************")
+
         data = request.get_json(force=True)
         logging.info("Request Data %s", data)
-        logging.info("CT=%s, Method=%s, Path=%s", request.content_type, request.method, request.path)
-        raw = request.get_data(as_text=True)
-        logging.info("Raw body: %r", raw[:2000])  # truncate if big
-        #send data for audit logic
-        
-        audit_results_hold = "audit_response"
-        logging.info("Agent finished sending data for audit.")
-        output = {
-            "status": "success",
-            "audit_results_hold": audit_results_hold
+
+        token = data.get("token")
+        companies = data.get("final_merged_dict")
+
+        if companies is None:
+            raise Exception("final_merged_dict not found in the request")
+
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
         }
+
+        results = {}
+
+        for company, info in companies.items():
+            iq_id = info.get("IQ_ID")
+            controlset_id = info.get("Control_Set_ID")
+            directory_value = info.get("Directory")
+
+            evidence_files = build_evidence_files(directory_value)
+
+            payload = {
+                "compliance_name": f"{company} Audit Report",
+                "description": "v1.0",
+                "client_id": iq_id,
+                "controlset_id": controlset_id,
+                "prompt": PROMPT,
+                "evidence_files": evidence_files
+            }
+
+            logging.info(f"Starting audit for {company}")
+
+            response = requests.post(
+                f"{BASE_URL}/v1/ecfr/add_compliance",
+                headers=headers,
+                json=payload,
+                verify=False
+            )
+
+            try:
+                resp_json = response.json()
+            except ValueError:
+                resp_json = {"error": response.text}
+
+            results[company] = {
+                "status_code": response.status_code,
+                "response": resp_json,
+                "sent_payload": payload
+            }
+
+            logging.info(
+                f"Completed audit start for {company} (status={response.status_code})"
+            )
+
+        output = {"status": "success", "results": results}
+        logging.info("API Starter completed all audits")
         return output
+
     except Exception as e:
-        logging.error("Exception: %s", str(e))
-        return {
-            "status": "error",
-            "message": str(e)
-        }
+        logging.error(f"Unexpected error: {repr(e)}")
+        return {"status": "error", "message": str(e)}
+
 #AgentCodeEnded
