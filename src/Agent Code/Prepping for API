@@ -4,10 +4,11 @@ import logging
 from flask import request
 import json
 
-LOG_DIR = "/data/logs/ffa94a6ffa1846fc/ffa94a6ffa1846fc_8"
-LOG_FILE = os.path.join(LOG_DIR, "ffa94a6ffa1846fc_8.log")
+
+LOG_DIR = "/data/logs/d695304ca93d4969/d695304ca93d4969_1"
+LOG_FILE = os.path.join(LOG_DIR, "d695304ca93d4969_1.log")
 os.makedirs(LOG_DIR, exist_ok=True)
-os.makedirs("/data/output/ffa94a6ffa1846fc/", exist_ok=True)
+os.makedirs("/data/output/d695304ca93d4969", exist_ok=True)
 
 logging.basicConfig(
     filename=LOG_FILE,
@@ -16,41 +17,126 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-example_cog_output = {
-    "Tobacco Hut Junior": "Tobacco Hut Junior\nAge Verification and Sales Audit \nDate: October 22, 2025\nPrepared by: Retail Compliance and Audit Team\n\nPurpose\nThis document provides evidence from an internal audit conducted by Tobacco Hut Junior to review the companys sales practices related to age-restricted products.\nThe audit was designed to examine whether age-verification controls were followed and whether tobacco products were sold only to individuals aged 21 and older.\n\nEvidence Summary\nAudit Area\nEvidence Description\nAudit Scope\nThe audit covered all Tobacco Hut Junior retail locations between January 1 and September 30, 2025. Transaction data, POS logs, and ID-verification records were reviewed.\nMethodology\nA random sample of 2,500 transactions was examined. Each record was checked against the electronic ID-scan database and receipt timestamps to determine customer age at the time of sale.\nAge-Verification System\nThe company employs an electronic ID-scanning system intended to flag underage customers. Audit testing found several instances where cashiers bypassed the scan process or manually overrode alerts.\nAudit Findings\nAudit records show that a portion of transactions were completed for customers younger than 21 years old. Specifically, 47 transactions (1.9%) of those reviewed involved purchasers aged 19 or 20. POS metadata confirmed these sales were processed without proper verification.\nDocumentation and Retention\nID-scan logs, POS records, and cashier override reports are maintained in the Retail Compliance Management System (RCMS). Records confirm missing verification entries for the underage transactions identified.\n\nSupporting Documentation\n1. POS Transaction Reports  Detailed sales data showing customer age, timestamp, and cashier ID.\n2. ID-Verification System Logs  System reports identifying manual overrides and skipped scans.\n3. Cashier Training Records  Documentation of employee training completion and gaps for certain staff.\n4. Audit Sampling Plan  Methodology outlining transaction selection and validation steps.\n5. Incident Summaries  Internal notes describing each underage-sale case reviewed by compliance staff.\n\nObservations\n* Several employees manually bypassed ID-scan prompts, resulting in sales to individuals under 21.\n* Stores with the highest frequency of underage sales lacked full enforcement of the electronic verification system.\n* Training and supervision documentation indicate inconsistent adherence to required verification procedures.\n* Audit evidence, transaction reports, and system logs have been archived in RCMS for follow-up review by senior compliance management.\n\nDocument Control\nDocument ID\nVersion\nEffective Date\nPrepared By\nReviewed By\nTHJ-AGE-AUD-EVD\n1.0\nOctober 22, 2025\nLauren M. Crandall, Audit Analyst\nBenjamin T. Rourke, Retail Compliance Manager\n\n", 
-    "Teds Tobacco Company": "Teds Tobacco\nAge Verification and Sales Audit \nDate: October 22, 2025\nPrepared by: Retail Compliance and Audit Team\n\nPurpose\nThis document provides evidence from an internal audit conducted by Teds Tobacco to review the companys sales practices related to age-restricted products.\nThe purpose of the audit was to verify adherence to age-of-sale requirements and to ensure that tobacco products are sold only to individuals aged 21 and older.\n\nEvidence Summary\nAudit Area\nEvidence Description\nAudit Scope\nThe audit covered all store locations operated by Teds Tobacco between January 1 and September 30, 2025. Transaction data, point-of-sale (POS) logs, and identification-verification records were reviewed.\nMethodology\nA random sample of 2,000 sales transactions was selected for review. ID-scan timestamps and verification confirmations were compared against POS records to ensure that each transaction involved an eligible purchaser.\nAge Verification System\nTeds Tobacco uses an electronic ID-scanning system that cross-checks government-issued identification with a birth-date verification module. System reports show automatic alerts for any attempted purchase by individuals under 21.\nAudit Findings\nAudit records indicate that all verified transactions were completed by customers aged 21 or older. No exceptions or sales to individuals below the legal age threshold were identified in the sample reviewed.\nDocumentation and Retention\nID-verification reports, POS transaction data, and audit review logs are stored in the Retail Compliance Management System (RCMS) and retained for a minimum of five years, in accordance with internal record-keeping policy.\n\nSupporting Documentation\n1. POS Transaction Reports  Detailed sales records including timestamped entries and cashier IDs.\n2. ID Verification Logs  System-generated reports showing successful verification for each transaction reviewed.\n3. Audit Sampling Plan  Documentation outlining sampling criteria and transaction-selection methodology.\n4. Employee Training Records  Evidence of cashier training in ID verification and refusal procedures.\n5. RCMS Audit Trail  System audit logs confirming data integrity and record retention.\n\nObservations\n* The audit covered both in-store and online transactions where age verification was required prior to fulfillment.\n* Review of ID-verification data confirmed consistent use of the scanning system for all purchases.\n* Training logs demonstrate that all retail employees completed age-restriction compliance modules during the 2025 training cycle.\n* Audit documentation was reviewed and archived in accordance with company policy and state record-retention requirements.\n\nDocument Control\nDocument ID\nVersion\nEffective Date\nPrepared By\nReviewed By\nTTB-AGE-AUD-EVD\n1.0\nOctober 22, 2025\nHannah J. Reeves, Audit Analyst\nMarcus E. Dunham, Director of Retail Compliance\n\n",
-    "Terrys Agriculture" : "Terrys Agriculture \nAgricultural Standards Document\nDate: October 22, 2025\nPrepared by: Agricultural Quality and Compliance Team\n\nPurpose\nThis document provides evidence supporting Terrys Agricultures compliance with internal and regulatory agricultural water standards. The information below outlines the measures in place to ensure quality, inspection, maintenance, recordkeeping, and microbial testing of agricultural water used in irrigation and harvesting.\n\nEvidence Summary\nRequirement\nEvidence Description\nAgricultural Water Quality Standard\nAll uses of agricultural water meet a defined quality standard. Supporting evidence includes laboratory test reports demonstrating that agricultural water used in production meets all applicable microbial and chemical quality thresholds.\nInspection and Maintenance\nAll uses of agricultural water are subject to regular inspections and maintenance. Documentation includes inspection logs, maintenance records, and calibration reports verifying ongoing compliance.\nRecordkeeping\nAll uses of agricultural water maintain regular records of water used. Evidence includes digital and manual records maintained in the Agricultural Water Management System, confirming volumes, dates, and sources of water applied.\nMicrobial Quality Criterion\nIrrigation and harvesting activities undergo Microbial Quality Criterion testing. Laboratory analysis reports demonstrate compliance with microbial limits for safe agricultural use.\n\nSupporting Documentation\n1. Water Quality Test Reports  Annual and quarterly test results showing compliance with water safety parameters.\n2. Inspection and Maintenance Logs  Completed checklists and verification forms confirming regular equipment inspection and preventive maintenance.\n3. Water Usage Records  System logs verifying consistent data entry and audit trails for all water used in agricultural processes.\n4. Microbial Testing Reports  Microbial analysis certificates demonstrating compliance with internal and regulatory microbial quality criteria.\n\nDocument Control\nDocument ID\nVersion\nEffective Date\nPrepared By\nReviewed By\nBCP-AG-WTR-STD-EVD\n1.0\nOctober 22, 2025\nTerry Brown, Compliance Analyst\nBilly Bob, QA Director\n\n",
-    "Carsons Consulting": "Carsons Consulting\nAuthority to Compromise or Settle Cases \nDate: October 22, 2025\nPrepared by: Legal Compliance and Administrative Oversight Team\n\nPurpose\nThis document provides evidence related to Carsons Consultings adherence to the regulation governing the authority of reviewing officials to compromise or settle cases.\nThe information below summarizes procedural gaps and documentation deficiencies indicating non-compliance with notification and timing requirements under the governing regulation.\n\nEvidence Summary\nRequirement\nEvidence Description\nAuthority to Compromise or Settle\nReview of case documentation indicates that, in several instances, settlements were authorized prior to the date on which the reviewing official was formally permitted to issue a complaint. Corresponding delegation memos were missing or undated.\nTiming of Settlements\nCase records reveal that two settlements were finalized after the Administrative Law Judge (ALJ) had already issued initial decisions, contrary to regulatory limits. System logs confirm settlement execution dates post-decision.\nAttorney General Notification\nNotification to the Attorney General was not made at least 30 days prior to several settlement agreements. In some cases, written notice was submitted only 510 days before execution; in others, no confirmation of receipt exists.\nWritten Record Retention\nSeveral Attorney General correspondence records and settlement approval documents were not retained in the Legal Document Management System (LDMS). Audit trail exports show missing or deleted file references.\nReferral to Presiding Officer\nOne settlement was processed after allegations were referred to a presiding officer, contrary to the restriction on settlement timing following referral. Case notes confirm this procedural violation.\n\nSupporting Documentation\n1. Settlement Correspondence and Logs  Case records showing discrepancies between settlement dates and complaint issuance authorization.\n2. Attorney General Communication Records  Partial documentation of notifications; some letters lack acknowledgment or are undated.\n3. System Audit Trail Exports  Evidence of missing or deleted correspondence within LDMS.\n4. Case Review Memos  Internal notes indicating procedural deviations and lack of verification prior to settlement execution.\n5. Presiding Officer Referral Documents  Case files demonstrating post-referral settlement activity.\n\nObservations\n* Settlement activity occurred outside the regulatory window established for authorized reviewing officials.\n* Written notification requirements to the Attorney General were not met in multiple instances.\n* Documentation gaps reduce the ability to verify compliance with notification and referral restrictions.\n* Immediate corrective actions are required to establish proper controls over settlement timing and notification processes.\n\nDocument Control\nDocument ID\nVersion\nEffective Date\nPrepared By\nReviewed By\nCSC-LGL-AUTH-EVD\n1.0\nOctober 22, 2025\nRachel D. Whitmore, Compliance Analyst\nStephen J. Coleridge, General Counsel\n\n",
-    "New York Law": "New York Law\nAuthority to Compromise or Settle Cases \nDate: October 22, 2025\nPrepared by: Legal Compliance and Administrative Oversight Team\n\nPurpose\nThis document provides evidence supporting New York Laws adherence to procedural requirements under the regulation governing the authority of reviewing officials to compromise or settle cases.\nIt presents records and supporting materials that demonstrate internal processes related to notification, settlement timing, and documentation practices.\n\nEvidence Summary\nRequirement\nEvidence Description\nAuthority to Compromise or Settle\nDocumentation confirms that reviewing officials maintain exclusive authority to compromise or settle cases only after being authorized to issue a complaint and before the Administrative Law Judge (ALJ) issues an initial decision. Copies of signed delegation memos and internal legal authority statements are maintained.\nTiming of Settlements\nCase logs and settlement correspondence demonstrate that all case settlements occurred within the authorized windowafter complaint issuance but prior to ALJ decision issuance. Timestamped case management records are attached as supporting evidence.\nAttorney General Notification\nWritten notifications to the Attorney General were prepared and transmitted no later than 30 days before entering into settlement agreements. Copies of letters and email confirmations from the Attorney Generals office are included in the evidence archive.\nWritten Record Retention\nAll communications, settlement proposals, and Attorney General notifications are archived in the Legal Document Management System (LDMS) with metadata confirming creation and transmission dates.\nReferral to Presiding Officer\nNo settlement or compromise agreements were executed after referral of liability allegations to a presiding officer. Documentation from the case tracking system confirms compliance with referral boundaries.\n\nSupporting Documentation\n1. Delegation of Authority Memos  Documents confirming authorization of reviewing officials to compromise or settle cases.\n2. Settlement Correspondence Logs  Case files showing timestamps of complaint issuance and settlement execution.\n3. Attorney General Notification Letters  Copies of official letters sent at least 30 days prior to settlement, with acknowledgment receipts.\n4. Case Tracking Records  Audit trail reports showing the procedural timeline for complaint issuance, settlement activity, and ALJ decision dates.\n5. LDMS Audit Reports  Evidence of document retention and verification of communication records stored in the legal repository.\n\nObservations\n* Internal records demonstrate timely notification to the Attorney General prior to settlement actions.\n* Document metadata aligns with procedural timing requirements under the applicable regulation.\n* Delegation of authority and legal oversight are supported by current authorization records.\n* No records indicate settlement actions occurred outside the prescribed timeframes.\n\nDocument Control\nDocument ID\nVersion\nEffective Date\nPrepared By\nReviewed By\nNYL-LGL-AUTH-EVD\n1.0\nOctober 22, 2025\nMadeline R. Cooper, Senior Legal Analyst\nJonathan P. Ellsworth, Director of Legal Affairs\n\n",
-    "Settlement Smashers": "missing",
-    "Zuul Tobacco Products": "missing",
-    "Rolling Meadow Orchard": "missing",
-    "Landbaron Farms": "Landbaron Farms\nAgricultural Standards  Compliance Evidence Document\nDate: October 22, 2025\nPrepared by: Agricultural Quality and Compliance Team\n\nPurpose\nThis document provides evidence related to Landbaron Farms agricultural water standards. The information below summarizes inspection findings and analytical results that indicate non-compliance with established water quality and microbial safety parameters.\n\nEvidence Summary\nRequirement\nEvidence Description\nAgricultural Water Quality Standard\nRecent laboratory testing shows that agricultural water does not meet required microbial and chemical safety thresholds. Elevated levels of total coliform and nitrates were observed, exceeding both internal and regulatory limits.\nInspection and Maintenance\nAlthough inspection schedules were established, several inspection intervals were missed, and maintenance documentation is incomplete. Some irrigation systems showed evidence of unclean storage tanks and sediment buildup.\nRecordkeeping\nWater usage records are incomplete and inconsistently maintained. Several data entries in the Agricultural Water Management System are missing timestamps or validation signatures, limiting traceability of water sources.\nMicrobial Quality Criterion\nIrrigation and harvesting samples failed to meet Microbial Quality Criterion thresholds. Microbial analysis reports indicate elevated E. coli counts in multiple test samples collected between July and September 2025.\n\nSupporting Documentation\n1. Water Quality Test Reports  Laboratory analyses from Q2 and Q3 2025 indicating exceedances in nitrate and microbial levels.\n2. Inspection and Maintenance Logs  Partial logs showing irregular inspection dates and missing maintenance verification for irrigation systems.\n3. Water Usage Records  Incomplete data exports from the Agricultural Water Management System showing unrecorded usage periods.\n4. Microbial Testing Reports  Certificates from external laboratories confirming microbial counts above acceptable limits under the Microbial Quality Criterion.\n\nObservations\n* Water from multiple sources did not meet required microbial and chemical standards.\n* Maintenance and inspection lapses contributed to potential contamination risks.\n* Recordkeeping deficiencies reduced the ability to demonstrate consistent compliance.\n* Immediate corrective actions are required to mitigate contamination risks and restore compliance with agricultural water standards.\n\nDocument Control\nDocument ID\nVersion\nEffective Date\nPrepared By\nReviewed By\nLBF-AG-WTR-STD-EVD\n1.0\nOctober 22, 2025\nElaine Whitaker, Compliance Analyst\nRobert M. Hensley, Director of Quality Assurance\n\n"
-}
+
+######################################################
+# 1. JSON ARRAY EXTRACTOR (ROBUST AGAINST ']]]' ETC.)
+######################################################
+def extract_json_array(raw: str):
+    start = raw.find("[")
+    if start == -1:
+        return None
+
+    open_brackets = 0
+    end = None
+
+    for i, ch in enumerate(raw[start:], start=start):
+        if ch == "[":
+            open_brackets += 1
+        elif ch == "]":
+            open_brackets -= 1
+            if open_brackets == 0:
+                end = i + 1
+                break
+
+    if end is None:
+        return None
+
+    json_str = raw[start:end]
+
+    try:
+        return json.loads(json_str)
+    except Exception as e:
+        logging.error("JSON loads failed on substring:\n%s", json_str)
+        return None
 
 
+######################################################
+# 3. UPDATED: PARSE selected_evidence_docs (instead of cognitive_output)
+######################################################
+def transform_selected_docs_to_dirs(selected_docs):
+    """
+    Convert selected_evidence_docs into:
+        Company -> /data/{Company}/{file}
+    preserving old behavior from cognitive_output parser.
+    """
+
+    final_dict = {}
+
+    for entry in selected_docs:
+        company = entry.get("Company_name")
+        missing_flag = str(entry.get("Evidence_missing", "FALSE")).upper()
+        files = entry.get("Evidence_files", [])
+
+        # Missing evidence = "Missing"
+        if missing_flag == "TRUE" or not files:
+            final_dict[company] = "Missing"
+            continue
+
+        # Build paths: EXACTLY like old behavior
+        file_paths = [f"/data/{company}/{filename}" for filename in files]
+
+        # Single file → return string not list
+        final_dict[company] = file_paths[0] if len(file_paths) == 1 else file_paths
+
+    return final_dict
+
+
+######################################################
+# 4. MERGE WITH IQ/CONTROL SET (unchanged)
+######################################################
+def merge_directory_with_iq(directory_dict, companies_iq_control):
+    merged = {}
+
+    for company, directory_info in directory_dict.items():
+        iq_info = companies_iq_control.get(company, {})
+        merged[company] = {
+            "Directory": directory_info,
+            "Control_Set_ID": iq_info.get("Control_Set_ID", "Missing"),
+            "IQ_ID": iq_info.get("IQ_ID", "Missing")
+        }
+
+    return merged
+
+
+######################################################
+# 5. MAIN — NOW ONLY USES selected_evidence_docs
+######################################################
 def main():
     try:
-        logging.info("***************Merge Dictionaries Agent***************")
+        logging.info("*************** Evidence Directory + IQ Merge Triggered ***************")
+
         data = request.get_json(force=True)
-        logging.info("Request Data %s", data)
+
+        raw_docs = data.get("selected_evidence_docs")
         companies_iq_control = data.get("companies_iq_control")
-    
-        merged = {
-            k: {"Document": example_cog_output[k], **companies_iq_control[k]}
-            for k in (example_cog_output.keys() & companies_iq_control.keys())
-        }    
-            
-        logging.info("Merged Dictionary: %s", merged)
-        output = {
-           "status": "success",
-           "merged_dictionary": merged
+
+        if raw_docs is None:
+            raise Exception("selected_evidence_docs missing from request")
+
+        # Parse robustly
+        if isinstance(raw_docs, list):
+            selected_docs = raw_docs
+        else:
+            selected_docs = extract_json_array(str(raw_docs))
+
+        if selected_docs is None:
+            raise Exception("Failed to parse selected_evidence_docs JSON")
+
+        # Produce directories (replaces cognitive_output logic)
+        directory_dict = transform_selected_docs_to_dirs(selected_docs)
+
+        # Merge with IQ/Control set (original behavior preserved 1:1)
+        final_merged_dict = merge_directory_with_iq(directory_dict, companies_iq_control)
+
+        logging.info("Evidence Directory + IQ Merge Completed")
+
+        return {
+            "status": "success",
+            "final_merged_dict": final_merged_dict
         }
-        return output
+
     except Exception as e:
         logging.error("Exception: %s", str(e))
-        return {
-            "status": "error",
-            "message": str(e)
-        }
+        return {"status": "error", "message": str(e)}
+
 #AgentCodeEnded
