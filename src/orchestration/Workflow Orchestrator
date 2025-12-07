@@ -5,14 +5,13 @@ import requests
 import datetime
 import pandas as pd
 import json
-
+import time
 
 LOG_DIR = "/data/logs/ffa94a6ffa1846fc/"
 LOG_FILE = os.path.join(LOG_DIR, "workflow.log")
 os.makedirs(LOG_DIR, exist_ok=True)
 output_path = "/data/output/ffa94a6ffa1846fc/"
 os.makedirs(output_path, exist_ok=True)
-logging.basicConfig(filename=LOG_FILE, filemode="a", format="%(asctime)s - %(levelname)s - %(message)s", level=logging.INFO)
 
 # Create a file handler
 file_handler = logging.FileHandler(LOG_FILE, mode = 'a')
@@ -27,6 +26,10 @@ def main():
     logger.info("***************Workflow code is triggered***************")
     data = request.get_json(force=True)
     logger.info("request data: %s", data)
+    start_time = time.perf_counter()  # ⏱ Start timing
+    success_count = 0
+    failure_count = 0
+
     
     input_path = "/data/input_final"
     evidence_path = "/data/Evidence_Documents"    
@@ -45,7 +48,6 @@ def main():
             "status": "failed",
             "message": "Reader Agent failed"
         }
-    companies_requiring_audit = agent1_response_data.get("companies_requiring_audit_dictionary", [])
     companies_and_requirements = agent1_response_data.get("companies_and_requirements", [])
     companies_and_poc = agent1_response_data.get("companies_and_poc", [])                                             
     companies_iq_control = agent1_response_data.get("companies_iq_control", [])
@@ -65,7 +67,7 @@ def main():
     # Agent 2: Evidence Document Gatherer
     logger.info("Calling Evidence Document Gatherer")
     agent2_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-2"
-    agent2_request_data = {"evidence_path" : evidence_path}
+    agent2_request_data = {"companies_and_requirements" : companies_and_requirements}
     agent2_response = requests.post(agent2_url, json=agent2_request_data)
     agent2_response_data = agent2_response.json()
     logger.info("Finished Calling Evidence Document Gatherer")
@@ -82,8 +84,8 @@ def main():
     with open(output_file_path, "w") as f:
         json.dump(evidence_docs, f, indent = 4)
 
-    # Agent 3: Checklist Agent
-    logger.info("Calling Checklist Agent")
+    # Agent 3: Token Agent
+    logger.info("Calling Token Agent")
     agent3_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-4"
     agent3_response = requests.post(agent3_url)
     agent3_response_data = agent3_response.json()
@@ -96,7 +98,10 @@ def main():
         }    
     
     token = agent3_response_data.get("token", [])
-
+    
+    output_file_path = os.path.join(output_path, "token.json")
+    with open(output_file_path, "w") as f:
+        json.dump(token, f, indent = 4)
 
     # Agent 4: Checklist Pull Agent
     logger.info("Calling Checklist Pull Agent")
@@ -137,7 +142,7 @@ def main():
             "message": "Format data agent failed"
         }   
     
-    companies_regulations_and_requirements = agent5_response_data.get("companies_regulations_and_requirements")
+    companies_regulations_and_requirements = agent5_response_data.get("companies_regulations_and_requirements", [])
 
     output_file_path = os.path.join(output_path, "companies_regulations_and_requirements.json")
     with open(output_file_path, "w") as f:
@@ -146,16 +151,20 @@ def main():
     # Agent 6: Determine evidence document (cognitive)
     logger.info("Calling Determine evidence document")
     agent6_url = "http://router.accure-momentum.svc.cluster.local:80/cognitive_agent_runner"
+
     agent6_request_data = {
         "prompt": data.get("6_prompt", ""),
-        "input_path": companies_regulations_and_requirements
+        "input_data": {
+            "evidence_docs": evidence_docs,
+            "companies_regulations_requirements": companies_regulations_and_requirements
+        }
     }
     agent6_response = requests.post(agent6_url, json=agent6_request_data)
     agent6_response_json = agent6_response.json()
     logger.info("Finished Calling Determine evidence document")
     
     selected_evidence_docs = agent6_response_json.get("response")
-    
+   
     output_file_path = os.path.join(output_path, "selected_evidence_docs.json")
     with open(output_file_path, "w") as f:
         json.dump(selected_evidence_docs, f, indent = 4)    
@@ -163,7 +172,11 @@ def main():
     # Agent 7: Prepping for API
     logger.info("Calling Prepping for API")
     agent7_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-8"
-    agent7_request_data = {"companies_iq_control" : companies_iq_control}
+    agent7_request_data = {
+        "companies_iq_control" : companies_iq_control,
+        "selected_evidence_docs" : selected_evidence_docs,
+        "evidence_docs" : evidence_docs
+    }
     agent7_response = requests.post(agent7_url, json=agent7_request_data)
     agent7_response_data = agent7_response.json()
     logger.info("Finished Calling Prepping for API")
@@ -174,84 +187,107 @@ def main():
             "message": "Make API Call Agent failed"
         }
         
-    merged = agent7_response_data.get("merged")
+    final_merged_dict = agent7_response_data.get("final_merged_dict", [])
     
-    output_file_path = os.path.join(output_path, "merged_dictionary.json")
+    output_file_path = os.path.join(output_path, "final_merged_dict.json")
     with open(output_file_path, "w") as f:
-        json.dump(merged, f, indent = 4)
+        json.dump(final_merged_dict, f, indent = 4)
 
-    # Agent 8: Audit Starter - Waiting Until We Get API Access
-#    logger.info("Calling Audit Starter")
-#    agent8_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-9"
-#    agent8_response = requests.post(agent8_url)
-#    agent8_response_data = agent8_response.json()
-#    logger.info("Finished Calling Audit Starter")
+    # Agent 8: Audit Starter 
+    logger.info("Calling Audit Starter")
+    agent8_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-9"
+    agent8_request_data = {
+        "final_merged_dict" : final_merged_dict,
+        "token" : token
+    }
+    agent8_response = requests.post(agent8_url, json=agent8_request_data)
+    agent8_response_data = agent8_response.json()
+    logger.info("Finished Calling Audit Starter")
     
-#    if agent8_response_data.get("status") != "success":
-#        return {
-#            "status": "failed",
-#            "message": "Audit Starter agent failed"
-#        }    
+    if agent8_response_data.get("status") != "success":
+        return {
+            "status": "failed",
+            "message": "Audit Starter agent failed"
+        }    
     
-#    audit_results_hold = agent3_response_data.get("audit_results_hold", [])
+    audit_results_hold = agent8_response_data.get("results", [])
 
-
+    output_file_path = os.path.join(output_path, "audit_results_hold.json")
+    with open(output_file_path, "w") as f:
+        json.dump(audit_results_hold, f, indent = 4)
+        
     # Agent 9: Audit Results
     logger.info("Calling Audit Results")
     agent9_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-10"
-    agent9_request_data = {"audit_results_path" : audit_results_path}
-    agent9_response = requests.post(agent9_url, json=agent9_request_data)
+    agent9_request_data = {"audit_results_path" : audit_results_path,
+        "token": token,
+        'AuditDict':audit_results_hold}
+    agent9_response = requests.post(agent9_url, json=agent9_request_data, timeout=7200)
     agent9_response_data = agent9_response.json()
     logger.info("Finished Calling Audit Results")
 
-    audit_results = agent9_response_data.get("audit_results")
+    audit_results = agent9_response_data.get("audit_results", {})
     
     output_file_path = os.path.join(output_path, "audit_results.json")
     with open(output_file_path, "w") as f:
         json.dump(audit_results, f, indent = 4)
-
-    # Agent 10: Compliance Summarization (cognitive)
-    logger.info("Calling Compliance Summarization")
-    agent10_url = "http://router.accure-momentum.svc.cluster.local:80/cognitive_agent_runner"
-    agent10_request_data = {
-        "prompt": data.get("10_prompt", ""),
-        "input_data": audit_results
-    }
-    agent10_response = requests.post(agent10_url, json=agent10_request_data)
-    agent10_response_json = agent10_response.json()
-    logger.info("Finished Calling Compliance Summarization")
-    
-    if agent10_response_json.get("status") != "success":
-        return {
-            "status": "failed",
-            "message": "Compliance and Summarization Agent failed"
-        }
         
-    compliance_status = agent10_response_json.get("response")
-    
-    output_file_path = os.path.join(output_path, "compliance_status.json")
-    with open(output_file_path, "w") as f:
-        json.dump(compliance_status, f, indent = 4)
+    for audit in audit_results:
 
-    # Agent 11: notification sender
-    logger.info("Calling notification sender")
-    agent11_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-12"
-    agent11_request_data = {
-        "compliance_status" : compliance_status,
-        "companies_and_poc" : companies_and_poc
-    }
-    agent11_response = requests.post(agent11_url, json=agent11_request_data)
-    agent11_response_data = agent11_response.json()
-    logger.info("Finished Calling notification sender")
-    
-    if agent11_response_data.get("status") != "success":
-        return {
-            "status": "failed",
-            "message": "Email Summary Agent failed"
+        # Agent 10: Compliance Summarization (cognitive)
+        logger.info("Calling Compliance Summarization")
+        agent10_url = "http://router.accure-momentum.svc.cluster.local:80/cognitive_agent_runner"
+        agent10_request_data = {
+            "prompt": data.get("10_prompt", ""),
+            "input_data": audit
         }
+        agent10_response = requests.post(agent10_url, json=agent10_request_data)
+        agent10_response_json = agent10_response.json()
+        logger.info("Finished Calling Compliance Summarization")
 
+        if agent10_response_json.get("status") != "success":
+            return {
+                "status": "failed",
+                "message": "Compliance and Summarization Agent failed"
+            }
+
+        compliance_report = agent10_response_json.get("response")
+
+        output_file_path = os.path.join(output_path, "compliance_status.json")
+        with open(output_file_path, "w") as f:
+            json.dump(compliance_report, f, indent = 4)
+
+        # Agent 11: notification sender
+        logger.info("Calling notification sender")
+        agent11_url = "http://router.accure-momentum.svc.cluster.local:80/ffa94a6ffa1846fc-12"
+        agent11_request_data = {
+            "compliance_report" : compliance_report,
+            #"companies_and_poc" : companies_and_poc
+        }
+        agent11_response = requests.post(agent11_url, json=agent11_request_data)
+        agent11_response_data = agent11_response.json()
+        logger.info("Finished Calling notification sender")
+
+        if agent11_response_data.get("status") != "success":
+            return {
+                "status": "failed",
+                "message": "Email Summary Agent failed"
+            }
+            
+            if agent11_response.status_code == 200 and agent11_response.json().get("status") == "success":
+                success_count += 1
+                logging.info("✅Workflow Succeeded.")
+            else:
+                failure_count += 1
+                logging.warning(f"⚠️ Workflow Failed: {response.text}")
+
+    
     output = {
         "status": "success",
         "message": "Workflow completed"
     }
+    
+    elapsed_time = time.perf_counter() - start_time  # ⏱ Stop timing
+    logging.info(f"Latency: {elapsed_time:.3f} seconds")
+
     return output
