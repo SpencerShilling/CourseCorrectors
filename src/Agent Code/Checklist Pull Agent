@@ -20,15 +20,18 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-BASE_URL_BE = "https://complianceai-be.accure.ai:9091/"
+BASE_URL_BE = "https://complianceai-be.accure.ai:9091"
 
 def auth_hdr(token: str) -> dict:
+    """Authorization header for API calls"""
     return {"Authorization": f"Bearer {token}"}
-    
+
 def get_checklist(token: str, title_number: int, section_identifier: str) -> dict:
+    """Pulls the checklist for a specific CFR Title and Section."""
     url = f"{BASE_URL_BE}/v1/ecfr/titles/{title_number}/sections/{section_identifier}/checklist"
     headers = {**auth_hdr(token), "Accept": "application/json"}
-    r = requests.get(url, headers=headers, timeout=60, verify = False)
+
+    r = requests.get(url, headers=headers, timeout=60, verify=False)
 
     if r.status_code == 404:
         return {"_error": "not_found", "status": 404, "url": url, "body": r.text}
@@ -38,9 +41,15 @@ def get_checklist(token: str, title_number: int, section_identifier: str) -> dic
     try:
         return r.json()
     except ValueError:
-        return {"_error": "non_json_response", "status": r.status_code, "url": url, "body": r.text}
+        return {
+            "_error": "non_json_response",
+            "status": r.status_code,
+            "url": url,
+            "body": r.text,
+        }
 
-def vr_list_from_checklist_blocks(blocks):
+def vr_list_from_checklist_blocks(blocks: List[str]) -> List[str]:
+    """Extract Verifiable Requirements from markdown checklist blocks."""
     out = []
     for block in blocks or []:
         for ln in block.splitlines():
@@ -48,58 +57,92 @@ def vr_list_from_checklist_blocks(blocks):
             if s.startswith("|") and "---" not in s and "Number" not in s:
                 cells = [c.strip() for c in s.strip("|").split("|")]
                 if len(cells) >= 4:
-                    out.append(cells[3])  # 4th col = Verifiable Requirement
+                    out.append(cells[3])  # 4th column = Verifiable Requirement
                 break
-    return out    
-
-
-def get_checklists_payload_by_code(token: str, codes: list[str]) -> dict[str, dict]:
-    """
-    Returns {'101346': <payload>, '2111240': <payload>, ...}
-    """
-    out: dict[str, dict] = {}
-    seen = set()
-    for code in codes:
-        code = str(code)
-        if code in seen:
-            continue
-        seen.add(code)
-
-        title = int(code[:2])
-        rest = code[2:]
-        section = f"{rest[:-2]}.{rest[-2:]}" if len(rest) >= 3 else rest
-
-        out[code] = get_checklist(token, title, section)  # payload only
     return out
 
-    
+def get_checklists_payload_by_title_section(
+    token: str, companies_and_requirements: Dict[str, List[Dict[str, Any]]]
+) -> Dict[str, Dict[str, Any]]:
+    """
+    For each company, pull the checklist payloads for all CFR Titles and Sections.
+    Returns nested dict in format:
+        {
+          "Carsons Consulting": { "10-13.46": payload, ... },
+          "Landbaron Farms": { "21-112.40": payload, ... }
+        }
+    """
+    out: Dict[str, Dict[str, Any]] = {}
+
+    for company, requirements in companies_and_requirements.items():
+        out[company] = {}
+        seen = set()
+
+        for req in requirements:
+            title = req.get("CFR_Title")
+            section = req.get("CFR_Section")
+
+            if not title or not section:
+                continue
+
+            key = f"{title}-{section}"  # maintain "CFR_Title-CFR_Section" format
+            if key in seen:
+                continue
+            seen.add(key)
+
+            payload = get_checklist(token, int(title), section)
+            out[company][key] = payload
+
+    return out
+
 def main():
     try:
-        logging.info("***************API Puller Agent triggered***************")
+        logging.info("***************Checklist Agent Triggered***************")
         data = request.get_json(force=True)
 
         token = data.get("token")
         companies_and_requirements = data.get("companies_and_requirements")
-        
-        unique_values = list({val for values in companies_and_requirements.values() for val in values})
-        result = get_checklists_payload_by_code(token, unique_values)
-        logging.info("Agent finished pulling API response for all regulations")
 
-        checklist = {
-            code: vr_list_from_checklist_blocks(payload.get("checklist", []))
-            for code, payload in (result or {}).items()
-        }     
-        
-        logging.info("Agent finished pulling verifiable requirment")
+        # --- Pull all checklists for each company’s CFR Title/Section ---
+        result = get_checklists_payload_by_title_section(token, companies_and_requirements)
+        logging.info("Finished pulling API responses")
+
+        # --- Extract verifiable requirements and reformat output ---
+        checklist = {}
+
+        for company, regs in result.items():
+            checklist[company] = []
+
+            for key, payload in regs.items():
+                # key format = "Title-Section"
+                try:
+                    title, section = key.split("-", 1)
+                    title = int(title)
+                except ValueError:
+                    logging.warning("Invalid key format for %s: %s", company, key)
+                    continue
+
+                vr_items = vr_list_from_checklist_blocks(payload.get("checklist", []))
+
+                checklist[company].append({
+                    "CFR_Title": title,
+                    "CFR_Section": section,
+                    "Requirements": vr_items
+                })
+
+        logging.info("Finished extracting and formatting Verifiable Requirements")
+
         output = {
             "status": "success",
-            "checklist" : checklist
+            "checklist": checklist
         }
         return output
+
     except Exception as e:
         logging.error("Exception: %s", str(e))
         return {
             "status": "error",
             "message": str(e)
         }
-#AgentCodeEnded
+
+# Agent code ended
